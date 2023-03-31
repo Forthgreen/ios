@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="BuenosAires-Book.otf">
+            <string>BuenosAires-Book</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="KGk-i7-Jjw" customClass="FilterSelectedTVC" customModule="Forthgreen" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="66"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="66"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tk4-zW-ZTt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="66"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clothing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t28-RL-6fa">
+                                <rect key="frame" x="24" y="24.5" width="235" height="17"/>
+                                <fontDescription key="fontDescription" name="BuenosAires-Book" family="Buenos Aires" pointSize="14"/>
+                                <color key="textColor" name="charcoal"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_tick" translatesAutoresizingMaskIntoConstraints="NO" id="wX3-vG-OEv">
+                                <rect key="frame" x="275" y="20.5" width="25" height="25"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="Hb1-3i-auV"/>
+                                    <constraint firstAttribute="width" constant="25" id="dGx-y1-DPR"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z0W-dE-wcq">
+                                <rect key="frame" x="0.0" y="64.5" width="320" height="1"/>
+                                <color key="backgroundColor" name="paleGrey"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="Zfn-Xy-7K0"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="z0W-dE-wcq" secondAttribute="trailing" id="4uo-Ux-cAL"/>
+                            <constraint firstItem="wX3-vG-OEv" firstAttribute="leading" secondItem="t28-RL-6fa" secondAttribute="trailing" constant="16" id="DoF-Kr-lJH"/>
+                            <constraint firstItem="z0W-dE-wcq" firstAttribute="top" secondItem="wX3-vG-OEv" secondAttribute="bottom" constant="19" id="MpB-k5-Lrn"/>
+                            <constraint firstItem="z0W-dE-wcq" firstAttribute="leading" secondItem="Tk4-zW-ZTt" secondAttribute="leading" id="OaP-2L-NOW"/>
+                            <constraint firstItem="wX3-vG-OEv" firstAttribute="centerY" secondItem="t28-RL-6fa" secondAttribute="centerY" id="eZM-A1-cTK"/>
+                            <constraint firstAttribute="trailing" secondItem="wX3-vG-OEv" secondAttribute="trailing" constant="20" id="fIR-kq-CGB"/>
+                            <constraint firstItem="wX3-vG-OEv" firstAttribute="top" secondItem="Tk4-zW-ZTt" secondAttribute="top" constant="20.5" id="fsD-1I-8po"/>
+                            <constraint firstItem="t28-RL-6fa" firstAttribute="leading" secondItem="Tk4-zW-ZTt" secondAttribute="leading" constant="24" id="rCp-UH-6B1"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Tk4-zW-ZTt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="EhN-TF-GFf"/>
+                    <constraint firstItem="Tk4-zW-ZTt" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Qd4-vr-ekx"/>
+                    <constraint firstAttribute="trailing" secondItem="Tk4-zW-ZTt" secondAttribute="trailing" id="onc-IM-aLx"/>
+                    <constraint firstAttribute="bottom" secondItem="Tk4-zW-ZTt" secondAttribute="bottom" id="zOg-qK-7Wf"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="checkImage" destination="wX3-vG-OEv" id="Qge-gq-Nzl"/>
+                <outlet property="filterLbl" destination="t28-RL-6fa" id="uqq-ld-uCj"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="153.34821428571428"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic_tick" width="24" height="24"/>
+        <namedColor name="charcoal">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="paleGrey">
+            <color red="0.94900000095367432" green="0.95300000905990601" blue="0.9570000171661377" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

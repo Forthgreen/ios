@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="BuenosAires-Bold.otf">
+            <string>BuenosAires-Bold</string>
+        </array>
+        <array key="BuenosAires-Book.otf">
+            <string>BuenosAires-Book</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="restaurantCell" rowHeight="120" id="KGk-i7-Jjw" customClass="restaurantCell" customModule="Forthgreen" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y2k-uY-mQG">
+                        <rect key="frame" x="16" y="16" width="88" height="88"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rectangle" translatesAutoresizingMaskIntoConstraints="NO" id="wgB-Oy-fqy">
+                                <rect key="frame" x="0.0" y="0.0" width="88" height="88"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="wgB-Oy-fqy" firstAttribute="leading" secondItem="y2k-uY-mQG" secondAttribute="leading" id="1E9-BS-XsK"/>
+                            <constraint firstItem="wgB-Oy-fqy" firstAttribute="top" secondItem="y2k-uY-mQG" secondAttribute="top" id="I1j-TR-4z5"/>
+                            <constraint firstAttribute="width" constant="88" id="KGM-9x-eLr"/>
+                            <constraint firstAttribute="bottom" secondItem="wgB-Oy-fqy" secondAttribute="bottom" id="WhZ-n8-8nH"/>
+                            <constraint firstAttribute="trailing" secondItem="wgB-Oy-fqy" secondAttribute="trailing" id="hRD-QJ-jB8"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restaurant name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fWi-yV-qIp">
+                        <rect key="frame" x="120" y="16" width="184" height="17"/>
+                        <fontDescription key="fontDescription" name="BuenosAires-Bold" family="Buenos Aires" pointSize="14"/>
+                        <color key="textColor" name="charcoal"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nMz-Sf-76v" customClass="FloatRatingView" customModule="SainiUtils">
+                        <rect key="frame" x="120" y="37" width="85" height="16"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="WwA-hg-0Os"/>
+                            <constraint firstAttribute="width" constant="85" id="ex4-vI-bM7"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="image" keyPath="emptyImage" value="star_white"/>
+                            <userDefinedRuntimeAttribute type="image" keyPath="fullImage" value="star_black"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="maxRating">
+                                <integer key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="minRating">
+                                <integer key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="size" keyPath="minImageSize">
+                                <size key="value" width="16" height="16"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="rating">
+                                <real key="value" value="3"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="editable" value="NO"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="32" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bsM-rw-sSE">
+                        <rect key="frame" x="211" y="36.5" width="16" height="17"/>
+                        <fontDescription key="fontDescription" name="BuenosAires-Book" family="Buenos Aires" pointSize="14"/>
+                        <color key="textColor" name="coolGrey"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Italian • Pizza • Pasta • Salads" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t0q-eA-Dar">
+                        <rect key="frame" x="120" y="58" width="184" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="22" id="AlU-et-3Od"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="BuenosAires-Book" family="Buenos Aires" pointSize="12"/>
+                        <color key="textColor" name="coolGrey"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$$$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tnc-IV-3cf">
+                        <rect key="frame" x="120" y="87" width="23" height="17"/>
+                        <fontDescription key="fontDescription" name="BuenosAires-Bold" family="Buenos Aires" pointSize="14"/>
+                        <color key="textColor" red="0.75686274509803919" green="0.79607843137254897" blue="0.81176470588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.6 miles" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jCn-dy-FSA">
+                        <rect key="frame" x="153" y="88.5" width="48.5" height="14"/>
+                        <fontDescription key="fontDescription" name="BuenosAires-Book" family="Buenos Aires" pointSize="12"/>
+                        <color key="textColor" name="coolGrey"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RjV-NI-ZZD">
+                        <rect key="frame" x="0.0" y="119" width="320" height="1"/>
+                        <color key="backgroundColor" name="paleGrey"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="41d-ie-AJN"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Tnc-IV-3cf" firstAttribute="bottom" secondItem="wgB-Oy-fqy" secondAttribute="bottom" id="2Rj-uI-BdL"/>
+                    <constraint firstAttribute="trailing" secondItem="fWi-yV-qIp" secondAttribute="trailing" constant="16" id="7h1-CD-nUY"/>
+                    <constraint firstItem="Tnc-IV-3cf" firstAttribute="leading" secondItem="y2k-uY-mQG" secondAttribute="trailing" constant="16" id="B9O-u7-pks"/>
+                    <constraint firstItem="nMz-Sf-76v" firstAttribute="top" secondItem="fWi-yV-qIp" secondAttribute="bottom" constant="4" id="GDT-nw-T7b"/>
+                    <constraint firstItem="nMz-Sf-76v" firstAttribute="leading" secondItem="y2k-uY-mQG" secondAttribute="trailing" constant="16" id="Lwm-2i-xwG"/>
+                    <constraint firstItem="bsM-rw-sSE" firstAttribute="centerY" secondItem="nMz-Sf-76v" secondAttribute="centerY" id="MXl-bP-xvP"/>
+                    <constraint firstItem="jCn-dy-FSA" firstAttribute="centerY" secondItem="Tnc-IV-3cf" secondAttribute="centerY" id="Rcw-EK-rnc"/>
+                    <constraint firstAttribute="bottom" secondItem="RjV-NI-ZZD" secondAttribute="bottom" id="RmD-yj-qNi"/>
+                    <constraint firstAttribute="trailing" secondItem="RjV-NI-ZZD" secondAttribute="trailing" id="Tdn-aV-Q3D"/>
+                    <constraint firstItem="fWi-yV-qIp" firstAttribute="leading" secondItem="y2k-uY-mQG" secondAttribute="trailing" constant="16" id="YE6-rA-kPo"/>
+                    <constraint firstItem="bsM-rw-sSE" firstAttribute="leading" secondItem="nMz-Sf-76v" secondAttribute="trailing" constant="6" id="Z8P-a7-wz7"/>
+                    <constraint firstItem="t0q-eA-Dar" firstAttribute="top" secondItem="nMz-Sf-76v" secondAttribute="bottom" constant="5" id="dNH-Pv-C0h"/>
+                    <constraint firstItem="fWi-yV-qIp" firstAttribute="top" secondItem="wgB-Oy-fqy" secondAttribute="top" id="fHU-aq-pMZ"/>
+                    <constraint firstItem="y2k-uY-mQG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="fY0-BS-E9z"/>
+                    <constraint firstItem="t0q-eA-Dar" firstAttribute="trailing" secondItem="fWi-yV-qIp" secondAttribute="trailing" id="frh-P8-m10"/>
+                    <constraint firstItem="RjV-NI-ZZD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="lii-Kp-8v3"/>
+                    <constraint firstAttribute="bottom" secondItem="y2k-uY-mQG" secondAttribute="bottom" constant="16" id="oQt-rq-qDY"/>
+                    <constraint firstItem="t0q-eA-Dar" firstAttribute="leading" secondItem="fWi-yV-qIp" secondAttribute="leading" id="pAJ-8q-uxi"/>
+                    <constraint firstItem="y2k-uY-mQG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="pEZ-k7-ZyY"/>
+                    <constraint firstItem="jCn-dy-FSA" firstAttribute="leading" secondItem="Tnc-IV-3cf" secondAttribute="trailing" constant="10" id="thi-t5-vkw"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="dishTypeLbl" destination="t0q-eA-Dar" id="g4c-0x-3jF"/>
+                <outlet property="distanceLbl" destination="jCn-dy-FSA" id="CbV-Y4-R6G"/>
+                <outlet property="priceLbl" destination="Tnc-IV-3cf" id="xa7-qy-sVH"/>
+                <outlet property="ratingCountLbl" destination="bsM-rw-sSE" id="LcI-Y3-KFk"/>
+                <outlet property="restaurantImageView" destination="wgB-Oy-fqy" id="7dU-ZP-pyb"/>
+                <outlet property="restaurantNameLbl" destination="fWi-yV-qIp" id="vLK-uv-wsy"/>
+                <outlet property="starRatingView" destination="nMz-Sf-76v" id="sqq-2u-Gsx"/>
+            </connections>
+            <point key="canvasLocation" x="108.69565217391305" y="129.24107142857142"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="rectangle" width="414" height="412"/>
+        <image name="star_black" width="16" height="16"/>
+        <image name="star_white" width="16" height="16"/>
+        <namedColor name="charcoal">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="coolGrey">
+            <color red="0.59200000762939453" green="0.6470000147819519" blue="0.66299998760223389" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="paleGrey">
+            <color red="0.94900000095367432" green="0.95300000905990601" blue="0.9570000171661377" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

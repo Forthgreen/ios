@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="BuenosAires-Book.otf">
+            <string>BuenosAires-Book</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ReportTypeCell" rowHeight="66" id="KGk-i7-Jjw" customClass="ReportTypeCell" customModule="Forthgreen" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="66"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="66"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DeA-MU-8s0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="66"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dCo-qq-Mrc">
+                                <rect key="frame" x="15" y="60.5" width="290" height="1"/>
+                                <color key="backgroundColor" name="paleGrey"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="bx3-ui-NtF"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle_empty" translatesAutoresizingMaskIntoConstraints="NO" id="OKC-PT-zR4">
+                                <rect key="frame" x="15" y="20.5" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="MqK-4B-HLy"/>
+                                    <constraint firstAttribute="height" constant="25" id="Sgr-7K-VJe"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It’s prohibited content" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3pB-DD-dyH">
+                                <rect key="frame" x="55" y="24.5" width="250" height="17"/>
+                                <fontDescription key="fontDescription" name="BuenosAires-Book" family="Buenos Aires" pointSize="14"/>
+                                <color key="textColor" name="charcoal"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="3pB-DD-dyH" secondAttribute="trailing" constant="15" id="7sF-bL-2nM"/>
+                            <constraint firstItem="OKC-PT-zR4" firstAttribute="leading" secondItem="DeA-MU-8s0" secondAttribute="leading" constant="15" id="8oi-Jy-3ZN"/>
+                            <constraint firstItem="dCo-qq-Mrc" firstAttribute="top" secondItem="3pB-DD-dyH" secondAttribute="bottom" constant="19" id="Aha-Vo-DYB"/>
+                            <constraint firstItem="3pB-DD-dyH" firstAttribute="leading" secondItem="OKC-PT-zR4" secondAttribute="trailing" constant="15" id="Iqr-ja-l73"/>
+                            <constraint firstAttribute="trailing" secondItem="dCo-qq-Mrc" secondAttribute="trailing" constant="15" id="NKS-0W-Szj"/>
+                            <constraint firstItem="3pB-DD-dyH" firstAttribute="centerY" secondItem="OKC-PT-zR4" secondAttribute="centerY" id="Ogy-cb-dJ4"/>
+                            <constraint firstItem="OKC-PT-zR4" firstAttribute="centerY" secondItem="DeA-MU-8s0" secondAttribute="centerY" id="Rz9-jg-dXV"/>
+                            <constraint firstItem="dCo-qq-Mrc" firstAttribute="leading" secondItem="DeA-MU-8s0" secondAttribute="leading" constant="15" id="eb5-TJ-2RV"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="DeA-MU-8s0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="jWa-PH-wIi"/>
+                    <constraint firstAttribute="trailing" secondItem="DeA-MU-8s0" secondAttribute="trailing" id="p9S-b8-v1n"/>
+                    <constraint firstAttribute="bottom" secondItem="DeA-MU-8s0" secondAttribute="bottom" id="qpy-gu-6ar"/>
+                    <constraint firstItem="DeA-MU-8s0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="v7f-JS-06a"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="circleImage" destination="OKC-PT-zR4" id="YGg-us-nhf"/>
+                <outlet property="reportReasonLbl" destination="3pB-DD-dyH" id="gdh-wh-nhd"/>
+                <outlet property="reportReasonView" destination="DeA-MU-8s0" id="6JZ-yD-h27"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="111.16071428571428"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="circle_empty" width="25" height="24"/>
+        <namedColor name="charcoal">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="paleGrey">
+            <color red="0.94900000095367432" green="0.95300000905990601" blue="0.9570000171661377" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

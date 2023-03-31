@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="addPostCell" id="KGk-i7-Jjw" customClass="addPostCell" customModule="Forthgreen" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="414"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="414"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rectangle" translatesAutoresizingMaskIntoConstraints="NO" id="tQF-zw-BE4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="408"/>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4S4-An-cum" customClass="sainiCardView" customModule="SainiUtils">
+                        <rect key="frame" x="279" y="9" width="32" height="32"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconographyCloseWhite" translatesAutoresizingMaskIntoConstraints="NO" id="dlI-0C-LTt">
+                                <rect key="frame" x="8" y="8" width="16" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="16" id="lso-OW-MN1"/>
+                                    <constraint firstAttribute="height" constant="16" id="t48-53-W7L"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pMQ-Oa-ByX">
+                                <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" name="charcoal"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="32" id="03B-7X-Emv"/>
+                            <constraint firstItem="dlI-0C-LTt" firstAttribute="centerY" secondItem="4S4-An-cum" secondAttribute="centerY" id="AWT-Ll-JIh"/>
+                            <constraint firstAttribute="height" constant="32" id="DPv-ZL-IIY"/>
+                            <constraint firstAttribute="bottom" secondItem="pMQ-Oa-ByX" secondAttribute="bottom" id="IHg-pw-2iy"/>
+                            <constraint firstAttribute="trailing" secondItem="pMQ-Oa-ByX" secondAttribute="trailing" id="eFF-17-SHB"/>
+                            <constraint firstItem="pMQ-Oa-ByX" firstAttribute="top" secondItem="4S4-An-cum" secondAttribute="top" id="gfd-SX-8El"/>
+                            <constraint firstItem="pMQ-Oa-ByX" firstAttribute="leading" secondItem="4S4-An-cum" secondAttribute="leading" id="tZH-ab-LTi"/>
+                            <constraint firstItem="dlI-0C-LTt" firstAttribute="centerX" secondItem="4S4-An-cum" secondAttribute="centerX" id="v9U-OU-xj6"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadious">
+                                <real key="value" value="16"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="tQF-zw-BE4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="3aY-az-vQ2"/>
+                    <constraint firstAttribute="trailing" secondItem="4S4-An-cum" secondAttribute="trailing" constant="9" id="H7W-bK-sOh"/>
+                    <constraint firstAttribute="trailing" secondItem="tQF-zw-BE4" secondAttribute="trailing" id="IXb-ua-Fbb"/>
+                    <constraint firstItem="4S4-An-cum" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="9" id="WNx-Bf-nCT"/>
+                    <constraint firstAttribute="bottom" secondItem="tQF-zw-BE4" secondAttribute="bottom" constant="6" id="cL3-2y-zvN"/>
+                    <constraint firstItem="tQF-zw-BE4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="jyy-CJ-COZ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="crossBtn" destination="pMQ-Oa-ByX" id="60v-h2-xIb"/>
+                <outlet property="postImage" destination="tQF-zw-BE4" id="NHX-qx-as2"/>
+            </connections>
+            <point key="canvasLocation" x="-35" y="76"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="iconographyCloseWhite" width="16" height="16"/>
+        <image name="rectangle" width="414" height="412"/>
+        <namedColor name="charcoal">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="BuenosAires-Bold.otf">
+            <string>BuenosAires-Bold</string>
+        </array>
+        <array key="BuenosAires-Book.otf">
+            <string>BuenosAires-Book</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="RestaurantNewTVC" customModule="Forthgreen" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="312"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="312"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jzv-as-zi9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="312"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ldm-BY-nHc">
+                                <rect key="frame" x="16" y="16" width="288" height="164"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rectangle" translatesAutoresizingMaskIntoConstraints="NO" id="sOd-Vl-fbP">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="164"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="164" id="Sm0-aN-cR9"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="sOd-Vl-fbP" secondAttribute="trailing" id="GBT-nj-6HW"/>
+                                    <constraint firstItem="sOd-Vl-fbP" firstAttribute="leading" secondItem="Ldm-BY-nHc" secondAttribute="leading" id="UJs-TF-MmZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="sOd-Vl-fbP" secondAttribute="bottom" id="Zbj-Zm-537"/>
+                                    <constraint firstItem="sOd-Vl-fbP" firstAttribute="top" secondItem="Ldm-BY-nHc" secondAttribute="top" id="aCF-6c-HiL"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restaurant name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SLp-sr-1Ai">
+                                <rect key="frame" x="16" y="192" width="288" height="19"/>
+                                <fontDescription key="fontDescription" name="BuenosAires-Bold" family="Buenos Aires" pointSize="16"/>
+                                <color key="textColor" name="charcoal"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yjG-he-AgN" customClass="FloatRatingView" customModule="SainiUtils">
+                                <rect key="frame" x="16" y="215" width="85" height="16"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="85" id="GRD-ff-VNX"/>
+                                    <constraint firstAttribute="height" constant="16" id="u9m-aI-nrW"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="emptyImage" value="star_white"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="fullImage" value="star_black"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maxRating">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="minRating">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="minImageSize">
+                                        <size key="value" width="16" height="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rating">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="editable" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="32" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YPK-nS-WcG">
+                                <rect key="frame" x="107" y="214.5" width="16" height="17"/>
+                                <fontDescription key="fontDescription" name="BuenosAires-Book" family="Buenos Aires" pointSize="14"/>
+                                <color key="textColor" red="0.24313725490196078" green="0.29411764705882354" blue="0.30196078431372547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Italian • Pizza • Pasta • Salads" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hce-SC-X1O">
+                                <rect key="frame" x="16" y="236" width="288" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="yof-eo-3JF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BuenosAires-Book" family="Buenos Aires" pointSize="14"/>
+                                <color key="textColor" red="0.24313725489999999" green="0.29411764709999999" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$$$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Rm-H4-yLc">
+                                <rect key="frame" x="16" y="263" width="23" height="17"/>
+                                <fontDescription key="fontDescription" name="BuenosAires-Bold" family="Buenos Aires" pointSize="14"/>
+                                <color key="textColor" red="0.75686274509999996" green="0.79607843140000001" blue="0.81176470590000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.6 miles" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uKu-b5-qDC">
+                                <rect key="frame" x="49" y="263" width="56.5" height="17"/>
+                                <fontDescription key="fontDescription" name="BuenosAires-Book" family="Buenos Aires" pointSize="14"/>
+                                <color key="textColor" red="0.24313725489999999" green="0.29411764709999999" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Hce-SC-X1O" firstAttribute="trailing" secondItem="SLp-sr-1Ai" secondAttribute="trailing" id="0gN-lD-VVJ"/>
+                            <constraint firstItem="SLp-sr-1Ai" firstAttribute="leading" secondItem="jzv-as-zi9" secondAttribute="leading" constant="16" id="2db-ix-7Ea"/>
+                            <constraint firstItem="yjG-he-AgN" firstAttribute="leading" secondItem="SLp-sr-1Ai" secondAttribute="leading" id="56z-vW-XYg"/>
+                            <constraint firstAttribute="trailing" secondItem="SLp-sr-1Ai" secondAttribute="trailing" constant="16" id="5Cb-7i-CUf"/>
+                            <constraint firstItem="uKu-b5-qDC" firstAttribute="leading" secondItem="9Rm-H4-yLc" secondAttribute="trailing" constant="10" id="7BD-e5-sy5"/>
+                            <constraint firstAttribute="height" constant="312" id="BXF-ZI-dM3"/>
+                            <constraint firstItem="uKu-b5-qDC" firstAttribute="centerY" secondItem="9Rm-H4-yLc" secondAttribute="centerY" id="CdY-Vw-rdH"/>
+                            <constraint firstItem="9Rm-H4-yLc" firstAttribute="leading" secondItem="SLp-sr-1Ai" secondAttribute="leading" id="FBp-KC-0an"/>
+                            <constraint firstAttribute="trailing" secondItem="Ldm-BY-nHc" secondAttribute="trailing" constant="16" id="IMY-oa-cXX"/>
+                            <constraint firstItem="Ldm-BY-nHc" firstAttribute="top" secondItem="jzv-as-zi9" secondAttribute="top" constant="16" id="On7-7U-oEt"/>
+                            <constraint firstItem="Hce-SC-X1O" firstAttribute="leading" secondItem="SLp-sr-1Ai" secondAttribute="leading" id="QV7-9X-vvD"/>
+                            <constraint firstItem="SLp-sr-1Ai" firstAttribute="top" secondItem="Ldm-BY-nHc" secondAttribute="bottom" constant="12" id="T4v-VW-KoV"/>
+                            <constraint firstItem="YPK-nS-WcG" firstAttribute="leading" secondItem="yjG-he-AgN" secondAttribute="trailing" constant="6" id="VVV-Yh-i0J"/>
+                            <constraint firstItem="Ldm-BY-nHc" firstAttribute="leading" secondItem="jzv-as-zi9" secondAttribute="leading" constant="16" id="ZGi-Ks-jyg"/>
+                            <constraint firstItem="yjG-he-AgN" firstAttribute="top" secondItem="SLp-sr-1Ai" secondAttribute="bottom" constant="4" id="aHd-Ee-wNt"/>
+                            <constraint firstItem="9Rm-H4-yLc" firstAttribute="top" secondItem="Hce-SC-X1O" secondAttribute="bottom" constant="5" id="c2g-5y-CoO"/>
+                            <constraint firstItem="YPK-nS-WcG" firstAttribute="centerY" secondItem="yjG-he-AgN" secondAttribute="centerY" id="j4h-yD-8bJ"/>
+                            <constraint firstItem="Hce-SC-X1O" firstAttribute="top" secondItem="yjG-he-AgN" secondAttribute="bottom" constant="5" id="tJD-Mg-wbU"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="jzv-as-zi9" secondAttribute="trailing" id="BZs-ex-FJy"/>
+                    <constraint firstItem="jzv-as-zi9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="L71-Si-jP3"/>
+                    <constraint firstAttribute="bottom" secondItem="jzv-as-zi9" secondAttribute="bottom" id="NWI-Xs-Ob0"/>
+                    <constraint firstItem="jzv-as-zi9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="ti3-2K-NmO"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="dishTypeLbl" destination="Hce-SC-X1O" id="qI7-hi-DQS"/>
+                <outlet property="distanceLbl" destination="uKu-b5-qDC" id="Gt3-mx-cqI"/>
+                <outlet property="priceLbl" destination="9Rm-H4-yLc" id="6fe-gM-xhk"/>
+                <outlet property="ratingCountLbl" destination="YPK-nS-WcG" id="UQc-Ez-jge"/>
+                <outlet property="restaurantImageView" destination="sOd-Vl-fbP" id="i73-Bn-djR"/>
+                <outlet property="restaurantNameLbl" destination="SLp-sr-1Ai" id="2qX-aO-8dU"/>
+                <outlet property="starRatingView" destination="yjG-he-AgN" id="10K-eY-Zlg"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="153.34821428571428"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="rectangle" width="414" height="412"/>
+        <image name="star_black" width="16" height="16"/>
+        <image name="star_white" width="16" height="16"/>
+        <namedColor name="charcoal">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

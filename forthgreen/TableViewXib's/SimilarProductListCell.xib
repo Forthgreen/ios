@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="BuenosAires-Bold.otf">
+            <string>BuenosAires-Bold</string>
+        </array>
+        <array key="BuenosAires-Book.otf">
+            <string>BuenosAires-Book</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="SimilarProductListCell" rowHeight="354" id="KGk-i7-Jjw" customClass="SimilarProductListCell" customModule="Forthgreen" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="411" height="425"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="411" height="425"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You might also like" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sdg-VP-Wzr">
+                        <rect key="frame" x="16" y="16" width="168" height="29"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="29" id="kys-JM-rLb"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="BuenosAires-Bold" family="Buenos Aires" pointSize="18"/>
+                        <color key="textColor" name="charcoal"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="K3w-Gw-LoT">
+                        <rect key="frame" x="0.0" y="69" width="411" height="290"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="290" id="6bg-Do-Vd3"/>
+                        </constraints>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="3wJ-sb-BhQ">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="arC-xi-Y78">
+                        <rect key="frame" x="16" y="415" width="379" height="1"/>
+                        <color key="backgroundColor" name="paleGrey"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="wXr-Lg-dVb"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sxo-9T-4N2">
+                        <rect key="frame" x="0.0" y="364" width="411" height="50"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aTa-EU-6Hm">
+                                <rect key="frame" x="16" y="0.0" width="379" height="1"/>
+                                <color key="backgroundColor" name="paleGrey"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="u1e-uM-JLX"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6xP-Ei-vyp">
+                                <rect key="frame" x="16" y="0.0" width="379" height="50"/>
+                                <fontDescription key="fontDescription" name="BuenosAires-Book" family="Buenos Aires" pointSize="14"/>
+                                <state key="normal" title="Write a review...">
+                                    <color key="titleColor" name="charcoal"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="6xP-Ei-vyp" secondAttribute="bottom" id="5Ya-UJ-hku"/>
+                            <constraint firstAttribute="height" constant="50" id="9kV-G3-4BI"/>
+                            <constraint firstItem="aTa-EU-6Hm" firstAttribute="top" secondItem="sxo-9T-4N2" secondAttribute="top" id="K6B-Zm-QBZ"/>
+                            <constraint firstAttribute="trailing" secondItem="6xP-Ei-vyp" secondAttribute="trailing" constant="16" id="LaZ-DA-b3L"/>
+                            <constraint firstAttribute="trailing" secondItem="aTa-EU-6Hm" secondAttribute="trailing" constant="16" id="Mwc-sP-Kg6"/>
+                            <constraint firstItem="6xP-Ei-vyp" firstAttribute="leading" secondItem="sxo-9T-4N2" secondAttribute="leading" constant="16" id="PSn-o8-gYB"/>
+                            <constraint firstItem="aTa-EU-6Hm" firstAttribute="leading" secondItem="sxo-9T-4N2" secondAttribute="leading" constant="16" id="Pob-y4-AdD"/>
+                            <constraint firstItem="6xP-Ei-vyp" firstAttribute="top" secondItem="sxo-9T-4N2" secondAttribute="top" id="jOF-yl-dU8"/>
+                            <constraint firstItem="6xP-Ei-vyp" firstAttribute="centerY" secondItem="sxo-9T-4N2" secondAttribute="centerY" id="urd-bE-d2Z"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Sdg-VP-Wzr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="BDe-q7-hi9"/>
+                    <constraint firstAttribute="trailing" secondItem="arC-xi-Y78" secondAttribute="trailing" constant="16" id="CG8-d5-OPh"/>
+                    <constraint firstItem="sxo-9T-4N2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="YhC-f4-qLg"/>
+                    <constraint firstAttribute="bottom" secondItem="arC-xi-Y78" secondAttribute="bottom" id="ZjW-PI-fGi"/>
+                    <constraint firstItem="K3w-Gw-LoT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="abC-Rg-RfE"/>
+                    <constraint firstItem="K3w-Gw-LoT" firstAttribute="top" secondItem="Sdg-VP-Wzr" secondAttribute="bottom" constant="24" id="gbC-5x-QNK"/>
+                    <constraint firstItem="Sdg-VP-Wzr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="i0b-hs-QGa"/>
+                    <constraint firstAttribute="trailing" secondItem="K3w-Gw-LoT" secondAttribute="trailing" id="qyI-HP-i1L"/>
+                    <constraint firstAttribute="trailing" secondItem="sxo-9T-4N2" secondAttribute="trailing" id="s65-gp-pgl"/>
+                    <constraint firstItem="arC-xi-Y78" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="svJ-bm-18b"/>
+                    <constraint firstItem="arC-xi-Y78" firstAttribute="top" secondItem="sxo-9T-4N2" secondAttribute="bottom" constant="1" id="x4f-Qc-nJ9"/>
+                    <constraint firstItem="sxo-9T-4N2" firstAttribute="top" secondItem="K3w-Gw-LoT" secondAttribute="bottom" constant="5" id="yya-aP-T1S"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="collectionView" destination="K3w-Gw-LoT" id="AjA-Wk-uNN"/>
+                <outlet property="writeReviewBtn" destination="6xP-Ei-vyp" id="KS7-la-xyc"/>
+            </connections>
+            <point key="canvasLocation" x="119.56521739130436" y="173.77232142857142"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="charcoal">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="paleGrey">
+            <color red="0.94900000095367432" green="0.95300000905990601" blue="0.9570000171661377" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

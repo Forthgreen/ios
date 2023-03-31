@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="BuenosAires-Bold.otf">
+            <string>BuenosAires-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ShopCell" id="KGk-i7-Jjw" customClass="ShopCell" customModule="Forthgreen" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="363"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="363"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CLOTHING" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pve-bU-wbC">
+                        <rect key="frame" x="16" y="16" width="103.5" height="24"/>
+                        <fontDescription key="fontDescription" name="BuenosAires-Bold" family="Buenos Aires" pointSize="20"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Kw-Mc-1PF">
+                        <rect key="frame" x="239" y="13.5" width="65" height="29"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="29" id="97t-vp-hdz"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="BuenosAires-Bold" family="Buenos Aires" pointSize="14"/>
+                        <state key="normal" title="VIEW ALL">
+                            <color key="titleColor" name="charcoal"/>
+                        </state>
+                    </button>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Pho-a7-e8h">
+                        <rect key="frame" x="0.0" y="58.5" width="320" height="288.5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="16" minimumInteritemSpacing="16" id="rtF-jI-4bb">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="4Kw-Mc-1PF" secondAttribute="trailing" constant="16" id="7Bs-R7-a8S"/>
+                    <constraint firstItem="Pho-a7-e8h" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="7R3-hX-MqU"/>
+                    <constraint firstAttribute="bottom" secondItem="Pho-a7-e8h" secondAttribute="bottom" constant="16" id="BiA-OD-dCN"/>
+                    <constraint firstItem="Pho-a7-e8h" firstAttribute="top" secondItem="4Kw-Mc-1PF" secondAttribute="bottom" constant="16" id="KDB-sN-jZJ"/>
+                    <constraint firstItem="Pve-bU-wbC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="Rih-Bq-ooH"/>
+                    <constraint firstItem="Pve-bU-wbC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="lBl-Mw-mKu"/>
+                    <constraint firstAttribute="trailing" secondItem="Pho-a7-e8h" secondAttribute="trailing" id="nut-vm-vqb"/>
+                    <constraint firstItem="4Kw-Mc-1PF" firstAttribute="centerY" secondItem="Pve-bU-wbC" secondAttribute="centerY" id="yAv-fW-qFM"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="collectionView" destination="Pho-a7-e8h" id="eNz-TJ-48N"/>
+                <outlet property="headingLbl" destination="Pve-bU-wbC" id="8ua-NM-j3L"/>
+                <outlet property="viewAllBtn" destination="4Kw-Mc-1PF" id="MP7-Bb-wgb"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="76"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="charcoal">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

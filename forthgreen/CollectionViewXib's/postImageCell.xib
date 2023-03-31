@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="postImageCell" id="gTV-IL-0wX" customClass="postImageCell" customModule="Forthgreen" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="87" height="96"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="87" height="96"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rectangle" translatesAutoresizingMaskIntoConstraints="NO" id="w55-hN-oHR">
+                        <rect key="frame" x="0.0" y="0.0" width="87" height="96"/>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kog-q1-nA0" customClass="sainiCardView" customModule="SainiUtils">
+                        <rect key="frame" x="47" y="5" width="32" height="32"/>
+                        <subviews>
+                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cl7-7G-WTk">
+                                <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
+                                <state key="normal" image="ic_cross_white.png"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="cl7-7G-WTk" secondAttribute="bottom" id="6ax-Ow-PYZ"/>
+                            <constraint firstItem="cl7-7G-WTk" firstAttribute="leading" secondItem="Kog-q1-nA0" secondAttribute="leading" id="862-Jg-Ob8"/>
+                            <constraint firstAttribute="trailing" secondItem="cl7-7G-WTk" secondAttribute="trailing" id="SuA-4i-piR"/>
+                            <constraint firstAttribute="width" constant="32" id="ToE-ub-8G2"/>
+                            <constraint firstAttribute="height" constant="32" id="gYg-0t-NdR"/>
+                            <constraint firstItem="cl7-7G-WTk" firstAttribute="top" secondItem="Kog-q1-nA0" secondAttribute="top" id="tOe-e9-Zcu"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadious">
+                                <real key="value" value="16"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Kog-q1-nA0" secondAttribute="trailing" constant="8" id="6Qy-DC-l0T"/>
+                <constraint firstAttribute="trailing" secondItem="w55-hN-oHR" secondAttribute="trailing" id="SDa-LQ-vB0"/>
+                <constraint firstAttribute="bottom" secondItem="w55-hN-oHR" secondAttribute="bottom" id="XxQ-Nk-qaD"/>
+                <constraint firstItem="w55-hN-oHR" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="b1E-yQ-PGF"/>
+                <constraint firstItem="Kog-q1-nA0" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="iNq-eX-gEK"/>
+                <constraint firstItem="w55-hN-oHR" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="imF-UW-hOT"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="87" height="96"/>
+            <connections>
+                <outlet property="crossBtn" destination="cl7-7G-WTk" id="5On-kI-ump"/>
+                <outlet property="crossBtnView" destination="Kog-q1-nA0" id="BwF-6p-B6N"/>
+                <outlet property="feedImage" destination="w55-hN-oHR" id="T4l-mx-iSe"/>
+            </connections>
+            <point key="canvasLocation" x="164.49275362318841" y="86.383928571428569"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="ic_cross_white.png" width="13" height="13"/>
+        <image name="rectangle" width="414" height="412"/>
+    </resources>
+</document>

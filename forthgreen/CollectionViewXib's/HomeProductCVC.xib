@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="BuenosAires-Bold.otf">
+            <string>BuenosAires-Bold</string>
+        </array>
+        <array key="BuenosAires-Book.otf">
+            <string>BuenosAires-Book</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="HomeProductCVC" customModule="Forthgreen" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="199" height="315"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="199" height="315"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jUg-Ot-Rek">
+                        <rect key="frame" x="0.0" y="0.0" width="199" height="315"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rectangle" translatesAutoresizingMaskIntoConstraints="NO" id="BKY-OK-xKB">
+                                <rect key="frame" x="0.0" y="0.0" width="199" height="199"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ogJ-Lq-H0x">
+                                <rect key="frame" x="0.0" y="199" width="191" height="116"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product name " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c57-aN-dGq">
+                                        <rect key="frame" x="0.0" y="12" width="162" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="22" id="Xfj-8I-eK8"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="BuenosAires-Bold" family="Buenos Aires" pointSize="14"/>
+                                        <color key="textColor" name="charcoal"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Brand name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XNj-Au-ErW">
+                                        <rect key="frame" x="0.0" y="39" width="191" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="22" id="RIf-no-Mjx"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="BuenosAires-Book" family="Buenos Aires" pointSize="14"/>
+                                        <color key="textColor" name="charcoal"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zIc-xd-vyO">
+                                        <rect key="frame" x="161" y="8" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="sCM-7V-LR5"/>
+                                            <constraint firstAttribute="width" constant="30" id="wll-gD-WhA"/>
+                                        </constraints>
+                                        <state key="normal" image="bookmark"/>
+                                        <state key="selected" image="bookmard_selected"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="$ Loading..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mx0-ZZ-FPD">
+                                        <rect key="frame" x="0.0" y="66" width="191" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="22" id="A0H-Ev-Ae1"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="BuenosAires-Book" family="Buenos Aires" pointSize="14"/>
+                                        <color key="textColor" name="charcoal"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="XNj-Au-ErW" firstAttribute="trailing" secondItem="c57-aN-dGq" secondAttribute="trailing" constant="29" id="1DO-Zf-Jxa"/>
+                                    <constraint firstItem="XNj-Au-ErW" firstAttribute="leading" secondItem="c57-aN-dGq" secondAttribute="leading" id="4hW-dd-LMg"/>
+                                    <constraint firstItem="c57-aN-dGq" firstAttribute="top" secondItem="ogJ-Lq-H0x" secondAttribute="top" constant="12" id="6lC-PK-fyu"/>
+                                    <constraint firstAttribute="trailing" secondItem="zIc-xd-vyO" secondAttribute="trailing" id="CW9-wJ-czQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="c57-aN-dGq" secondAttribute="trailing" constant="29" id="Hr8-kj-4yW"/>
+                                    <constraint firstItem="zIc-xd-vyO" firstAttribute="top" secondItem="ogJ-Lq-H0x" secondAttribute="top" constant="8" id="JPo-X7-SXB"/>
+                                    <constraint firstItem="mx0-ZZ-FPD" firstAttribute="leading" secondItem="c57-aN-dGq" secondAttribute="leading" id="Jpn-pT-grD"/>
+                                    <constraint firstItem="mx0-ZZ-FPD" firstAttribute="top" secondItem="XNj-Au-ErW" secondAttribute="bottom" constant="5" id="Lib-a7-xA4"/>
+                                    <constraint firstAttribute="height" constant="116" id="N8n-4M-Hyr"/>
+                                    <constraint firstItem="c57-aN-dGq" firstAttribute="leading" secondItem="ogJ-Lq-H0x" secondAttribute="leading" id="mJN-fY-0UO"/>
+                                    <constraint firstItem="XNj-Au-ErW" firstAttribute="top" secondItem="zIc-xd-vyO" secondAttribute="bottom" constant="1" id="rIG-fm-VgP"/>
+                                    <constraint firstItem="mx0-ZZ-FPD" firstAttribute="trailing" secondItem="XNj-Au-ErW" secondAttribute="trailing" id="uO2-2N-P45"/>
+                                    <constraint firstAttribute="bottom" secondItem="mx0-ZZ-FPD" secondAttribute="bottom" constant="28" id="udd-h6-WBJ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="ogJ-Lq-H0x" secondAttribute="trailing" constant="8" id="5xI-ZT-1rX"/>
+                            <constraint firstAttribute="trailing" secondItem="BKY-OK-xKB" secondAttribute="trailing" id="Fnv-LM-uOb"/>
+                            <constraint firstItem="BKY-OK-xKB" firstAttribute="top" secondItem="jUg-Ot-Rek" secondAttribute="top" id="MuD-OL-6VJ"/>
+                            <constraint firstItem="ogJ-Lq-H0x" firstAttribute="leading" secondItem="jUg-Ot-Rek" secondAttribute="leading" id="PhT-v7-2MM"/>
+                            <constraint firstItem="ogJ-Lq-H0x" firstAttribute="top" secondItem="BKY-OK-xKB" secondAttribute="bottom" id="VgC-sl-8jq"/>
+                            <constraint firstItem="BKY-OK-xKB" firstAttribute="leading" secondItem="jUg-Ot-Rek" secondAttribute="leading" id="kGG-gy-lEE"/>
+                            <constraint firstAttribute="bottom" secondItem="ogJ-Lq-H0x" secondAttribute="bottom" id="rrv-s8-VoO"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="jUg-Ot-Rek" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="KQh-Ni-E7K"/>
+                <constraint firstAttribute="trailing" secondItem="jUg-Ot-Rek" secondAttribute="trailing" id="ekx-Mo-VtV"/>
+                <constraint firstItem="jUg-Ot-Rek" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="pFf-oX-Rhh"/>
+                <constraint firstAttribute="bottom" secondItem="jUg-Ot-Rek" secondAttribute="bottom" id="wcE-HY-oi9"/>
+            </constraints>
+            <connections>
+                <outlet property="bookmarkBtn" destination="zIc-xd-vyO" id="Xvi-As-Yd7"/>
+                <outlet property="brandNameLbl" destination="XNj-Au-ErW" id="geY-Ef-I0y"/>
+                <outlet property="priceLbl" destination="mx0-ZZ-FPD" id="11Y-dY-TCS"/>
+                <outlet property="productImage" destination="BKY-OK-xKB" id="WpB-tN-ayw"/>
+                <outlet property="productNameLbl" destination="c57-aN-dGq" id="sEa-Op-kWq"/>
+            </connections>
+            <point key="canvasLocation" x="132" y="154"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="bookmard_selected" width="32" height="32"/>
+        <image name="bookmark" width="33" height="32"/>
+        <image name="rectangle" width="414" height="412"/>
+        <namedColor name="charcoal">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
