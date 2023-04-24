@@ -20,6 +20,8 @@ class OtherUserProfileInfoCell: UITableViewCell {
     @IBOutlet weak var userNameLbl: UILabel!
     @IBOutlet weak var nameLbl: UILabel!
     @IBOutlet weak var profileImage: UIImageView!
+    
+    @IBOutlet weak var viewFollow: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

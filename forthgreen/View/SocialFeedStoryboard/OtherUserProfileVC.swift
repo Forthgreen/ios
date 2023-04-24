@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SainiUtils
 
 protocol didPressFollowBtnDelegate {
     func didRecieveFollowAction(userId: String, isFollow: Bool)
@@ -29,7 +30,9 @@ class OtherUserProfileVC: UIViewController {
     @IBOutlet weak var shimmerView: UIView!
     @IBOutlet weak var tableView: UITableView!
     
+    private var alertVM: Alert = Alert()
     var isCurrentScreen = false
+    var isMySelfBlocked = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +40,8 @@ class OtherUserProfileVC: UIViewController {
         // Do any additional setup after loading the view.
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(self.appEnteredFromBackground),
-                                               name: UIApplication.willEnterForegroundNotification, object: nil)
+                                               name: UIApplication.willEnterForegroundNotification,
+                                               object: nil)
         configUI()
     }
     
@@ -119,21 +123,29 @@ class OtherUserProfileVC: UIViewController {
             if self.profileInfoVM.success.value {
                 self.shimmerView.hideSkeleton()
                 self.shimmerView.isHidden = true
+                self.tableView.reloadData()
             }
         }
-        
+        self.alertVM.delegate = self
         profileInfoVM.userInfo.bind { [weak self](_) in
             guard let `self` = self else { return }
-            self.titleLbl.text = "\(self.profileInfoVM.userInfo.value.firstName)"//" \(self.profileInfoVM.userInfo.value.lastName)"
+            let profileInfo = self.profileInfoVM.userInfo.value
+            self.titleLbl.text = "\(profileInfo.firstName)"//" \(self.profileInfoVM.userInfo.value.lastName)"
             if self.profileInfoVM.userInfo.value.dummyUser {
                 self.navigationItem.rightBarButtonItem?.image = UIImage()
                 self.navigationItem.rightBarButtonItem?.isEnabled = false
             } else {
                 self.navigationItem.rightBarButtonItem?.isEnabled = true
             }
+            print(profileInfo.isSenderBlock," ", self.userId)
+            if profileInfo.isBlock == false && profileInfo.isSenderBlock.isEmpty == false {
+                self.isMySelfBlocked = true
+            } else {
+                self.isMySelfBlocked = false
+            }
             DispatchQueue.main.async {
                 self.tableView.reloadData()
-                delay(0.5) {
+                delay(0.1) {
                     self.playFirstVisibleVideo(true)
                 }
             }
@@ -161,6 +173,16 @@ class OtherUserProfileVC: UIViewController {
                 }
             }
         }
+        
+        profileInfoVM.successBlock.bind { [weak self](_) in
+            guard let `self` = self else { return }
+            if self.profileInfoVM.successBlock.value {
+                delay(0.5) {
+                    let request = ProfileInfoRequest(userRef: self.userId)
+                    self.profileInfoVM.fetchInfo(request: request)
+                }
+            }
+        }
     }
     
     //MARK: - backBtnIsPressed
@@ -179,6 +201,25 @@ class OtherUserProfileVC: UIViewController {
         }
         actionSheet.addAction(cancelButton)
         
+        if isMySelfBlocked == false {
+            if self.profileInfoVM.userInfo.value.isBlock == true {
+                let blockUserBtn = UIAlertAction(title: STATIC_LABELS.unblockUser.rawValue, style: .default)
+                { _ in
+                    log.result(STATIC_LABELS.blockUser.rawValue)/
+                    self.shimmerView.showSkeleton()
+                    self.shimmerView.isHidden = false
+                    self.profileInfoVM.blockUser(request: ProfileBlockRequest(blockingRef: self.profileInfoVM.userInfo.value.id, block: false))
+                }
+                actionSheet.addAction(blockUserBtn)
+            } else {
+                let blockUserBtn = UIAlertAction(title: STATIC_LABELS.blockUser.rawValue, style: .default)
+                { _ in
+                    log.result(STATIC_LABELS.blockUser.rawValue)/
+                    self.showBloackAlert()
+                }
+                actionSheet.addAction(blockUserBtn)
+            }
+        }
         let reportBtn = UIAlertAction(title: STATIC_LABELS.report.rawValue, style: .destructive)
         { _ in
             log.result(STATIC_LABELS.report.rawValue)/
@@ -197,6 +238,16 @@ class OtherUserProfileVC: UIViewController {
         self.present(actionSheet, animated: true, completion: nil)
     }
     
+    func showBloackAlert() {
+        DispatchQueue.main.async {
+            self.alertVM.displayAlert(vc: self,
+                                      alertTitle: STATIC_LABELS.blockUser.rawValue,
+                                      message: STATIC_LABELS.blockNotification.rawValue,
+                                      okBtnTitle: STATIC_LABELS.block.rawValue,
+                                      cancelBtnTitle: STATIC_LABELS.cancel.rawValue)
+        }
+        
+    }
 }
 
 //MARK: - TableView DataSource and Delegate Methods
@@ -212,7 +263,18 @@ extension OtherUserProfileVC: UITableViewDataSource, UITableViewDelegate {
             return 1
         }
         else {
-            return profileInfoVM.userInfo.value.posts.count
+            if profileInfoVM.userInfo.value.isBlock == true {
+                tableView.sainiSetEmptyMessage(STATIC_LABELS.blockUserTableMessage.rawValue)
+                return 0
+            } else if profileInfoVM.userInfo.value.isSenderBlock.isEmpty == false {
+                tableView.sainiSetEmptyMessage(STATIC_LABELS.blockByOtherUserMessage.rawValue)
+                return 0
+            } else {
+                tableView.restore()
+                tableView.separatorStyle = .none
+                return profileInfoVM.userInfo.value.posts.count
+            }
+           
         }
     }
     
@@ -251,13 +313,18 @@ extension OtherUserProfileVC: UITableViewDataSource, UITableViewDelegate {
             }
             cell.followersCount.text = "\(profileInfoVM.userInfo.value.followers)"
             cell.followingCount.text = "\(profileInfoVM.userInfo.value.followings)"
-            if profileInfoVM.userInfo.value.isFollow {
-                cell.followBtn.setTitle(STATIC_LABELS.followingBtnTitle.rawValue, for: .normal)
-                cell.followBtn.backgroundColor = AppColors.paleGrey
-            }
-            else {
-                cell.followBtn.setTitle(STATIC_LABELS.followBtnTitle.rawValue, for: .normal)
-                cell.followBtn.backgroundColor = AppColors.turqoiseGreen
+            if profileInfoVM.userInfo.value.isBlock == false && profileInfoVM.userInfo.value.isSenderBlock.isEmpty == true {
+                cell.viewFollow.isHidden = false
+                if profileInfoVM.userInfo.value.isFollow {
+                    cell.followBtn.setTitle(STATIC_LABELS.followingBtnTitle.rawValue, for: .normal)
+                    cell.followBtn.backgroundColor = AppColors.paleGrey
+                }
+                else {
+                    cell.followBtn.setTitle(STATIC_LABELS.followBtnTitle.rawValue, for: .normal)
+                    cell.followBtn.backgroundColor = AppColors.turqoiseGreen
+                }
+            } else {
+                cell.viewFollow.isHidden = true
             }
             cell.followerFollowingBtn.tag = indexPath.row
             cell.followerFollowingBtn.addTarget(self, action: #selector(followerFollowingBtnIsPressed), for: .touchUpInside)
@@ -456,5 +523,18 @@ extension OtherUserProfileVC: FollowCountDelegate {
     func fetchFollowerCount(follower: Int, following: Int) {
         profileInfoVM.userInfo.value.followers = follower
         profileInfoVM.userInfo.value.followings = following
+    }
+}
+
+extension OtherUserProfileVC: AlertDelegate {
+    func didClickOkBtn() {
+        print("Block User \(self.profileInfoVM.userInfo.value.id)")
+        self.shimmerView.showSkeleton()
+        self.shimmerView.isHidden = false
+        self.profileInfoVM.blockUser(request: ProfileBlockRequest(blockingRef: self.profileInfoVM.userInfo.value.id, block: true))
+    }
+    
+    func didClickCancelBtn() {
+        
     }
 }

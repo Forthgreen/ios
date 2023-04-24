@@ -119,6 +119,11 @@ class CustomTabBarController: UITabBarController,CustomTabBarViewDelegate{
         setSelectedViewController(selectedViewController: self.viewControllers![index], tabIndex: index)
     }
     
+    func selectedTabView(index: Int = 0) {
+        self.selectedIndex = index
+        self.selectedViewController = self.viewControllers![index]
+    }
+    
     func setSelectedViewController(selectedViewController:UIViewController, tabIndex:Int)
     {
         

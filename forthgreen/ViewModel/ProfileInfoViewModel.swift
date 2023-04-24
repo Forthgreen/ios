@@ -18,6 +18,7 @@ protocol ProfileInfoDelegate {
 
 struct ProfileInfoViewModel: ProfileInfoDelegate {
     var success: Box<Bool> = Box(Bool())
+    var successBlock: Box<Bool> = Box(Bool())
     var userInfo: Box<ProfileInfo> = Box(ProfileInfo())
     var postList: Box<[SocialFeed]> = Box([SocialFeed]())
     
@@ -29,8 +30,31 @@ struct ProfileInfoViewModel: ProfileInfoDelegate {
                         let success = try JSONDecoder().decode(ProfileInfoResponse.self, from: response!) // decode the response into model
                         switch success.code{
                         case 100:
+                            self.userInfo.value = ProfileInfo()
                             self.userInfo.value = success.data
                             self.success.value = true
+                            break
+                        default:
+                            log.error("\(Log.stats()) \(success.message)")/
+                        }
+                    }
+                    catch let err {
+                        log.error("ERROR OCCURED WHILE DECODING: \(Log.stats()) \(err)")/
+                    }
+                }
+            }
+        }
+    }
+    
+    func blockUser(request: ProfileBlockRequest) {
+        DispatchQueue.global().async {
+            APIManager.sharedInstance.I_AM_COOL(params: request.toJSON(), api: API.USER.blockUser, Loader: false, isMultipart: false) { (response) in
+                if response != nil{                             //if response is not empty
+                    do {
+                        let success = try JSONDecoder().decode(LOCBlockResultModel.self, from: response!) // decode the response into model
+                        switch success.code{
+                        case 100:
+                            self.successBlock.value = true
                             break
                         default:
                             log.error("\(Log.stats()) \(success.message)")/

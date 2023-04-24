@@ -42,11 +42,15 @@ struct ProfileInfo: Codable {
     let email: String
     let gender: Int
     var isFollow, dummyUser: Bool
+    var isBlock: Bool
+    var isSenderBlock: [IsSenderBlock]
 
     enum CodingKeys: String, CodingKey {
         case lastName, firstName, createdOn, posts
         case id = "_id"
         case followings, bio, image, username, followers, email, gender, isFollow, dummyUser
+        case isBlock
+        case isSenderBlock
     }
     
     init(from decoder: Decoder) throws {
@@ -65,6 +69,8 @@ struct ProfileInfo: Codable {
         gender = try values.decodeIfPresent(Int.self, forKey: .gender) ?? DocumentDefaultValues.Empty.int
         isFollow = try values.decodeIfPresent(Bool.self, forKey: .isFollow) ?? DocumentDefaultValues.Empty.bool
         dummyUser = try values.decodeIfPresent(Bool.self, forKey: .dummyUser) ?? DocumentDefaultValues.Empty.bool
+        isBlock = try values.decodeIfPresent(Bool.self, forKey: .isBlock) ?? DocumentDefaultValues.Empty.bool
+        isSenderBlock = try values.decodeIfPresent([IsSenderBlock].self, forKey: .isSenderBlock) ?? []
     }
     
     internal init() {
@@ -82,6 +88,42 @@ struct ProfileInfo: Codable {
         self.gender = DocumentDefaultValues.Empty.int
         self.isFollow = DocumentDefaultValues.Empty.bool
         self.dummyUser = DocumentDefaultValues.Empty.bool
+        self.isBlock = DocumentDefaultValues.Empty.bool
+        self.isSenderBlock = []
+    }
+}
+
+// MARK: - IsSenderBlock
+struct IsSenderBlock: Codable {
+    var blockingRef, createdOn, id, userRef: String
+    var v: Int
+    var updatedOn: String
+
+    enum CodingKeys: String, CodingKey {
+        case blockingRef, createdOn
+        case id = "_id"
+        case userRef
+        case v = "__v"
+        case updatedOn
+    }
+    
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        id = try values.decodeIfPresent(String.self, forKey: .id) ?? DocumentDefaultValues.Empty.string
+        blockingRef = try values.decodeIfPresent(String.self, forKey: .blockingRef) ?? DocumentDefaultValues.Empty.string
+        createdOn = try values.decodeIfPresent(String.self, forKey: .createdOn) ?? DocumentDefaultValues.Empty.string
+        userRef = try values.decodeIfPresent(String.self, forKey: .userRef) ?? DocumentDefaultValues.Empty.string
+        v = try values.decodeIfPresent(Int.self, forKey: .v) ?? DocumentDefaultValues.Empty.int
+        updatedOn = try values.decodeIfPresent(String.self, forKey: .updatedOn) ?? DocumentDefaultValues.Empty.string
+    }
+    
+    internal init() {
+        self.id = DocumentDefaultValues.Empty.string
+        self.blockingRef = DocumentDefaultValues.Empty.string
+        self.createdOn = DocumentDefaultValues.Empty.string
+        self.v = DocumentDefaultValues.Empty.int
+        self.userRef = DocumentDefaultValues.Empty.string
+        self.updatedOn = DocumentDefaultValues.Empty.string
     }
 }
 
@@ -113,4 +155,11 @@ struct Post: Codable {
         likes = try values.decodeIfPresent(Int.self, forKey: .likes) ?? DocumentDefaultValues.Empty.int
         updatedOn = try values.decodeIfPresent(String.self, forKey: .updatedOn) ?? DocumentDefaultValues.Empty.string
     }
+}
+
+
+// MARK: - LOCContactsModel
+struct LOCBlockResultModel: Codable {
+    var code: Int?
+    var message, format, timestamp: String?
 }

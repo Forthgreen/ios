@@ -36,7 +36,7 @@ enum HOME_STORYBOARD: String {
 
 //MARK: - SOCIAL_FEED_STORYBOARD
 enum SOCIAL_FEED_STORYBOARD: String {
-    case OtherUserProfileVC, SearchPostVC, SocialFeedVC, PostDetailVC, RepliesVC, AddPostVC, CommentListVC, PostLikeVC, InviteUsersVC
+    case OtherUserProfileVC, SearchPostVC, SocialFeedVC, PostDetailVC, RepliesVC, AddPostVC, CommentListVC, PostLikeVC, InviteUsersVC, AskLoginPopupVC
 }
 
 //MARK: - NOTIFICATION_STORYBOARD
@@ -67,7 +67,9 @@ enum STATIC_LABELS: String {
     case removeComment = "Remove Comment"
     case removeReply = "Remove Reply"
     case reportAbuse = "Report Abuse"
-    case report = "Report"
+    case report = "Report User"
+    case blockUser = "Block User"
+    case unblockUser = "Unblock User"
     case reportPost = "Report Post"
     case reportComment = "Report Comment"
     case reportReply = "Report Reply"
@@ -110,6 +112,8 @@ enum STATIC_LABELS: String {
     case profileUpdated = "Profile updated successfully"
     
     case noNotifications = "No Notifications yet."
+    case blockUserTableMessage = "You’ve blocked this user."
+    case blockByOtherUserMessage = "This user has blocked you."
     case noPostExist = "Post Deleted by the user."
     case noCommentExist = "Comment Deleted by the user."
     case noReplyExist = "Reply Deleted by the user."
@@ -142,6 +146,11 @@ enum STATIC_LABELS: String {
     
     case invitationSent = "Invitation sent"
     case invitationNotSend = "Couldn’t send the invitation. Try again later "
+    case loginToContinue = "Login to Continue"
+    case loginToContinueMessage = "It looks like you're not currently logged in. If you want to continue, you'll need to either Login or Create an Account."
+    case login = "Login"
+    case blockNotification = "This users will no longer be able to follow you, and you will not see notifications from this user."
+    case block = "Block"
 }
 
 //MARK: - STATIC_URLS

@@ -272,14 +272,7 @@ extension BrandDetailVC: UITableViewDelegate,UITableViewDataSource {
     @objc func clickToBookmark(_ sender: UIButton) {
         if brandDetail != nil {
             if AppModel.shared.isGuestUser {
-//                self.navigationController?.setNavigationBarHidden(true, animated: false)
-//                AppModel.shared.showNabBarView = .No
-                if self.guestUserView == nil {
-                    self.guestUserView = GuestUserView.init()
-                }
-                displaySubViewtoParentView(self.view, subview: guestUserView)
-                self.guestUserView.isHidden = false
-                self.guestUserView.crossBtn.isHidden = true
+                self.showLoginAlert()
             }
             else {
                 AppDelegate().sharedDelegate().vibrateOnTouch()
@@ -287,6 +280,17 @@ extension BrandDetailVC: UITableViewDelegate,UITableViewDataSource {
             }
         }
     }
+    
+    func showLoginAlert() {
+        DispatchQueue.main.async {
+            var alertVM: Alert = Alert()
+            alertVM.delegate = self
+            alertVM.displayAlert(vc: self, alertTitle: STATIC_LABELS.loginToContinue.rawValue,
+                                      message: STATIC_LABELS.loginToContinueMessage.rawValue,
+                                      okBtnTitle: STATIC_LABELS.login.rawValue,
+                                      cancelBtnTitle: STATIC_LABELS.cancel.rawValue)
+        }
+     }
     
     //MARK: - viewBtnIsPressed
     @objc func viewBtnIsPressed(sender: UIButton) {
@@ -305,12 +309,7 @@ extension BrandDetailVC: UITableViewDelegate,UITableViewDataSource {
     @objc func saveBtnIsPressed(sender: UIButton) {
         if AppModel.shared.isGuestUser {
 //            self.navigationController?.setNavigationBarHidden(true, animated: false)
-            AppModel.shared.showNabBarView = .No
-            if self.guestUserView == nil {
-                self.guestUserView = GuestUserView.init()
-            }
-            displaySubViewtoParentView(self.view, subview: guestUserView)
-            self.guestUserView.isHidden = false
+            self.showLoginAlert()
         }
         else {
             self.navigationController?.setNavigationBarHidden(false, animated: false)
@@ -360,6 +359,16 @@ extension BrandDetailVC: UITableViewDelegate,UITableViewDataSource {
         }
     }
     
+}
+
+extension BrandDetailVC: AlertDelegate {
+    func didClickOkBtn() {
+        (UIApplication.shared.delegate as? AppDelegate)?.logoutUser()
+    }
+    
+    func didClickCancelBtn() {
+        
+    }
 }
 
 //MARK: - BrandDetailDelegate

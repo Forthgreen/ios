@@ -11,3 +11,8 @@ import Foundation
 struct ProfileInfoRequest: Encodable {
     var userRef: String
 }
+
+struct ProfileBlockRequest: Encodable {
+    var blockingRef: String
+    var block: Bool
+}

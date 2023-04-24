@@ -71,6 +71,7 @@
 		88FF6E9727266C1300ED3C3B /* RestaurantMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FF6E9627266C1300ED3C3B /* RestaurantMapViewModel.swift */; };
 		D03CE3A229546DEA00EEB139 /* SocialFeedTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03CE3A129546DEA00EEB139 /* SocialFeedTabVC.swift */; };
 		D0640D1229CB4452003C208E /* InviteUsersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0640D1129CB4452003C208E /* InviteUsersVC.swift */; };
+		D09E910929E5A16B00D3074F /* AskLoginPopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09E910829E5A16B00D3074F /* AskLoginPopupVC.swift */; };
 		D0D22F7A29D1B49000A86721 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D22F7929D1B49000A86721 /* Extension.swift */; };
 		EA61F5EF67A77D1E989679FF /* Pods_forthgreen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED30AB50B9E5B3ED412E28FA /* Pods_forthgreen.framework */; };
 		FA101072253217BD0080225C /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA101071253217BD0080225C /* MapVC.swift */; };
@@ -370,6 +371,7 @@
 		88FF6E9627266C1300ED3C3B /* RestaurantMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantMapViewModel.swift; sourceTree = "<group>"; };
 		D03CE3A129546DEA00EEB139 /* SocialFeedTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialFeedTabVC.swift; sourceTree = "<group>"; };
 		D0640D1129CB4452003C208E /* InviteUsersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteUsersVC.swift; sourceTree = "<group>"; };
+		D09E910829E5A16B00D3074F /* AskLoginPopupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskLoginPopupVC.swift; sourceTree = "<group>"; };
 		D0D22F7929D1B49000A86721 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		ED30AB50B9E5B3ED412E28FA /* Pods_forthgreen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_forthgreen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA101071253217BD0080225C /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
@@ -810,6 +812,7 @@
 				FA40F93724600E6500FC5019 /* ResetPwdPopUp.swift */,
 				FA527207261C7FB700D93F0C /* OnboardingVC.swift */,
 				888576B827ABB45B002BA0EC /* SocialLogin.swift */,
+				D09E910829E5A16B00D3074F /* AskLoginPopupVC.swift */,
 			);
 			path = MainStoryboard;
 			sourceTree = "<group>";
@@ -1844,6 +1847,7 @@
 				FAB965EC262EBDCE006C76D4 /* LikeCommentViewModel.swift in Sources */,
 				88AAF0E8272CFF0B00E78FAC /* Label.swift in Sources */,
 				FAB96607262EE3C6006C76D4 /* FollowUserListRequest.swift in Sources */,
+				D09E910929E5A16B00D3074F /* AskLoginPopupVC.swift in Sources */,
 				FADBE05B245C467C00823EC6 /* SceneDelegate.swift in Sources */,
 				18B8D7812806A3A100318A92 /* ASVideoContainer.swift in Sources */,
 				FAB965F8262ECCF6006C76D4 /* FollowUserViewModel.swift in Sources */,
@@ -2052,7 +2056,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = NZZUYZM26J;
 				INFOPLIST_FILE = forthgreen/Info.plist;
@@ -2080,7 +2084,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = NZZUYZM26J;
 				INFOPLIST_FILE = forthgreen/Info.plist;

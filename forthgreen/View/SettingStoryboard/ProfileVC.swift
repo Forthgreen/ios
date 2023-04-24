@@ -88,22 +88,24 @@ class ProfileVC: UIViewController {
         profileInfoVM.fetchInfo(request: request)
     }
     
+    func showLoginAlert() {
+        DispatchQueue.main.async {
+            var alertVM: Alert = Alert()
+            alertVM.delegate = self
+            alertVM.displayAlert(vc: self, alertTitle: STATIC_LABELS.loginToContinue.rawValue,
+                                      message: STATIC_LABELS.loginToContinueMessage.rawValue,
+                                      okBtnTitle: STATIC_LABELS.login.rawValue,
+                                      cancelBtnTitle: STATIC_LABELS.cancel.rawValue)
+        }
+     }
+    
     func setupGuestUser() {
         if AppModel.shared.isGuestUser {
-            if self.guestUserView == nil {
-                self.guestUserView = GuestUserView.init()
-            }
-            displaySubViewtoParentView(self.view, subview: guestUserView)
-            guestUserView.crossBtn.isHidden = true
-            guestUserView.isHidden = false
+            self.showLoginAlert()
         }
-//        else if profileInfoVM.userInfo.value.posts.count == 0 {
-//            shimmerView.isHidden = false
-//            shimmerView.isSkeletonable = true
-//            shimmerView.showAnimatedGradientSkeleton()
-//            guestUserView.isHidden = true
-//        }
     }
+    
+    
     
     //MARK: - configUI
     private func configUI() {
@@ -113,6 +115,7 @@ class ProfileVC: UIViewController {
         tableView.register(UINib(nibName: TABLE_VIEW_CELL.ProfileInfoCell.rawValue, bundle: nil), forCellReuseIdentifier: TABLE_VIEW_CELL.ProfileInfoCell.rawValue)
         
         if !AppModel.shared.isGuestUser {
+            self.titleLbl.isHidden = false
             userId = AppModel.shared.currentUser?.id ?? DocumentDefaultValues.Empty.string
             let request = ProfileInfoRequest(userRef: userId)
             profileInfoVM.fetchInfo(request: request)
@@ -120,6 +123,8 @@ class ProfileVC: UIViewController {
             if AppModel.shared.currentUser != nil {
                 titleLbl.text = "\(AppModel.shared.currentUser!.firstName)"
             }
+        } else {
+            self.titleLbl.isHidden = true
         }
         
         profileInfoVM.success.bind { [weak self](_) in
@@ -207,13 +212,21 @@ class ProfileVC: UIViewController {
     
     //MARK: - sideMenuBtnIsPressed
     @IBAction func sideMenuBtnIsPressed(_ sender: UIButton) {
-        guard let sideMenu = SideMenuManager.default.leftMenuNavigationController else { return }
-        present(sideMenu, animated: true, completion: nil)
+        if AppModel.shared.isGuestUser {
+            self.showLoginAlert()
+        } else {
+            guard let sideMenu = SideMenuManager.default.leftMenuNavigationController else { return }
+            present(sideMenu, animated: true, completion: nil)
+        }
     }
     
     //MARK: - shareProfileBtnIsPressed
     @IBAction func shareProfileBtnIsPressed(_ sender: UIButton) {
-        shareProfile()
+        if AppModel.shared.isGuestUser {
+            self.showLoginAlert()
+        } else {
+            shareProfile()
+        }
     }
     
     //MARK: - shareBrand
@@ -240,6 +253,16 @@ class ProfileVC: UIViewController {
                 self.present(activityViewController, animated: true, completion: nil)
             }
         }
+    }
+}
+
+extension ProfileVC: AlertDelegate {
+    func didClickOkBtn() {
+        (UIApplication.shared.delegate as? AppDelegate)?.logoutUser()
+    }
+    
+    func didClickCancelBtn() {
+        
     }
 }
 
@@ -443,10 +466,14 @@ extension ProfileVC: UITableViewDataSource, UITableViewDelegate {
     
     //MARK: - followerFollowingBtnIsPressed
     @objc func followerFollowingBtnIsPressed(_ sender: UIButton) {
-        let vc = STORYBOARD.SETTING.instantiateViewController(withIdentifier: SETTING_STORYBOARD.FollowerListVC.rawValue) as! FollowerListVC
-        vc.username = "\(profileInfoVM.userInfo.value.firstName)" //" \(profileInfoVM.userInfo.value.lastName)"
-        vc.followCountDelegate = self
-        self.navigationController?.pushViewController(vc, animated: true)
+        if AppModel.shared.isGuestUser {
+            self.showLoginAlert()
+        } else {
+            let vc = STORYBOARD.SETTING.instantiateViewController(withIdentifier: SETTING_STORYBOARD.FollowerListVC.rawValue) as! FollowerListVC
+            vc.username = "\(profileInfoVM.userInfo.value.firstName)" //" \(profileInfoVM.userInfo.value.lastName)"
+            vc.followCountDelegate = self
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
     //MARK: - threeDotBtnIsPressed

@@ -539,12 +539,28 @@ extension ProductDetailVC: UITableViewDataSource, UITableViewDelegate {
     }
     
     func showGuestView() {
-        if self.guestUserView == nil {
-            self.guestUserView = GuestUserView.init()
+        self.showLoginAlert()
+    }
+    
+    func showLoginAlert() {
+        DispatchQueue.main.async {
+            var alertVM: Alert = Alert()
+            alertVM.delegate = self
+            alertVM.displayAlert(vc: self, alertTitle: STATIC_LABELS.loginToContinue.rawValue,
+                                      message: STATIC_LABELS.loginToContinueMessage.rawValue,
+                                      okBtnTitle: STATIC_LABELS.login.rawValue,
+                                      cancelBtnTitle: STATIC_LABELS.cancel.rawValue)
         }
-        displaySubViewtoParentView(self.view, subview: guestUserView)
-        guestUserView.isHidden = false
-        guestUserView.crossBtn.isHidden = true
+     }
+}
+
+extension ProductDetailVC: AlertDelegate {
+    func didClickOkBtn() {
+        (UIApplication.shared.delegate as? AppDelegate)?.logoutUser()
+    }
+    
+    func didClickCancelBtn() {
+        
     }
 }
 

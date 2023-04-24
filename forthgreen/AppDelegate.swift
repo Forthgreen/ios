@@ -140,6 +140,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
+    func logoutUser() {
+        KeychainItem.deleteUserIdentifierFromKeychain()
+        UserDefaults.standard.set("", forKey: "token")
+        UserDefaults.standard.removeObject(forKey: "currentUser")
+        AppModel.shared.guestUserType = .none
+        AppModel.shared.token = ""
+        let loginVC = STORYBOARD.MAIN.instantiateViewController(withIdentifier: "LoginNavigation") as! UINavigationController
+        UIApplication.shared.windows.first?.rootViewController = loginVC
+        UIApplication.shared.windows.first?.makeKeyAndVisible()
+    }
+    
     func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
       // pass the url to the handle deep link call
       Branch.getInstance().continue(userActivity)

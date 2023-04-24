@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -34,13 +35,13 @@
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BiB-Xu-sqp">
-                        <rect key="frame" x="89" y="137.5" width="7" height="14"/>
+                        <rect key="frame" x="92" y="138" width="7" height="14.5"/>
                         <fontDescription key="fontDescription" name="BuenosAires-Bold" family="Buenos Aires" pointSize="12"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lz9-ai-j63">
-                        <rect key="frame" x="16" y="136" width="7" height="17"/>
+                        <rect key="frame" x="16" y="136.5" width="7" height="17"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="17" id="vR9-E0-kBo"/>
                         </constraints>
@@ -48,18 +49,18 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NzM-4Y-LgP">
-                        <rect key="frame" x="16" y="129.5" width="133.5" height="30"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NzM-4Y-LgP">
+                        <rect key="frame" x="16" y="130" width="141" height="30"/>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EQO-G7-fPj">
-                        <rect key="frame" x="16" y="169" width="288" height="81.5"/>
+                        <rect key="frame" x="16" y="169.5" width="288" height="81"/>
                         <string key="text">Our philosophy was born as a stand against the system developed by the fashion industry. We put the resources required to lead the transformation towards a fairer</string>
                         <fontDescription key="fontDescription" name="BuenosAires-Book" family="Buenos Aires" pointSize="14"/>
                         <color key="textColor" name="charcoal"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Following" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9bs-eN-wNM">
-                        <rect key="frame" x="98" y="129.5" width="51.5" height="30"/>
+                        <rect key="frame" x="101" y="130" width="56" height="30"/>
                         <fontDescription key="fontDescription" name="BuenosAires-Book" family="Buenos Aires" pointSize="12"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -82,67 +83,84 @@
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Followers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6p1-Ra-Dlb">
-                        <rect key="frame" x="25" y="137.5" width="52" height="14"/>
+                        <rect key="frame" x="25" y="138" width="55" height="14.5"/>
                         <fontDescription key="fontDescription" name="BuenosAires-Book" family="Buenos Aires" pointSize="12"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="A3x-gm-KJX">
-                        <rect key="frame" x="85" y="27" width="219" height="34.5"/>
+                        <rect key="frame" x="85" y="26.5" width="219" height="35.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="loading..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0AN-vt-pfc">
-                                <rect key="frame" x="0.0" y="0.0" width="219" height="16.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="219" height="17"/>
                                 <fontDescription key="fontDescription" name="BuenosAires-Bold" family="Buenos Aires" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@loading..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ihO-SV-l9y">
-                                <rect key="frame" x="0.0" y="20.5" width="219" height="14"/>
+                                <rect key="frame" x="0.0" y="21" width="219" height="14.5"/>
                                 <fontDescription key="fontDescription" name="BuenosAires-Book" family="Buenos Aires" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                     </stackView>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SGK-2m-Bay">
-                        <rect key="frame" x="16" y="88" width="288" height="32"/>
-                        <color key="backgroundColor" name="turquoiseGreen"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="32" id="cdw-Xh-7ps"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" name="BuenosAires-Bold" family="Buenos Aires" pointSize="12"/>
-                        <state key="normal" title="FOLLOW">
-                            <color key="titleColor" name="charcoal"/>
-                        </state>
-                    </button>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Pmw-YP-Ati">
+                        <rect key="frame" x="0.0" y="72" width="320" height="45"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HJH-5G-is7">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="45"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SGK-2m-Bay">
+                                        <rect key="frame" x="16" y="13" width="288" height="32"/>
+                                        <color key="backgroundColor" name="turquoiseGreen"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="cdw-Xh-7ps"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="BuenosAires-Bold" family="Buenos Aires" pointSize="12"/>
+                                        <state key="normal" title="FOLLOW">
+                                            <color key="titleColor" name="charcoal"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="SGK-2m-Bay" firstAttribute="top" secondItem="HJH-5G-is7" secondAttribute="top" constant="13" id="HED-ix-voG"/>
+                                    <constraint firstAttribute="trailing" secondItem="SGK-2m-Bay" secondAttribute="trailing" constant="16" id="OP1-s1-KuZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="SGK-2m-Bay" secondAttribute="bottom" id="QfP-9N-ngn"/>
+                                    <constraint firstItem="SGK-2m-Bay" firstAttribute="leading" secondItem="HJH-5G-is7" secondAttribute="leading" constant="16" id="YPj-wU-E4G"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                    </stackView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="9bs-eN-wNM" firstAttribute="centerY" secondItem="BiB-Xu-sqp" secondAttribute="centerY" id="17x-uN-sbs"/>
                     <constraint firstAttribute="trailing" secondItem="Htq-0u-HZU" secondAttribute="trailing" id="9UG-Zz-GeK"/>
+                    <constraint firstAttribute="trailing" secondItem="Pmw-YP-Ati" secondAttribute="trailing" id="AKb-87-1J1"/>
                     <constraint firstItem="NzM-4Y-LgP" firstAttribute="bottom" secondItem="9bs-eN-wNM" secondAttribute="bottom" id="B1c-WV-HGj"/>
-                    <constraint firstItem="lz9-ai-j63" firstAttribute="top" secondItem="SGK-2m-Bay" secondAttribute="bottom" constant="16" id="CfU-Cg-nkl"/>
+                    <constraint firstItem="Pmw-YP-Ati" firstAttribute="top" secondItem="ONk-Zd-P88" secondAttribute="bottom" id="EZh-RN-kMf"/>
                     <constraint firstItem="ONk-Zd-P88" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="G15-q4-CSq"/>
                     <constraint firstAttribute="trailing" secondItem="A3x-gm-KJX" secondAttribute="trailing" constant="16" id="GA1-W2-4ue"/>
                     <constraint firstItem="6p1-Ra-Dlb" firstAttribute="leading" secondItem="lz9-ai-j63" secondAttribute="trailing" constant="2" id="IJE-a3-2LF"/>
                     <constraint firstItem="A3x-gm-KJX" firstAttribute="leading" secondItem="ONk-Zd-P88" secondAttribute="trailing" constant="13" id="NGa-EI-23i"/>
+                    <constraint firstItem="lz9-ai-j63" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="O4z-fw-t77"/>
+                    <constraint firstItem="Pmw-YP-Ati" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="PBb-sm-Iaw"/>
                     <constraint firstItem="EQO-G7-fPj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Q8t-Hu-33h"/>
                     <constraint firstItem="9bs-eN-wNM" firstAttribute="leading" secondItem="BiB-Xu-sqp" secondAttribute="trailing" constant="2" id="Qxn-FF-Zcr"/>
                     <constraint firstItem="NzM-4Y-LgP" firstAttribute="trailing" secondItem="9bs-eN-wNM" secondAttribute="trailing" id="QzU-d4-alK"/>
                     <constraint firstItem="A3x-gm-KJX" firstAttribute="centerY" secondItem="ONk-Zd-P88" secondAttribute="centerY" id="R5c-7r-d6m"/>
                     <constraint firstItem="NzM-4Y-LgP" firstAttribute="top" secondItem="9bs-eN-wNM" secondAttribute="top" id="Tdz-cQ-7qy"/>
-                    <constraint firstAttribute="trailing" secondItem="SGK-2m-Bay" secondAttribute="trailing" constant="16" id="WQA-Wh-UO7"/>
                     <constraint firstItem="NzM-4Y-LgP" firstAttribute="leading" secondItem="lz9-ai-j63" secondAttribute="leading" id="Yfw-Ty-iTJ"/>
                     <constraint firstItem="ONk-Zd-P88" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="ZLS-TV-UbD"/>
                     <constraint firstItem="Htq-0u-HZU" firstAttribute="top" secondItem="EQO-G7-fPj" secondAttribute="bottom" constant="16" id="aNP-n4-ZU9"/>
-                    <constraint firstItem="SGK-2m-Bay" firstAttribute="top" secondItem="ONk-Zd-P88" secondAttribute="bottom" constant="16" id="dCf-rj-mzE"/>
                     <constraint firstAttribute="trailing" secondItem="EQO-G7-fPj" secondAttribute="trailing" constant="16" id="eBc-d2-dsp"/>
-                    <constraint firstItem="lz9-ai-j63" firstAttribute="leading" secondItem="SGK-2m-Bay" secondAttribute="leading" id="fd9-eD-iv8"/>
                     <constraint firstAttribute="bottom" secondItem="Htq-0u-HZU" secondAttribute="bottom" constant="-0.5" id="gbs-Gd-my8"/>
                     <constraint firstItem="6p1-Ra-Dlb" firstAttribute="centerY" secondItem="lz9-ai-j63" secondAttribute="centerY" id="hAz-YN-se0"/>
                     <constraint firstItem="Htq-0u-HZU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="lgV-SM-xwo"/>
                     <constraint firstItem="EQO-G7-fPj" firstAttribute="top" secondItem="lz9-ai-j63" secondAttribute="bottom" constant="16" id="qXo-6g-b7K"/>
-                    <constraint firstItem="SGK-2m-Bay" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="qlv-bc-eUT"/>
                     <constraint firstItem="BiB-Xu-sqp" firstAttribute="leading" secondItem="6p1-Ra-Dlb" secondAttribute="trailing" constant="12" id="tol-kY-ntw"/>
+                    <constraint firstItem="NzM-4Y-LgP" firstAttribute="top" secondItem="Pmw-YP-Ati" secondAttribute="bottom" constant="13" id="zOk-w0-gP8"/>
                     <constraint firstItem="BiB-Xu-sqp" firstAttribute="centerY" secondItem="6p1-Ra-Dlb" secondAttribute="centerY" id="zby-Oc-9C4"/>
                 </constraints>
             </tableViewCellContentView>
@@ -157,6 +175,7 @@
                 <outlet property="nameLbl" destination="0AN-vt-pfc" id="s6G-Zf-QwU"/>
                 <outlet property="profileImage" destination="obT-Hj-IpT" id="89O-l3-oLd"/>
                 <outlet property="userNameLbl" destination="ihO-SV-l9y" id="193-Ho-fkD"/>
+                <outlet property="viewFollow" destination="HJH-5G-is7" id="Mfw-cx-iOF"/>
             </connections>
             <point key="canvasLocation" x="53.623188405797109" y="58.928571428571423"/>
         </tableViewCell>
@@ -172,5 +191,8 @@
         <namedColor name="turquoiseGreen">
             <color red="0.16899999976158142" green="0.83899998664855957" blue="0.58399999141693115" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

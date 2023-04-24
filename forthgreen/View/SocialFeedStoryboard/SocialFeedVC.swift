@@ -8,6 +8,7 @@
 
 import UIKit
 import SkeletonView
+import SainiUtils
 
 var isMuteVideo = true
 var dictVideoHeight = [String : Float]()
@@ -52,6 +53,8 @@ class SocialFeedVC: UIViewController, AddPostDeleagte {
     var isCurrentScreen = false
     var isFeedSelected = true
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         NotificationCenter.default.addObserver(self, selector: #selector(updatePostProgress(_:)), name: NOTIFICATIONS.AddPostProgress, object: nil)
@@ -61,7 +64,6 @@ class SocialFeedVC: UIViewController, AddPostDeleagte {
         self.viewTabProgress.backgroundColor = AppColors.turqoiseGreen
         isMuteVideo = true
         progressView.isHidden = true
-        
         self.viewTopTab.isHidden = AppModel.shared.isGuestUser
         
         configUI()
@@ -338,8 +340,12 @@ class SocialFeedVC: UIViewController, AddPostDeleagte {
     }
     
     @IBAction func clickToNotificaiton(_ sender: Any) {
-        let vc = STORYBOARD.NOTIFICATION.instantiateViewController(withIdentifier: NOTIFICATION_STORYBOARD.NotificationVC.rawValue) as! NotificationVC
-        self.navigationController?.pushViewController(vc, animated: true)
+        if AppModel.shared.isGuestUser {
+            self.showGuestView()
+        } else {
+            let vc = STORYBOARD.NOTIFICATION.instantiateViewController(withIdentifier: NOTIFICATION_STORYBOARD.NotificationVC.rawValue) as! NotificationVC
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
     //MARK: - searchBtnIsPressed
@@ -380,11 +386,28 @@ class SocialFeedVC: UIViewController, AddPostDeleagte {
     
     
     func showGuestView() {
-        if self.guestUserView == nil {
-            self.guestUserView = GuestUserView.init()
+        self.showLoginAlert()
+    }
+    
+    func showLoginAlert() {
+        DispatchQueue.main.async {
+            var alertVM: Alert = Alert()
+            alertVM.delegate = self
+            alertVM.displayAlert(vc: self, alertTitle: STATIC_LABELS.loginToContinue.rawValue,
+                                      message: STATIC_LABELS.loginToContinueMessage.rawValue,
+                                      okBtnTitle: STATIC_LABELS.login.rawValue,
+                                      cancelBtnTitle: STATIC_LABELS.cancel.rawValue)
         }
-        displaySubViewtoParentView(self.view, subview: guestUserView)
-        guestUserView.isHidden = false
+     }
+}
+
+extension SocialFeedVC: AlertDelegate {
+    func didClickOkBtn() {
+        (UIApplication.shared.delegate as? AppDelegate)?.logoutUser()
+    }
+    
+    func didClickCancelBtn() {
+        
     }
 }
 
@@ -786,6 +809,14 @@ extension SocialFeedVC: UITableViewDelegate, UITableViewDataSource {
             actionSheet.popoverPresentationController?.permittedArrowDirections = []
             actionSheet.view.tintColor = #colorLiteral(red: 0.1176470588, green: 0.1450980392, blue: 0.1490196078, alpha: 1)
             self.present(actionSheet, animated: true, completion: nil)
+        }
+    }
+}
+
+extension UIView {
+    var snapshot: UIImage {
+        return UIGraphicsImageRenderer(size: bounds.size).image { _ in
+            drawHierarchy(in: bounds, afterScreenUpdates: true)
         }
     }
 }
