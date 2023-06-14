@@ -305,22 +305,6 @@ extension ProductVC: UICollectionViewDelegate, UICollectionViewDataSource, UICol
         lastContentOffset = scrollView.contentOffset.y
     }
     
-    // scrollViewDidScroll
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if productListArray.count > 6 || productListArray.count > 4 {
-            if scrollView.contentOffset.y == 0 {
-                sortFilterView.showView()
-            }
-            else {
-                if lastContentOffset > scrollView.contentOffset.y { // down
-                    sortFilterView.showView()
-                } else if lastContentOffset < scrollView.contentOffset.y { // up
-                    sortFilterView.hideView()
-                }
-            }
-        }
-    }
-    
     @objc func clickToBookmark(_ sender: UIButton) {
         if AppModel.shared.isGuestUser {
             

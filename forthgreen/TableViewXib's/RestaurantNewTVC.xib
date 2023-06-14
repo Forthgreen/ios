@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -31,12 +30,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="312"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ldm-BY-nHc">
-                                <rect key="frame" x="16" y="16" width="288" height="164"/>
+                                <rect key="frame" x="0.0" y="16" width="320" height="175"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rectangle" translatesAutoresizingMaskIntoConstraints="NO" id="sOd-Vl-fbP">
-                                        <rect key="frame" x="0.0" y="0.0" width="288" height="164"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="175"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="164" id="Sm0-aN-cR9"/>
+                                            <constraint firstAttribute="height" constant="175" id="Sm0-aN-cR9"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
@@ -49,13 +48,13 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restaurant name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SLp-sr-1Ai">
-                                <rect key="frame" x="16" y="192" width="288" height="19"/>
+                                <rect key="frame" x="16" y="203" width="288" height="19"/>
                                 <fontDescription key="fontDescription" name="BuenosAires-Bold" family="Buenos Aires" pointSize="16"/>
-                                <color key="textColor" name="charcoal"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yjG-he-AgN" customClass="FloatRatingView" customModule="SainiUtils">
-                                <rect key="frame" x="16" y="215" width="85" height="16"/>
+                                <rect key="frame" x="16" y="226" width="85" height="16"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="85" id="GRD-ff-VNX"/>
@@ -80,29 +79,29 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="32" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YPK-nS-WcG">
-                                <rect key="frame" x="107" y="214.5" width="16" height="17"/>
-                                <fontDescription key="fontDescription" name="BuenosAires-Book" family="Buenos Aires" pointSize="14"/>
-                                <color key="textColor" red="0.24313725490196078" green="0.29411764705882354" blue="0.30196078431372547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="107" y="227" width="13.5" height="14.5"/>
+                                <fontDescription key="fontDescription" name="BuenosAires-Book" family="Buenos Aires" pointSize="12"/>
+                                <color key="textColor" red="0.24313725489999999" green="0.29411764709999999" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Italian • Pizza • Pasta • Salads" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hce-SC-X1O">
-                                <rect key="frame" x="16" y="236" width="288" height="22"/>
+                                <rect key="frame" x="16" y="247" width="288" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="yof-eo-3JF"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="BuenosAires-Book" family="Buenos Aires" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="BuenosAires-Book" family="Buenos Aires" pointSize="12"/>
                                 <color key="textColor" red="0.24313725489999999" green="0.29411764709999999" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$$$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Rm-H4-yLc">
-                                <rect key="frame" x="16" y="263" width="23" height="17"/>
-                                <fontDescription key="fontDescription" name="BuenosAires-Bold" family="Buenos Aires" pointSize="14"/>
+                                <rect key="frame" x="16" y="274" width="20" height="14.5"/>
+                                <fontDescription key="fontDescription" name="BuenosAires-Bold" family="Buenos Aires" pointSize="12"/>
                                 <color key="textColor" red="0.75686274509999996" green="0.79607843140000001" blue="0.81176470590000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.6 miles" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uKu-b5-qDC">
-                                <rect key="frame" x="49" y="263" width="56.5" height="17"/>
-                                <fontDescription key="fontDescription" name="BuenosAires-Book" family="Buenos Aires" pointSize="14"/>
+                                <rect key="frame" x="46" y="274" width="50.5" height="14.5"/>
+                                <fontDescription key="fontDescription" name="BuenosAires-Book" family="Buenos Aires" pointSize="12"/>
                                 <color key="textColor" red="0.24313725489999999" green="0.29411764709999999" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -117,12 +116,12 @@
                             <constraint firstAttribute="height" constant="312" id="BXF-ZI-dM3"/>
                             <constraint firstItem="uKu-b5-qDC" firstAttribute="centerY" secondItem="9Rm-H4-yLc" secondAttribute="centerY" id="CdY-Vw-rdH"/>
                             <constraint firstItem="9Rm-H4-yLc" firstAttribute="leading" secondItem="SLp-sr-1Ai" secondAttribute="leading" id="FBp-KC-0an"/>
-                            <constraint firstAttribute="trailing" secondItem="Ldm-BY-nHc" secondAttribute="trailing" constant="16" id="IMY-oa-cXX"/>
+                            <constraint firstAttribute="trailing" secondItem="Ldm-BY-nHc" secondAttribute="trailing" id="IMY-oa-cXX"/>
                             <constraint firstItem="Ldm-BY-nHc" firstAttribute="top" secondItem="jzv-as-zi9" secondAttribute="top" constant="16" id="On7-7U-oEt"/>
                             <constraint firstItem="Hce-SC-X1O" firstAttribute="leading" secondItem="SLp-sr-1Ai" secondAttribute="leading" id="QV7-9X-vvD"/>
                             <constraint firstItem="SLp-sr-1Ai" firstAttribute="top" secondItem="Ldm-BY-nHc" secondAttribute="bottom" constant="12" id="T4v-VW-KoV"/>
                             <constraint firstItem="YPK-nS-WcG" firstAttribute="leading" secondItem="yjG-he-AgN" secondAttribute="trailing" constant="6" id="VVV-Yh-i0J"/>
-                            <constraint firstItem="Ldm-BY-nHc" firstAttribute="leading" secondItem="jzv-as-zi9" secondAttribute="leading" constant="16" id="ZGi-Ks-jyg"/>
+                            <constraint firstItem="Ldm-BY-nHc" firstAttribute="leading" secondItem="jzv-as-zi9" secondAttribute="leading" id="ZGi-Ks-jyg"/>
                             <constraint firstItem="yjG-he-AgN" firstAttribute="top" secondItem="SLp-sr-1Ai" secondAttribute="bottom" constant="4" id="aHd-Ee-wNt"/>
                             <constraint firstItem="9Rm-H4-yLc" firstAttribute="top" secondItem="Hce-SC-X1O" secondAttribute="bottom" constant="5" id="c2g-5y-CoO"/>
                             <constraint firstItem="YPK-nS-WcG" firstAttribute="centerY" secondItem="yjG-he-AgN" secondAttribute="centerY" id="j4h-yD-8bJ"/>
@@ -154,9 +153,6 @@
         <image name="rectangle" width="414" height="412"/>
         <image name="star_black" width="16" height="16"/>
         <image name="star_white" width="16" height="16"/>
-        <namedColor name="charcoal">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

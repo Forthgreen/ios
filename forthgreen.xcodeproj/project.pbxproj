@@ -69,10 +69,20 @@
 		88DD278F27AA7B5500450A70 /* HomeProductCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DD278D27AA7B5400450A70 /* HomeProductCVC.swift */; };
 		88DD279027AA7B5500450A70 /* HomeProductCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88DD278E27AA7B5400450A70 /* HomeProductCVC.xib */; };
 		88FF6E9727266C1300ED3C3B /* RestaurantMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FF6E9627266C1300ED3C3B /* RestaurantMapViewModel.swift */; };
+		D0031EDF2A27257A00888F2B /* ShopCategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0031EDD2A27257A00888F2B /* ShopCategoryVC.swift */; };
+		D0031EE32A274AF000888F2B /* ShopModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0031EE22A274AF000888F2B /* ShopModel.swift */; };
+		D0031EE52A274E6300888F2B /* ShopViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0031EE42A274E6300888F2B /* ShopViewModel.swift */; };
+		D0031EE82A27808A00888F2B /* ShopSliderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0031EE62A27808A00888F2B /* ShopSliderCell.swift */; };
+		D0031EE92A27808A00888F2B /* ShopSliderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0031EE72A27808A00888F2B /* ShopSliderCell.xib */; };
 		D03CE3A229546DEA00EEB139 /* SocialFeedTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03CE3A129546DEA00EEB139 /* SocialFeedTabVC.swift */; };
 		D0640D1229CB4452003C208E /* InviteUsersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0640D1129CB4452003C208E /* InviteUsersVC.swift */; };
 		D09E910929E5A16B00D3074F /* AskLoginPopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09E910829E5A16B00D3074F /* AskLoginPopupVC.swift */; };
 		D0D22F7A29D1B49000A86721 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D22F7929D1B49000A86721 /* Extension.swift */; };
+		D0D9320F2A2643340054C9CB /* FShopTopCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D9320D2A2643340054C9CB /* FShopTopCell.swift */; };
+		D0D932102A2643340054C9CB /* FShopTopCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0D9320E2A2643340054C9CB /* FShopTopCell.xib */; };
+		D0D932132A264C910054C9CB /* FShopOtherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D932112A264C910054C9CB /* FShopOtherCell.swift */; };
+		D0D932142A264C910054C9CB /* FShopOtherCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0D932122A264C910054C9CB /* FShopOtherCell.xib */; };
+		D0D932162A264FF70054C9CB /* ShopVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D932152A264FF70054C9CB /* ShopVC.swift */; };
 		EA61F5EF67A77D1E989679FF /* Pods_forthgreen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED30AB50B9E5B3ED412E28FA /* Pods_forthgreen.framework */; };
 		FA101072253217BD0080225C /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA101071253217BD0080225C /* MapVC.swift */; };
 		FA15C6472461E74100315E16 /* ProductDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA15C6452461E74100315E16 /* ProductDetailCell.swift */; };
@@ -369,10 +379,20 @@
 		88DD278D27AA7B5400450A70 /* HomeProductCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProductCVC.swift; sourceTree = "<group>"; };
 		88DD278E27AA7B5400450A70 /* HomeProductCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeProductCVC.xib; sourceTree = "<group>"; };
 		88FF6E9627266C1300ED3C3B /* RestaurantMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantMapViewModel.swift; sourceTree = "<group>"; };
+		D0031EDD2A27257A00888F2B /* ShopCategoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopCategoryVC.swift; sourceTree = "<group>"; };
+		D0031EE22A274AF000888F2B /* ShopModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopModel.swift; sourceTree = "<group>"; };
+		D0031EE42A274E6300888F2B /* ShopViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewModel.swift; sourceTree = "<group>"; };
+		D0031EE62A27808A00888F2B /* ShopSliderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopSliderCell.swift; sourceTree = "<group>"; };
+		D0031EE72A27808A00888F2B /* ShopSliderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShopSliderCell.xib; sourceTree = "<group>"; };
 		D03CE3A129546DEA00EEB139 /* SocialFeedTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialFeedTabVC.swift; sourceTree = "<group>"; };
 		D0640D1129CB4452003C208E /* InviteUsersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteUsersVC.swift; sourceTree = "<group>"; };
 		D09E910829E5A16B00D3074F /* AskLoginPopupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskLoginPopupVC.swift; sourceTree = "<group>"; };
 		D0D22F7929D1B49000A86721 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		D0D9320D2A2643340054C9CB /* FShopTopCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FShopTopCell.swift; sourceTree = "<group>"; };
+		D0D9320E2A2643340054C9CB /* FShopTopCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FShopTopCell.xib; sourceTree = "<group>"; };
+		D0D932112A264C910054C9CB /* FShopOtherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FShopOtherCell.swift; sourceTree = "<group>"; };
+		D0D932122A264C910054C9CB /* FShopOtherCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FShopOtherCell.xib; sourceTree = "<group>"; };
+		D0D932152A264FF70054C9CB /* ShopVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopVC.swift; sourceTree = "<group>"; };
 		ED30AB50B9E5B3ED412E28FA /* Pods_forthgreen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_forthgreen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA101071253217BD0080225C /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 		FA15C6452461E74100315E16 /* ProductDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailCell.swift; sourceTree = "<group>"; };
@@ -741,6 +761,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		D0031EE12A274AD500888F2B /* ShopModel */ = {
+			isa = PBXGroup;
+			children = (
+				D0031EE22A274AF000888F2B /* ShopModel.swift */,
+			);
+			path = ShopModel;
+			sourceTree = "<group>";
+		};
 		D0D22F7829D1B46C00A86721 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -834,6 +862,8 @@
 				FA52782025AF6A7E005DA509 /* ProductVC.swift */,
 				8828908026A98F350060B5FA /* SearchCategoryVC.swift */,
 				8828908226A9A2640060B5FA /* CategoryFilterVC.swift */,
+				D0D932152A264FF70054C9CB /* ShopVC.swift */,
+				D0031EDD2A27257A00888F2B /* ShopCategoryVC.swift */,
 			);
 			path = HomeStoryboard;
 			sourceTree = "<group>";
@@ -908,6 +938,12 @@
 				FA27C435278BFB3900F6D5B3 /* ShopCell.xib */,
 				18F2BA0B27E5AE9000DF22F4 /* RestaurantNewTVC.swift */,
 				18F2BA0A27E5AE9000DF22F4 /* RestaurantNewTVC.xib */,
+				D0D9320D2A2643340054C9CB /* FShopTopCell.swift */,
+				D0D9320E2A2643340054C9CB /* FShopTopCell.xib */,
+				D0D932112A264C910054C9CB /* FShopOtherCell.swift */,
+				D0D932122A264C910054C9CB /* FShopOtherCell.xib */,
+				D0031EE62A27808A00888F2B /* ShopSliderCell.swift */,
+				D0031EE72A27808A00888F2B /* ShopSliderCell.xib */,
 			);
 			path = "TableViewXib's";
 			sourceTree = "<group>";
@@ -1356,6 +1392,7 @@
 		FADBE06C245C540C00823EC6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D0031EE12A274AD500888F2B /* ShopModel */,
 				885CDAB727240D6B000D3617 /* BookMarkModel */,
 				FAA19AD72636992700010AB6 /* NotificationModel */,
 				FAA19AA72634A94A00010AB6 /* SearchUserModel */,
@@ -1472,6 +1509,7 @@
 				883AB63F2727D4FD00FC2455 /* TagListViewModel.swift */,
 				8827310D2729119300A44449 /* BookMarkListViewModel.swift */,
 				8831ED4B279EA4B5000770D2 /* ProductHomeViewModel.swift */,
+				D0031EE42A274E6300888F2B /* ShopViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1545,9 +1583,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0D932102A2643340054C9CB /* FShopTopCell.xib in Resources */,
 				FA52725F261F6D4000D93F0C /* NotificationCell.xib in Resources */,
 				FA15C6542462B94E00315E16 /* FilterCell.xib in Resources */,
 				FA40F94524601B1200FC5019 /* ProductCell.xib in Resources */,
+				D0D932142A264C910054C9CB /* FShopOtherCell.xib in Resources */,
 				FA527295262052A400D93F0C /* OtherUserProfileInfoCell.xib in Resources */,
 				FA527267261F758C00D93F0C /* ProfileInfoCell.xib in Resources */,
 				FA40F9582461925600FC5019 /* BrandDetailCell2.xib in Resources */,
@@ -1593,6 +1633,7 @@
 				FA40F94E2460890400FC5019 /* BrandListCell.xib in Resources */,
 				FAC467D1245D873700DB9435 /* FSLucas-Regular.ttf in Resources */,
 				FA15C6622462CA7500315E16 /* ReportBtnCell.xib in Resources */,
+				D0031EE92A27808A00888F2B /* ShopSliderCell.xib in Resources */,
 				FA15C6482461E74100315E16 /* ProductDetailCell.xib in Resources */,
 				FA15C65E2462CA2600315E16 /* ReportOtherTextCell.xib in Resources */,
 				FAC467D3245D873700DB9435 /* FSLucas-Medium.ttf in Resources */,
@@ -1666,6 +1707,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0D932162A264FF70054C9CB /* ShopVC.swift in Sources */,
 				FAB9660D262F011B006C76D4 /* FollowListResponse.swift in Sources */,
 				88AAF0EC272D008600E78FAC /* String+RUI.swift in Sources */,
 				88273CC026AECDAC00EA4167 /* LikeListResponse.swift in Sources */,
@@ -1716,6 +1758,7 @@
 				FA415E76246D6B6C000D9730 /* BrandRequest.swift in Sources */,
 				FAAD860E24668AAD00F99403 /* AppModel.swift in Sources */,
 				FADBE076245C566700823EC6 /* WelcomeVC.swift in Sources */,
+				D0D9320F2A2643340054C9CB /* FShopTopCell.swift in Sources */,
 				8831ED4C279EA4B5000770D2 /* ProductHomeViewModel.swift in Sources */,
 				FAA19BC62638B44300010AB6 /* ReportUserRequest.swift in Sources */,
 				FA52729B26208E1C00D93F0C /* SearchPostVC.swift in Sources */,
@@ -1726,6 +1769,7 @@
 				FA632A9D26401EFD007DC90C /* UploadMultipleImagesVC.swift in Sources */,
 				888576B927ABB45B002BA0EC /* SocialLogin.swift in Sources */,
 				FA5FDA122628C6500055FEB7 /* AddCommentViewModel.swift in Sources */,
+				D0031EDF2A27257A00888F2B /* ShopCategoryVC.swift in Sources */,
 				FAAD862C24697C6B00F99403 /* ForgotPasswordRequest.swift in Sources */,
 				224FFB93247E5AE200A015E2 /* FilterStatus.swift in Sources */,
 				FA80543F2464873A00C38FA9 /* Onboarding2.swift in Sources */,
@@ -1733,6 +1777,7 @@
 				FA15C6662462EFC100315E16 /* ReportAbuseVC.swift in Sources */,
 				FAA19ADD2636999500010AB6 /* NotificationResponse.swift in Sources */,
 				2216E8E12474EE0000F7A623 /* LoadingShimmer.swift in Sources */,
+				D0031EE32A274AF000888F2B /* ShopModel.swift in Sources */,
 				FA5FDA0F2628C5D40055FEB7 /* AddCommentRequest.swift in Sources */,
 				8828907E26A989C80060B5FA /* SearchCategoryTVC.swift in Sources */,
 				FA4D56BF2471C29D00C8A5ED /* AddReviewResponse.swift in Sources */,
@@ -1770,6 +1815,7 @@
 				FA5272A72621DD1A00D93F0C /* AddCommentCell.swift in Sources */,
 				2293C4112473D72B00A07356 /* ShareAppActivityViewModel.swift in Sources */,
 				FA527219261DA2B100D93F0C /* socialFeedCell.swift in Sources */,
+				D0D932132A264C910054C9CB /* FShopOtherCell.swift in Sources */,
 				FAA19AE0263699CC00010AB6 /* NotificationViewModel.swift in Sources */,
 				FA15C6A0246426DA00315E16 /* ChangePasswordVC.swift in Sources */,
 				FAAD860C24668A8400F99403 /* API_Helper.swift in Sources */,
@@ -1893,6 +1939,7 @@
 				FA4C7BBB252DB5900066D74C /* RestaurantListingResponse.swift in Sources */,
 				FA415E91246FABFE000D9730 /* ProductDetailViewModel.swift in Sources */,
 				FA415E96247026BF000D9730 /* FollowBrandViewModel.swift in Sources */,
+				D0031EE82A27808A00888F2B /* ShopSliderCell.swift in Sources */,
 				FAC40504254ABBB500A464EE /* UploadImageVC.swift in Sources */,
 				FA41DC87246AD42B0039947C /* SocialLoginViewModel.swift in Sources */,
 				FA101072253217BD0080225C /* MapVC.swift in Sources */,
@@ -1905,6 +1952,7 @@
 				FAAD86252469699900F99403 /* LoginRequest.swift in Sources */,
 				FA52782825B0AD36005DA509 /* AppEnums.swift in Sources */,
 				FA415E8A246EC3DD000D9730 /* BrandDetailViewModel.swift in Sources */,
+				D0031EE52A274E6300888F2B /* ShopViewModel.swift in Sources */,
 				882630F726AA851600D2EFBD /* FilterSelectedTVC.swift in Sources */,
 				FAA19AA92634A96000010AB6 /* SearchUserRequest.swift in Sources */,
 				88DD278F27AA7B5500450A70 /* HomeProductCVC.swift in Sources */,
@@ -2056,7 +2104,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 12;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = NZZUYZM26J;
 				INFOPLIST_FILE = forthgreen/Info.plist;
@@ -2065,7 +2113,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 11;
+				MARKETING_VERSION = 12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.app.forthgreenApp;
 				PRODUCT_NAME = Forthgreen;
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -2084,7 +2132,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 12;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = NZZUYZM26J;
 				INFOPLIST_FILE = forthgreen/Info.plist;
@@ -2093,7 +2141,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 11;
+				MARKETING_VERSION = 12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.app.forthgreenApp;
 				PRODUCT_NAME = Forthgreen;
 				PROVISIONING_PROFILE_SPECIFIER = "";

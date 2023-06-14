@@ -26,8 +26,6 @@ class RestaurantListingVC: UIViewController {
     @IBOutlet weak var bottomConstraintOfTableView: NSLayoutConstraint!
     @IBOutlet weak var NoDataLbl: UILabel!
     @IBOutlet weak var noResultsView: UIView!
-    @IBOutlet weak var searchBackView: sainiCardView!
-    @IBOutlet weak var searchTextfield: UITextField!
     @IBOutlet weak var shimmerView: UIView!
     @IBOutlet weak var mapBtn: UIButton!
     @IBOutlet weak var tableView: UITableView!
@@ -62,10 +60,7 @@ class RestaurantListingVC: UIViewController {
     //MARK: - configUI
     private func configUI() {
         mapBtn.sainiCornerRadius(radius: 16)
-        searchTextfield.sainiSetLeftPadding(45)
         noResultsView.isHidden = true
-        
-        searchBackView.sainiCornerRadius(radius: 6)
         
         tableView.register(UINib(nibName: "RestaurantNewTVC", bundle: nil), forCellReuseIdentifier: "RestaurantNewTVC")
         
@@ -113,8 +108,6 @@ class RestaurantListingVC: UIViewController {
     //MARK: - refreshData
     @objc func refreshData(_ sender: Any) {
 //        restaurantListArray.removeAll()
-        searchTextfield.text = ""
-        searchTextfield.resignFirstResponder()
 //        shimmerView.isHidden = false
 //        shimmerView.isSkeletonable = true
 //        shimmerView.showAnimatedGradientSkeleton()

@@ -246,7 +246,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func vibrateOnTouch() {
-        AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+        let generator = UINotificationFeedbackGenerator()
+        generator.notificationOccurred(.success)
         print("*********** //////////// vibrate ///////////// *************")
     }
     

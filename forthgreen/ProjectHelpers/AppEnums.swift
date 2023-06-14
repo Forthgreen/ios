@@ -404,10 +404,10 @@ enum PRODUCT_CATEGORIES: Int, CaseIterable {
         case .CLOTHING               : return "clothing"
         case .BEAUTY                 : return "beauty"
         case .HEALTH                 : return "health"
-        case .FOOD                   : return "drink"
+        case .FOOD                   : return "food"
         case .ACCESSORIES            : return "accessory"
         case .MISCELLANEOUS          : return "misse"
-        case .DRINK                  : return "food"
+        case .DRINK                  : return "drink"
         }
     }
 }

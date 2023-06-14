@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "misse.png",
+      "filename" : "Tooth Brush.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "misse@2x.png",
+      "filename" : "Tooth Brush@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "misse@3x.png",
+      "filename" : "Tooth Brush@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

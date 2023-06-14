@@ -40,7 +40,7 @@ struct AppVideoUrl {
 //MARK: - API
 struct API {
     //Development
-  //  static let BASE_URL = "https://forthgreen.in.ngrok.io/api/"
+ //    static let BASE_URL = "https://forthgreen.in.ngrok.io/api/"
     
 //    BETA URL
   //    static let BASE_URL = "http://3.15.254.192/development/api/"
@@ -96,6 +96,7 @@ struct API {
         static let detailForGuest         = BASE_URL + "product/detailsGuest"
         static let productHome            = BASE_URL + "product/home"
         static let guestHomeForAll        = BASE_URL + "product/homeForAll"
+        static let productShop            = BASE_URL + "product/shopfeed"
     }
     
     struct AddDetails{

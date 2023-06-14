@@ -63,3 +63,11 @@ struct TagListRequest: Encodable {
         self.limit = limit
     }
 }
+
+struct ShopPageRequest: Encodable {
+    var page: Int?
+    
+    init(page: Int?) {
+        self.page = page
+    }
+}

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="o7C-Ai-dlj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="o7C-Ai-dlj">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -33,7 +33,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="riU-M8-T7Q">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <subviews>
                                     <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dAU-D0-u22">
                                         <rect key="frame" x="0.0" y="43" width="320" height="1"/>
@@ -48,15 +48,14 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3tl-57-Zus">
-                                        <rect key="frame" x="232" y="7" width="72" height="30"/>
-                                        <color key="backgroundColor" name="paleGrey"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3tl-57-Zus">
+                                        <rect key="frame" x="272" y="6" width="32" height="32"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="72" id="9oj-cM-vr1"/>
-                                            <constraint firstAttribute="height" constant="30" id="ncK-fG-Flp"/>
+                                            <constraint firstAttribute="width" constant="32" id="9oj-cM-vr1"/>
+                                            <constraint firstAttribute="height" constant="32" id="ncK-fG-Flp"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="BuenosAires-Bold" family="Buenos Aires" pointSize="12"/>
-                                        <state key="normal" title="MAP">
+                                        <state key="normal" image="ic_map">
                                             <color key="titleColor" name="charcoal"/>
                                         </state>
                                         <connections>
@@ -77,10 +76,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1ze-2O-OJC">
-                                <rect key="frame" x="0.0" y="120" width="320" height="378"/>
+                                <rect key="frame" x="0.0" y="140" width="320" height="358"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eid-97-Q90">
-                                        <rect key="frame" x="59" y="155.5" width="202" height="67.5"/>
+                                        <rect key="frame" x="59" y="145.5" width="202" height="67.5"/>
                                         <string key="text">There are not results on this location.
 Want to suggest a restaurant? Let us know.</string>
                                         <fontDescription key="fontDescription" name="BuenosAires-Book" family="Buenos Aires" pointSize="14"/>
@@ -99,75 +98,15 @@ Want to suggest a restaurant? Let us know.</string>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9kc-Zb-GxZ">
-                                <rect key="frame" x="0.0" y="44" width="320" height="454"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="434"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <view key="tableHeaderView" contentMode="scaleToFill" id="d2G-Fn-wdv">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="72"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jla-cO-yMK">
-                                            <rect key="frame" x="0.0" y="71" width="320" height="1"/>
-                                            <color key="backgroundColor" name="paleGrey"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="1" id="rvu-zA-fIh"/>
-                                            </constraints>
-                                        </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Fd-aB-cG7" customClass="sainiCardView" customModule="SainiUtils">
-                                            <rect key="frame" x="16" y="16" width="288" height="40"/>
-                                            <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search restaurants" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iLP-Sp-tkj">
-                                                    <rect key="frame" x="0.0" y="0.0" width="288" height="40"/>
-                                                    <color key="backgroundColor" name="paleGrey"/>
-                                                    <color key="tintColor" systemColor="systemBlueColor"/>
-                                                    <fontDescription key="fontDescription" name="BuenosAires-Book" family="Buenos Aires" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                    <connections>
-                                                        <outlet property="delegate" destination="ik1-oB-YWE" id="mHt-TD-iJx"/>
-                                                    </connections>
-                                                </textField>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="iconSearch" translatesAutoresizingMaskIntoConstraints="NO" id="ZBp-Pk-0Zg">
-                                                    <rect key="frame" x="11" y="8" width="24" height="24"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="24" id="dZC-xW-tjt"/>
-                                                        <constraint firstAttribute="width" constant="24" id="wS4-sk-1kb"/>
-                                                    </constraints>
-                                                </imageView>
-                                            </subviews>
-                                            <color key="backgroundColor" name="paleGrey"/>
-                                            <constraints>
-                                                <constraint firstItem="ZBp-Pk-0Zg" firstAttribute="centerY" secondItem="0Fd-aB-cG7" secondAttribute="centerY" id="37k-6U-n2l"/>
-                                                <constraint firstItem="iLP-Sp-tkj" firstAttribute="leading" secondItem="0Fd-aB-cG7" secondAttribute="leading" id="Jp1-PT-bb7"/>
-                                                <constraint firstAttribute="bottom" secondItem="iLP-Sp-tkj" secondAttribute="bottom" id="OFN-51-jaI"/>
-                                                <constraint firstAttribute="height" constant="40" id="Ra8-Qv-Ba2"/>
-                                                <constraint firstItem="ZBp-Pk-0Zg" firstAttribute="leading" secondItem="0Fd-aB-cG7" secondAttribute="leading" constant="11" id="W3o-ar-cs0"/>
-                                                <constraint firstAttribute="trailing" secondItem="iLP-Sp-tkj" secondAttribute="trailing" id="opF-ag-zEo"/>
-                                                <constraint firstItem="iLP-Sp-tkj" firstAttribute="top" secondItem="0Fd-aB-cG7" secondAttribute="top" id="pMB-QQ-Ma2"/>
-                                            </constraints>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadious">
-                                                    <real key="value" value="6"/>
-                                                </userDefinedRuntimeAttribute>
-                                            </userDefinedRuntimeAttributes>
-                                        </view>
-                                    </subviews>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="72" id="6mN-zK-xho"/>
-                                        <constraint firstAttribute="trailing" secondItem="jla-cO-yMK" secondAttribute="trailing" id="HB6-2U-N3W"/>
-                                        <constraint firstItem="0Fd-aB-cG7" firstAttribute="centerY" secondItem="d2G-Fn-wdv" secondAttribute="centerY" id="RiV-eh-J5A"/>
-                                        <constraint firstItem="0Fd-aB-cG7" firstAttribute="leading" secondItem="d2G-Fn-wdv" secondAttribute="leading" constant="16" id="Y5R-2I-dem"/>
-                                        <constraint firstItem="jla-cO-yMK" firstAttribute="leading" secondItem="d2G-Fn-wdv" secondAttribute="leading" id="hQk-F7-5cE"/>
-                                        <constraint firstAttribute="bottom" secondItem="jla-cO-yMK" secondAttribute="bottom" id="lpL-Re-UXm"/>
-                                        <constraint firstAttribute="trailing" secondItem="0Fd-aB-cG7" secondAttribute="trailing" constant="16" id="rEy-i8-Cfc"/>
-                                    </constraints>
-                                </view>
                                 <connections>
                                     <outlet property="dataSource" destination="ik1-oB-YWE" id="Jbc-GQ-ey8"/>
                                     <outlet property="delegate" destination="ik1-oB-YWE" id="wGW-Oq-stm"/>
                                 </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W65-5k-XYp">
-                                <rect key="frame" x="0.0" y="44" width="320" height="524"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="kwo-0z-JAx">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="632"/>
@@ -176,10 +115,10 @@ Want to suggest a restaurant? Let us know.</string>
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="316"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a6u-gV-LTY">
-                                                        <rect key="frame" x="16" y="16" width="288" height="164"/>
+                                                        <rect key="frame" x="0.0" y="16" width="320" height="164"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rectangle" translatesAutoresizingMaskIntoConstraints="NO" id="ei3-1Q-zFc">
-                                                                <rect key="frame" x="0.0" y="0.0" width="288" height="164"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="320" height="164"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="164" id="W4h-EC-NJp"/>
                                                                 </constraints>
@@ -282,7 +221,7 @@ Want to suggest a restaurant? Let us know.</string>
                                                     <constraint firstItem="uM5-xC-C1Q" firstAttribute="leading" secondItem="AQ7-Ws-50r" secondAttribute="leading" id="I7z-gM-7Up"/>
                                                     <constraint firstItem="oA2-AZ-krC" firstAttribute="leading" secondItem="deG-GK-d7I" secondAttribute="trailing" constant="10" id="M2N-js-cXZ"/>
                                                     <constraint firstItem="Rln-qm-VPu" firstAttribute="top" secondItem="uM5-xC-C1Q" secondAttribute="bottom" constant="5" id="NiF-KC-hBh"/>
-                                                    <constraint firstAttribute="trailing" secondItem="a6u-gV-LTY" secondAttribute="trailing" constant="16" id="O60-m6-nfv"/>
+                                                    <constraint firstAttribute="trailing" secondItem="a6u-gV-LTY" secondAttribute="trailing" id="O60-m6-nfv"/>
                                                     <constraint firstItem="Aad-M6-VuM" firstAttribute="leading" secondItem="uM5-xC-C1Q" secondAttribute="trailing" constant="6" id="T0Q-fo-LbT"/>
                                                     <constraint firstAttribute="height" constant="316" id="T8J-uo-SLA"/>
                                                     <constraint firstItem="AQ7-Ws-50r" firstAttribute="top" secondItem="a6u-gV-LTY" secondAttribute="bottom" constant="12" id="XfK-Yo-oid"/>
@@ -290,7 +229,7 @@ Want to suggest a restaurant? Let us know.</string>
                                                     <constraint firstItem="deG-GK-d7I" firstAttribute="leading" secondItem="AQ7-Ws-50r" secondAttribute="leading" id="c1n-xT-d5g"/>
                                                     <constraint firstItem="Rln-qm-VPu" firstAttribute="trailing" secondItem="AQ7-Ws-50r" secondAttribute="trailing" id="gl7-By-ZMa"/>
                                                     <constraint firstItem="Rln-qm-VPu" firstAttribute="leading" secondItem="AQ7-Ws-50r" secondAttribute="leading" id="l9i-M5-JXg"/>
-                                                    <constraint firstItem="a6u-gV-LTY" firstAttribute="leading" secondItem="UcG-IL-8Tg" secondAttribute="leading" constant="16" id="m4d-jo-TRe"/>
+                                                    <constraint firstItem="a6u-gV-LTY" firstAttribute="leading" secondItem="UcG-IL-8Tg" secondAttribute="leading" id="m4d-jo-TRe"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
@@ -300,10 +239,10 @@ Want to suggest a restaurant? Let us know.</string>
                                                 <rect key="frame" x="0.0" y="316" width="320" height="316"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZJu-Af-euh">
-                                                        <rect key="frame" x="16" y="16" width="288" height="164"/>
+                                                        <rect key="frame" x="0.0" y="16" width="320" height="164"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rectangle" translatesAutoresizingMaskIntoConstraints="NO" id="Dgf-4i-xrf">
-                                                                <rect key="frame" x="0.0" y="0.0" width="288" height="164"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="320" height="164"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="164" id="11Q-fu-hKp"/>
                                                                 </constraints>
@@ -401,7 +340,7 @@ Want to suggest a restaurant? Let us know.</string>
                                                     <constraint firstItem="uZY-ul-tsF" firstAttribute="top" secondItem="kao-Mw-5QO" secondAttribute="bottom" constant="4" id="A5c-0M-xK8"/>
                                                     <constraint firstItem="93k-fc-WPW" firstAttribute="top" secondItem="G6y-e6-lvy" secondAttribute="bottom" constant="5" id="BZv-mm-O2V"/>
                                                     <constraint firstItem="R9C-L4-LMA" firstAttribute="leading" secondItem="uZY-ul-tsF" secondAttribute="trailing" constant="6" id="CIP-GI-RbN"/>
-                                                    <constraint firstAttribute="trailing" secondItem="ZJu-Af-euh" secondAttribute="trailing" constant="16" id="KYK-BH-YBD"/>
+                                                    <constraint firstAttribute="trailing" secondItem="ZJu-Af-euh" secondAttribute="trailing" id="KYK-BH-YBD"/>
                                                     <constraint firstItem="93k-fc-WPW" firstAttribute="leading" secondItem="kao-Mw-5QO" secondAttribute="leading" id="OjP-2B-thf"/>
                                                     <constraint firstItem="p8Z-wy-i77" firstAttribute="centerY" secondItem="93k-fc-WPW" secondAttribute="centerY" id="PjN-5w-RJa"/>
                                                     <constraint firstItem="G6y-e6-lvy" firstAttribute="leading" secondItem="kao-Mw-5QO" secondAttribute="leading" id="QHt-Ip-fGC"/>
@@ -409,7 +348,7 @@ Want to suggest a restaurant? Let us know.</string>
                                                     <constraint firstItem="kao-Mw-5QO" firstAttribute="top" secondItem="ZJu-Af-euh" secondAttribute="bottom" constant="12" id="auj-CR-3To"/>
                                                     <constraint firstItem="kao-Mw-5QO" firstAttribute="leading" secondItem="ZNr-Ek-q0z" secondAttribute="leading" constant="16" id="bcG-ZF-bef"/>
                                                     <constraint firstAttribute="height" constant="316" id="eF9-lG-4DT"/>
-                                                    <constraint firstItem="ZJu-Af-euh" firstAttribute="leading" secondItem="ZNr-Ek-q0z" secondAttribute="leading" constant="16" id="f2H-Do-vJf"/>
+                                                    <constraint firstItem="ZJu-Af-euh" firstAttribute="leading" secondItem="ZNr-Ek-q0z" secondAttribute="leading" id="f2H-Do-vJf"/>
                                                     <constraint firstItem="p8Z-wy-i77" firstAttribute="leading" secondItem="93k-fc-WPW" secondAttribute="trailing" constant="10" id="hIq-sH-kNM"/>
                                                     <constraint firstItem="G6y-e6-lvy" firstAttribute="trailing" secondItem="kao-Mw-5QO" secondAttribute="trailing" id="m0T-XG-vzA"/>
                                                     <constraint firstItem="uZY-ul-tsF" firstAttribute="leading" secondItem="kao-Mw-5QO" secondAttribute="leading" id="nU8-cb-o1M"/>
@@ -476,8 +415,6 @@ Want to suggest a restaurant? Let us know.</string>
                         <outlet property="bottomConstraintOfTableView" destination="QA7-a3-evJ" id="c9t-4w-8Xf"/>
                         <outlet property="mapBtn" destination="3tl-57-Zus" id="dwu-0A-fW0"/>
                         <outlet property="noResultsView" destination="1ze-2O-OJC" id="HZA-xK-Bzw"/>
-                        <outlet property="searchBackView" destination="0Fd-aB-cG7" id="I2d-d1-i8H"/>
-                        <outlet property="searchTextfield" destination="iLP-Sp-tkj" id="z6j-G2-E3Z"/>
                         <outlet property="shimmerView" destination="W65-5k-XYp" id="oev-Zk-Cfn"/>
                         <outlet property="tableView" destination="9kc-Zb-GxZ" id="i7J-e1-eL4"/>
                     </connections>
@@ -495,10 +432,10 @@ Want to suggest a restaurant? Let us know.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fUk-jr-6Ua">
-                                <rect key="frame" x="0.0" y="44" width="320" height="524"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <subviews>
                                     <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" rotateEnabled="NO" pitchEnabled="NO" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r28-GT-fbo">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                                     </mapView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TRS-SW-Jx9" customClass="sainiCardView" customModule="SainiUtils">
                                         <rect key="frame" x="100" y="24" width="120" height="40"/>
@@ -593,7 +530,7 @@ Want to suggest a restaurant? Let us know.</string>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="mbM-6k-6ur">
-                                        <rect key="frame" x="16" y="328" width="288" height="120"/>
+                                        <rect key="frame" x="16" y="308" width="288" height="120"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7PQ-Ka-Vvc">
                                                 <rect key="frame" x="0.0" y="0.0" width="288" height="120"/>
@@ -838,7 +775,7 @@ Want to suggest a restaurant? Let us know.</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sOB-Q9-fZH">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EKe-hW-pcB">
                                         <rect key="frame" x="0.0" y="43" width="320" height="1"/>
@@ -853,15 +790,14 @@ Want to suggest a restaurant? Let us know.</string>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VZf-OQ-MbL">
-                                        <rect key="frame" x="232" y="7" width="72" height="30"/>
-                                        <color key="backgroundColor" name="paleGrey"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VZf-OQ-MbL">
+                                        <rect key="frame" x="272" y="6" width="32" height="32"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="72" id="9oK-Sn-voW"/>
-                                            <constraint firstAttribute="height" constant="30" id="Lv0-aO-reG"/>
+                                            <constraint firstAttribute="width" constant="32" id="9oK-Sn-voW"/>
+                                            <constraint firstAttribute="height" constant="32" id="Lv0-aO-reG"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="BuenosAires-Bold" family="Buenos Aires" pointSize="12"/>
-                                        <state key="normal" title="LIST">
+                                        <state key="normal" image="ic_list">
                                             <color key="titleColor" name="charcoal"/>
                                         </state>
                                         <connections>
@@ -931,7 +867,7 @@ Want to suggest a restaurant? Let us know.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mWd-X7-oIK">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ozc-eg-15w">
                                         <rect key="frame" x="267" y="0.0" width="48" height="44"/>
@@ -973,7 +909,7 @@ Want to suggest a restaurant? Let us know.</string>
                                 </constraints>
                             </view>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsBuildings="NO" rotateEnabled="NO" pitchEnabled="NO" showsUserLocation="YES" showsCompass="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IZq-0v-gSb">
-                                <rect key="frame" x="0.0" y="44" width="320" height="524"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <connections>
                                     <outlet property="delegate" destination="rqT-3Q-h08" id="QI0-CC-S9V"/>
                                 </connections>
@@ -1012,7 +948,7 @@ Want to suggest a restaurant? Let us know.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VIX-qR-nvd">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BGB-OO-Nal">
                                         <rect key="frame" x="5" y="0.0" width="48" height="44"/>
@@ -1067,7 +1003,7 @@ Want to suggest a restaurant? Let us know.</string>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bWg-YL-Pyt">
-                                <rect key="frame" x="0.0" y="44" width="320" height="524"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="9aI-F3-Plc" id="Xvc-pl-yu5"/>
@@ -1075,7 +1011,7 @@ Want to suggest a restaurant? Let us know.</string>
                                 </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dLd-6a-GWy">
-                                <rect key="frame" x="0.0" y="44" width="320" height="524"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="EMJ-g4-x5K">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
@@ -1248,7 +1184,7 @@ Want to suggest a restaurant? Let us know.</string>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="II0-UU-5bT" customClass="GuestUserView" customModule="Forthgreen" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44" width="320" height="524"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                         </subviews>
@@ -1378,7 +1314,8 @@ Want to suggest a restaurant? Let us know.</string>
         <image name="Secondary" width="59" height="60"/>
         <image name="cross" width="24" height="24"/>
         <image name="ic_back" width="24" height="24"/>
-        <image name="iconSearch" width="32" height="32"/>
+        <image name="ic_list" width="33" height="33"/>
+        <image name="ic_map" width="32" height="32"/>
         <image name="iconShareArtciel" width="32" height="32"/>
         <image name="preferences" width="25" height="24"/>
         <image name="rectangle" width="414" height="412"/>
@@ -1388,19 +1325,13 @@ Want to suggest a restaurant? Let us know.</string>
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="coolGrey">
-            <color red="0.59200000762939453" green="0.6470000147819519" blue="0.66299998760223389" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="paleGrey">
-            <color red="0.94900000095367432" green="0.95300000905990601" blue="0.9570000171661377" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.58823529411764708" green="0.64313725490196083" blue="0.66274509803921566" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="turquoiseGreen">
             <color red="0.16899999976158142" green="0.83899998664855957" blue="0.58399999141693115" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

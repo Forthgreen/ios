@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="BuenosAires-Book.otf">
-            <string>BuenosAires-Book</string>
+        <array key="BuenosAires-Bold.otf">
+            <string>BuenosAires-Bold</string>
         </array>
     </customFonts>
     <objects>
@@ -24,14 +24,14 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wyv-hf-ZVt">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="112"/>
+                        <rect key="frame" x="16" y="0.0" width="288" height="104"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="i4o-3R-c4q">
-                                <rect key="frame" x="125" y="46.5" width="175" height="19"/>
+                                <rect key="frame" x="117" y="43.5" width="151" height="17"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brand name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BBp-Pp-NtG">
-                                        <rect key="frame" x="0.0" y="0.0" width="175" height="19"/>
-                                        <fontDescription key="fontDescription" name="BuenosAires-Book" family="Buenos Aires" pointSize="16"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="151" height="17"/>
+                                        <fontDescription key="fontDescription" name="BuenosAires-Bold" family="Buenos Aires" pointSize="14"/>
                                         <color key="textColor" name="charcoal"/>
                                         <nil key="highlightedColor"/>
                                         <userDefinedRuntimeAttributes>
@@ -44,7 +44,7 @@
                                 </userDefinedRuntimeAttributes>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Q4-VE-rVY">
-                                <rect key="frame" x="0.0" y="111" width="320" height="1"/>
+                                <rect key="frame" x="0.0" y="103" width="288" height="1"/>
                                 <color key="backgroundColor" red="0.94901960780000005" green="0.95294117649999999" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="Ni8-Ac-tTH"/>
@@ -54,10 +54,13 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jnm-Eb-VrO">
-                                <rect key="frame" x="24" y="16" width="80" height="80"/>
+                                <rect key="frame" x="24" y="16" width="72" height="72"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fX9-Fc-xzi">
-                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_image_large" translatesAutoresizingMaskIntoConstraints="NO" id="fX9-Fc-xzi">
+                                        <rect key="frame" x="0.0" y="0.0" width="72" height="72"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="72" id="FVj-4u-PDP"/>
+                                        </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                                         </userDefinedRuntimeAttributes>
@@ -66,9 +69,8 @@
                                 <color key="backgroundColor" name="coolGrey"/>
                                 <constraints>
                                     <constraint firstItem="fX9-Fc-xzi" firstAttribute="top" secondItem="Jnm-Eb-VrO" secondAttribute="top" id="Cr7-yw-Yzh"/>
-                                    <constraint firstAttribute="width" constant="80" id="FuO-mh-rPf"/>
+                                    <constraint firstAttribute="width" constant="72" id="FuO-mh-rPf"/>
                                     <constraint firstAttribute="trailing" secondItem="fX9-Fc-xzi" secondAttribute="trailing" id="kKf-aR-0gb"/>
-                                    <constraint firstAttribute="height" constant="80" id="kyL-BK-sEZ"/>
                                     <constraint firstItem="fX9-Fc-xzi" firstAttribute="leading" secondItem="Jnm-Eb-VrO" secondAttribute="leading" id="t1D-wa-YEV"/>
                                     <constraint firstAttribute="bottom" secondItem="fX9-Fc-xzi" secondAttribute="bottom" id="vah-Ra-eeB"/>
                                 </constraints>
@@ -77,7 +79,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.95686274509803915" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="4Q4-VE-rVY" firstAttribute="leading" secondItem="Wyv-hf-ZVt" secondAttribute="leading" id="G8l-uR-fgw"/>
                             <constraint firstItem="Jnm-Eb-VrO" firstAttribute="leading" secondItem="Wyv-hf-ZVt" secondAttribute="leading" constant="24" id="Ho9-eA-ZiZ"/>
@@ -87,6 +89,7 @@
                             <constraint firstItem="i4o-3R-c4q" firstAttribute="leading" secondItem="Jnm-Eb-VrO" secondAttribute="trailing" constant="21" id="Xmz-RP-L3X"/>
                             <constraint firstAttribute="trailing" secondItem="i4o-3R-c4q" secondAttribute="trailing" constant="20" id="jXN-ne-PlE"/>
                             <constraint firstItem="Jnm-Eb-VrO" firstAttribute="top" secondItem="Wyv-hf-ZVt" secondAttribute="top" constant="16" id="oJ5-G8-5a4"/>
+                            <constraint firstAttribute="height" constant="104" id="ryP-Ng-ggt"/>
                             <constraint firstAttribute="trailing" secondItem="4Q4-VE-rVY" secondAttribute="trailing" id="vQ8-u3-uT1"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
@@ -95,10 +98,10 @@
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="Wyv-hf-ZVt" secondAttribute="bottom" id="6Rd-HC-ABi"/>
-                    <constraint firstItem="Wyv-hf-ZVt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="NQh-rN-BSA"/>
+                    <constraint firstAttribute="bottom" secondItem="Wyv-hf-ZVt" secondAttribute="bottom" constant="8" id="6Rd-HC-ABi"/>
+                    <constraint firstItem="Wyv-hf-ZVt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="NQh-rN-BSA"/>
                     <constraint firstItem="Wyv-hf-ZVt" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="dR6-Zp-Ws4"/>
-                    <constraint firstAttribute="trailing" secondItem="Wyv-hf-ZVt" secondAttribute="trailing" id="sRR-bm-TQC"/>
+                    <constraint firstAttribute="trailing" secondItem="Wyv-hf-ZVt" secondAttribute="trailing" constant="16" id="sRR-bm-TQC"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -112,6 +115,7 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="ic_image_large" width="375" height="375"/>
         <namedColor name="charcoal">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
