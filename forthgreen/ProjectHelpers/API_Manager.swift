@@ -575,7 +575,7 @@ public class APIManager {
                         }
                         else if code == 401{
                             if (result["message"] as? String) != nil{
-                                self.logout()
+                                 self.logout()
 //                                UIViewController.top?.view.sainiShowToast(message:message)
                                 
                             }

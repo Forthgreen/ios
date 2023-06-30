@@ -48,6 +48,7 @@ class socialFeedCell: UITableViewCell, ASAutoPlayVideoLayerContainer {
     @IBOutlet weak var soundBtn: UIButton!
     @IBOutlet weak var videoLoader: UIActivityIndicatorView!
     
+    @IBOutlet weak var viewBottomDividerHeight: NSLayoutConstraint!
     var locationManager: SainiLocationManager = SainiLocationManager()
     
     var playerController: ASVideoPlayerController?
@@ -336,6 +337,16 @@ class socialFeedCell: UITableViewCell, ASAutoPlayVideoLayerContainer {
         }
     }
     
+    func updateLikeAndImage() {
+        if postInfo.isLike {
+            likeBtn.setImage(UIImage(named: LIKE_POST_IMAGES.liked.rawValue), for: .normal)
+        }
+        else {
+            likeBtn.setImage(UIImage(named: LIKE_POST_IMAGES.notLiked.rawValue), for: .normal)
+        }
+        likeCountLbl.text = "\(postInfo.likes )"
+    }
+    
     var postDetail: Posts = Posts() {
         didSet {
             images = postDetail.image
@@ -536,26 +547,26 @@ class socialFeedCell: UITableViewCell, ASAutoPlayVideoLayerContainer {
     }
     
     @objc @IBAction func tapLabel(gesture: UITapGestureRecognizer) {
-        if postInfo.tags.count == 0 {
+        if postInfo.tags.count == 0 && postDetail.tags.count == 0 {
             return
         }
-        
-        let index = postInfo.tags.firstIndex { (temp) -> Bool in
+        let tags = self.postInfo.tags.isEmpty ? postDetail.tags : postInfo.tags
+        let index = tags.firstIndex { (temp) -> Bool in
           //  commentTextLbl.text?.contains(temp.name)
             gesture.didTapAttributedTextInLabel(label: postTxtLbl, targetText: temp.name)
         }
         if index != nil {
-            if postInfo.tags[index!].type == TAG_TYPES.USERS.rawValue {
+            if tags[index!].type == TAG_TYPES.USERS.rawValue {
                 let vc = STORYBOARD.SOCIAL_FEED.instantiateViewController(withIdentifier: SOCIAL_FEED_STORYBOARD.OtherUserProfileVC.rawValue) as! OtherUserProfileVC
-                vc.userId = postInfo.tags[index!].id
+                vc.userId = tags[index!].id
                 vc.userIsFrom = .home
                 if let visibleViewController = visibleViewController(){
                     visibleViewController.navigationController?.pushViewController(vc, animated: true)
                 }
             }
-            else if postInfo.tags[index!].type == TAG_TYPES.RESTAURANTS.rawValue {
+            else if tags[index!].type == TAG_TYPES.RESTAURANTS.rawValue {
                 let vc = STORYBOARD.RESTAURANT.instantiateViewController(withIdentifier: "RestaurantDetailVC") as! RestaurantDetailVC
-                vc.restaurantId = postInfo.tags[index!].id
+                vc.restaurantId = tags[index!].id
                 vc.isTransition = true
            //     vc.distance = restaurantListArray[indexPath.row].distance
                 vc.currentLocation = locationManager.exposedLocation?.coordinate
@@ -564,9 +575,9 @@ class socialFeedCell: UITableViewCell, ASAutoPlayVideoLayerContainer {
                     visibleViewController.navigationController?.pushViewController(vc, animated: true)
                 }
             }
-            else if postInfo.tags[index!].type == TAG_TYPES.BRAND.rawValue {
+            else if tags[index!].type == TAG_TYPES.BRAND.rawValue {
                 let vc = STORYBOARD.HOME.instantiateViewController(withIdentifier: "BrandDetailVC") as! BrandDetailVC
-                vc.brandId = postInfo.tags[index!].id
+                vc.brandId = tags[index!].id
                 vc.isTransition = true
                 if let visibleViewController = visibleViewController(){
                     visibleViewController.navigationController?.pushViewController(vc, animated: true)

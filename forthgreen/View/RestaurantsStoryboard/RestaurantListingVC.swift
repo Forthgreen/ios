@@ -101,7 +101,7 @@ class RestaurantListingVC: UIViewController {
         refreshControl.tintColor = UIColor(red:16/255, green:27/255, blue:57/255, alpha:1.0)
         refreshControl.attributedTitle = NSAttributedString(string: "")
         
-        noRestaurantsToShowGesture()
+     //   noRestaurantsToShowGesture()
         addAttributedText()
     }
     
@@ -124,7 +124,7 @@ class RestaurantListingVC: UIViewController {
     
     //MARK: - addAttributedText
     private func addAttributedText() {
-        let attributedText = NSMutableAttributedString(string: "There are no results in this location. Want to suggest a restaurant? ", attributes: [NSAttributedString.Key.font: UIFont(name: APP_FONT.buenosAiresBook.rawValue, size: 14)!,NSAttributedString.Key.foregroundColor: AppColors.charcol])
+        let attributedText = NSMutableAttributedString(string: "There are no results in this location.", attributes: [NSAttributedString.Key.font: UIFont(name: APP_FONT.buenosAiresBook.rawValue, size: 14)!,NSAttributedString.Key.foregroundColor: AppColors.charcol])
         let underlineedText = underline(string: "Let us know.")
         attributedText.append(underlineedText)
         NoDataLbl.attributedText = attributedText

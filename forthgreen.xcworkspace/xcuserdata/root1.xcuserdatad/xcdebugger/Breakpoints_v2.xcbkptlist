@@ -8,7 +8,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "10E330E6-506B-412C-8158-3342D7FF0882"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "forthgreen/ViewModel/SocialFeedViewModel.swift"
@@ -24,7 +24,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "892BB1C6-5A0F-4B6C-A8B6-745FB96E6304"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "forthgreen/ViewModel/SocialFeedViewModel.swift"
@@ -40,7 +40,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "2326CCFB-E3A2-408F-8A8E-E8F2680038FA"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "forthgreen/ProjectHelpers/API_Manager.swift"
@@ -103,7 +103,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "2ADC140C-9289-4BBD-A1B8-95E3D5261E20"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "forthgreen/ProjectHelpers/API_Manager.swift"
@@ -119,7 +119,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "226C5BBD-D4B1-4FBC-A160-E3414E4AE53C"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "forthgreen/ProjectHelpers/API_Manager.swift"
@@ -135,14 +135,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "86630E2C-F54F-4848-948A-E35EB5CE3E93"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "forthgreen/View/SocialFeedStoryboard/SocialFeedVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "238"
-            endingLineNumber = "238"
+            startingLineNumber = "248"
+            endingLineNumber = "248"
             landmarkName = "configUI()"
             landmarkType = "7">
             <Locations>
@@ -213,14 +213,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "B308C943-2DFB-40F5-9EAE-43765554FF15"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "forthgreen/View/SocialFeedStoryboard/SocialFeedVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "649"
-            endingLineNumber = "649"
+            startingLineNumber = "686"
+            endingLineNumber = "686"
             landmarkName = "goToOtherUserProfileBtnIsPressed(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -229,14 +229,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "3EA047FE-6954-4FD4-AE75-6E94A69BFE72"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "forthgreen/View/SocialFeedStoryboard/SocialFeedVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "634"
-            endingLineNumber = "634"
+            startingLineNumber = "671"
+            endingLineNumber = "671"
             landmarkName = "followUserBtnIsPressed(sender:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -245,14 +245,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "629CD5C0-6C36-47FA-B30F-B149EBEDA3B5"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "forthgreen/View/SocialFeedStoryboard/SocialFeedVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "483"
-            endingLineNumber = "483"
+            startingLineNumber = "494"
+            endingLineNumber = "494"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -267,10 +267,72 @@
             filePath = "forthgreen/View/SocialFeedStoryboard/SocialFeedVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "467"
-            endingLineNumber = "467"
+            startingLineNumber = "478"
+            endingLineNumber = "478"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "89EFBA41-38F4-4F48-9FBB-FCEF48B09737 - a9672ba7e547116f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Forthgreen.SocialFeedVC.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
+                  moduleName = "Forthgreen"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/root1/Documents/Projects/Forthgreen/forthgreen/View/SocialFeedStoryboard/SocialFeedVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "475"
+                  endingLineNumber = "475"
+                  offsetFromSymbolStart = "4592">
+               </Location>
+               <Location
+                  uuid = "89EFBA41-38F4-4F48-9FBB-FCEF48B09737 - a9672ba7e547116f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Forthgreen.SocialFeedVC.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
+                  moduleName = "Forthgreen"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/root1/Documents/Projects/Forthgreen/forthgreen/View/SocialFeedStoryboard/SocialFeedVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "475"
+                  endingLineNumber = "475"
+                  offsetFromSymbolStart = "2904">
+               </Location>
+               <Location
+                  uuid = "89EFBA41-38F4-4F48-9FBB-FCEF48B09737 - a9672ba7e5471129"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Forthgreen.SocialFeedVC.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
+                  moduleName = "Forthgreen"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/root1/Documents/Projects/Forthgreen/forthgreen/View/SocialFeedStoryboard/SocialFeedVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "473"
+                  endingLineNumber = "473"
+                  offsetFromSymbolStart = "2904">
+               </Location>
+               <Location
+                  uuid = "89EFBA41-38F4-4F48-9FBB-FCEF48B09737 - a9672ba7e5471129"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Forthgreen.SocialFeedVC.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
+                  moduleName = "Forthgreen"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/root1/Documents/Projects/Forthgreen/forthgreen/View/SocialFeedStoryboard/SocialFeedVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "473"
+                  endingLineNumber = "473"
+                  offsetFromSymbolStart = "4592">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -283,10 +345,72 @@
             filePath = "forthgreen/View/SocialFeedStoryboard/SocialFeedVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "657"
-            endingLineNumber = "657"
+            startingLineNumber = "694"
+            endingLineNumber = "694"
             landmarkName = "goToOtherUserProfileBtnIsPressed(_:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "DD6604D2-FF68-4A8D-8C56-ADEF3A4D8DF7 - 2a9c2c8cf616ff07"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Forthgreen.SocialFeedVC.goToOtherUserProfileBtnIsPressed(__C.UIButton) -&gt; ()"
+                  moduleName = "Forthgreen"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/root1/Documents/Projects/Forthgreen/forthgreen/View/SocialFeedStoryboard/SocialFeedVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "665"
+                  endingLineNumber = "665"
+                  offsetFromSymbolStart = "1720">
+               </Location>
+               <Location
+                  uuid = "DD6604D2-FF68-4A8D-8C56-ADEF3A4D8DF7 - 2a9c2c8cf616ff07"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Forthgreen.SocialFeedVC.goToOtherUserProfileBtnIsPressed(__C.UIButton) -&gt; ()"
+                  moduleName = "Forthgreen"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/root1/Documents/Projects/Forthgreen/forthgreen/View/SocialFeedStoryboard/SocialFeedVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "665"
+                  endingLineNumber = "665"
+                  offsetFromSymbolStart = "1240">
+               </Location>
+               <Location
+                  uuid = "DD6604D2-FF68-4A8D-8C56-ADEF3A4D8DF7 - 2a9c2c8cf616ff45"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Forthgreen.SocialFeedVC.goToOtherUserProfileBtnIsPressed(__C.UIButton) -&gt; ()"
+                  moduleName = "Forthgreen"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/root1/Documents/Projects/Forthgreen/forthgreen/View/SocialFeedStoryboard/SocialFeedVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "663"
+                  endingLineNumber = "663"
+                  offsetFromSymbolStart = "1240">
+               </Location>
+               <Location
+                  uuid = "DD6604D2-FF68-4A8D-8C56-ADEF3A4D8DF7 - 2a9c2c8cf616ff45"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Forthgreen.SocialFeedVC.goToOtherUserProfileBtnIsPressed(__C.UIButton) -&gt; ()"
+                  moduleName = "Forthgreen"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/root1/Documents/Projects/Forthgreen/forthgreen/View/SocialFeedStoryboard/SocialFeedVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "663"
+                  endingLineNumber = "663"
+                  offsetFromSymbolStart = "1720">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -495,70 +619,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "A8663F3A-D67B-4CB0-9D93-BBEAB367965B"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "forthgreen/View/NotificationStoryboard/NotificationVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "176"
-            endingLineNumber = "176"
-            landmarkName = "tableView(_:cellForRowAt:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "A8663F3A-D67B-4CB0-9D93-BBEAB367965B - 2561f48d4ff80415"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Forthgreen.NotificationVC.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
-                  moduleName = "Forthgreen"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/root1/Documents/Projects/Forthgreen/forthgreen/View/NotificationStoryboard/NotificationVC.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "167"
-                  endingLineNumber = "167"
-                  offsetFromSymbolStart = "244">
-               </Location>
-               <Location
-                  uuid = "A8663F3A-D67B-4CB0-9D93-BBEAB367965B - 2561f48d4ff8054e"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Forthgreen.NotificationVC.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
-                  moduleName = "Forthgreen"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/root1/Documents/Projects/Forthgreen/forthgreen/View/NotificationStoryboard/NotificationVC.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "176"
-                  endingLineNumber = "176"
-                  offsetFromSymbolStart = "1292">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "9E001DB2-62E4-44E4-8420-12F17E302CBE"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "forthgreen/View/SocialFeedStoryboard/SocialFeedVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "346"
-            endingLineNumber = "346"
-            landmarkName = "clickToNotificaiton(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "412F46FA-CA56-43C8-8B7E-E884A524B573"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -634,6 +694,910 @@
             endingLineNumber = "191"
             landmarkName = "didClickOkBtn()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "12A8B6FF-2922-4CD6-8A45-843EA0257BC7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "forthgreen/View/SocialFeedStoryboard/PostDetailVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "684"
+            endingLineNumber = "684"
+            landmarkName = "viewMoreBtnOfCommentIsPressed(sender:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "12A8B6FF-2922-4CD6-8A45-843EA0257BC7 - ea49f3f9f7a66531"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Forthgreen.PostDetailVC.viewMoreBtnOfCommentIsPressed(sender: __C.UIButton) -&gt; ()"
+                  moduleName = "Forthgreen"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/root1/Documents/Projects/Forthgreen/forthgreen/View/SocialFeedStoryboard/PostDetailVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "684"
+                  endingLineNumber = "684"
+                  offsetFromSymbolStart = "168">
+               </Location>
+               <Location
+                  uuid = "12A8B6FF-2922-4CD6-8A45-843EA0257BC7 - ea49f3f9f7a66531"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Forthgreen.PostDetailVC.viewMoreBtnOfCommentIsPressed(sender: __C.UIButton) -&gt; ()"
+                  moduleName = "Forthgreen"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/root1/Documents/Projects/Forthgreen/forthgreen/View/SocialFeedStoryboard/PostDetailVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "684"
+                  endingLineNumber = "684"
+                  offsetFromSymbolStart = "520">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D275DD73-1ED8-4183-8E3F-77369833B772"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "forthgreen/View/SocialFeedStoryboard/PostDetailVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "757"
+            endingLineNumber = "757"
+            landmarkName = "viewMoreBtnOfReplyIsPressed(sender:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D275DD73-1ED8-4183-8E3F-77369833B772 - e6b4c13bcc706971"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Forthgreen.PostDetailVC.viewMoreBtnOfReplyIsPressed(sender: __C.UIButton) -&gt; ()"
+                  moduleName = "Forthgreen"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/root1/Documents/Projects/Forthgreen/forthgreen/View/SocialFeedStoryboard/PostDetailVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "757"
+                  endingLineNumber = "757"
+                  offsetFromSymbolStart = "168">
+               </Location>
+               <Location
+                  uuid = "D275DD73-1ED8-4183-8E3F-77369833B772 - e6b4c13bcc706971"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Forthgreen.PostDetailVC.viewMoreBtnOfReplyIsPressed(sender: __C.UIButton) -&gt; ()"
+                  moduleName = "Forthgreen"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/root1/Documents/Projects/Forthgreen/forthgreen/View/SocialFeedStoryboard/PostDetailVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "757"
+                  endingLineNumber = "757"
+                  offsetFromSymbolStart = "520">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "15FA7898-47D9-453E-B964-814C2D1133B4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "forthgreen/View/SocialFeedStoryboard/PostDetailVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "608"
+            endingLineNumber = "608"
+            landmarkName = "viewMoreBtnOfPostIsPressed(sender:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7328E6A0-1309-4C78-9162-72525F866402"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "forthgreen/View/SocialFeedStoryboard/PostDetailVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "595"
+            endingLineNumber = "595"
+            landmarkName = "likePostBtnIsPressed(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0B858340-70DF-41ED-AAAF-9772733327EC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "forthgreen/View/HomeStoryboard/ProductDetailVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "429"
+            endingLineNumber = "429"
+            landmarkName = "clickToBookmark(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "10D22D89-7A2C-4172-8E93-0BDA08DF5CDF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "forthgreen/View/HomeStoryboard/ProductDetailVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "441"
+            endingLineNumber = "441"
+            landmarkName = "clickToBookmark(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "79355098-04AB-45AE-87B8-4A31C70EF611"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "forthgreen/View/SocialFeedStoryboard/CommentListVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "383"
+            endingLineNumber = "383"
+            landmarkName = "addLikeBtnIsPressed(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7B495E55-DA2D-4ECF-92C2-C910A1E8F267"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "forthgreen/View/RestaurantsStoryboard/RestaurantDetailVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "420"
+            endingLineNumber = "420"
+            landmarkName = "clickToBookmark(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CC00BB09-5A3F-4EE3-BB89-647178D5E390"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "forthgreen/ViewModel/NotificationDetailViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "fetchNotiDetail(request:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "CC00BB09-5A3F-4EE3-BB89-647178D5E390 - 1c0cea12832432f6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;) -&gt; () in closure #1 () -&gt; () in Forthgreen.NotificationDetailViewModel.fetchNotiDetail(request: Forthgreen.PostDetailRequest) -&gt; ()"
+                  moduleName = "Forthgreen"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/root1/Documents/Projects/Forthgreen/forthgreen/ViewModel/NotificationDetailViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "772">
+               </Location>
+               <Location
+                  uuid = "CC00BB09-5A3F-4EE3-BB89-647178D5E390 - 6dc7e8bd810ff810"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;) -&gt; () in closure #1 () -&gt; () in Forthgreen.NotificationDetailViewModel.fetchNotiDetail(request: Forthgreen.NotificationDetailRequest) -&gt; ()"
+                  moduleName = "Forthgreen"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/root1/Documents/Projects/Forthgreen/forthgreen/ViewModel/NotificationDetailViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "804">
+               </Location>
+               <Location
+                  uuid = "CC00BB09-5A3F-4EE3-BB89-647178D5E390 - 6dc7e8bd810ff810"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;) -&gt; () in closure #1 () -&gt; () in Forthgreen.NotificationDetailViewModel.fetchNotiDetail(request: Forthgreen.NotificationDetailRequest) -&gt; ()"
+                  moduleName = "Forthgreen"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/root1/Documents/Projects/Forthgreen/forthgreen/ViewModel/NotificationDetailViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "2984">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "390CF099-F772-451C-B9A3-B19D8F67DCE6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "forthgreen/TableViewXib&apos;s/socialFeedCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "550"
+            endingLineNumber = "550"
+            landmarkName = "tapLabel(gesture:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "390CF099-F772-451C-B9A3-B19D8F67DCE6 - fad1f6753659e2f9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Forthgreen.socialFeedCell.tapLabel(gesture: __C.UITapGestureRecognizer) -&gt; ()"
+                  moduleName = "Forthgreen"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/root1/Documents/Projects/Forthgreen/forthgreen/TableViewXib&apos;s/socialFeedCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "541"
+                  endingLineNumber = "541"
+                  offsetFromSymbolStart = "152">
+               </Location>
+               <Location
+                  uuid = "390CF099-F772-451C-B9A3-B19D8F67DCE6 - fad1f6753659e318"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Forthgreen.socialFeedCell.tapLabel(gesture: __C.UITapGestureRecognizer) -&gt; ()"
+                  moduleName = "Forthgreen"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/root1/Documents/Projects/Forthgreen/forthgreen/TableViewXib&apos;s/socialFeedCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "540"
+                  endingLineNumber = "540"
+                  offsetFromSymbolStart = "156">
+               </Location>
+               <Location
+                  uuid = "390CF099-F772-451C-B9A3-B19D8F67DCE6 - fad1f6753659e1ce"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Forthgreen.socialFeedCell.tapLabel(gesture: __C.UITapGestureRecognizer) -&gt; ()"
+                  moduleName = "Forthgreen"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/root1/Documents/Projects/Forthgreen/forthgreen/TableViewXib&apos;s/socialFeedCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "550"
+                  endingLineNumber = "550"
+                  offsetFromSymbolStart = "156">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8C3EAB82-9866-4009-8A8C-3F9BDD35BFBF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "forthgreen/View/SocialFeedStoryboard/PostDetailVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
+            landmarkName = "viewWillAppear(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E381F6D2-837B-4F38-9EF9-1F1D041D13AB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "forthgreen/TableViewXib&apos;s/socialFeedCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "554"
+            endingLineNumber = "554"
+            landmarkName = "tapLabel(gesture:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E381F6D2-837B-4F38-9EF9-1F1D041D13AB - fad1f6753659e275"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Forthgreen.socialFeedCell.tapLabel(gesture: __C.UITapGestureRecognizer) -&gt; ()"
+                  moduleName = "Forthgreen"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/root1/Documents/Projects/Forthgreen/forthgreen/TableViewXib&apos;s/socialFeedCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "545"
+                  endingLineNumber = "545"
+                  offsetFromSymbolStart = "272">
+               </Location>
+               <Location
+                  uuid = "E381F6D2-837B-4F38-9EF9-1F1D041D13AB - b38ef7e98da419a9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Forthgreen.TagModel) -&gt; Swift.Bool in Forthgreen.socialFeedCell.tapLabel(gesture: __C.UITapGestureRecognizer) -&gt; ()"
+                  moduleName = "Forthgreen"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/root1/Documents/Projects/Forthgreen/forthgreen/TableViewXib&apos;s/socialFeedCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "547"
+                  endingLineNumber = "547"
+                  offsetFromSymbolStart = "100">
+               </Location>
+               <Location
+                  uuid = "E381F6D2-837B-4F38-9EF9-1F1D041D13AB - fad1f6753659e294"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Forthgreen.socialFeedCell.tapLabel(gesture: __C.UITapGestureRecognizer) -&gt; ()"
+                  moduleName = "Forthgreen"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/root1/Documents/Projects/Forthgreen/forthgreen/TableViewXib&apos;s/socialFeedCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "544"
+                  endingLineNumber = "544"
+                  offsetFromSymbolStart = "748">
+               </Location>
+               <Location
+                  uuid = "E381F6D2-837B-4F38-9EF9-1F1D041D13AB - b38ef7e98da419c8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Forthgreen.TagModel) -&gt; Swift.Bool in Forthgreen.socialFeedCell.tapLabel(gesture: __C.UITapGestureRecognizer) -&gt; ()"
+                  moduleName = "Forthgreen"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/root1/Documents/Projects/Forthgreen/forthgreen/TableViewXib&apos;s/socialFeedCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "546"
+                  endingLineNumber = "546"
+                  offsetFromSymbolStart = "100">
+               </Location>
+               <Location
+                  uuid = "E381F6D2-837B-4F38-9EF9-1F1D041D13AB - fad1f6753659e14a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Forthgreen.socialFeedCell.tapLabel(gesture: __C.UITapGestureRecognizer) -&gt; ()"
+                  moduleName = "Forthgreen"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/root1/Documents/Projects/Forthgreen/forthgreen/TableViewXib&apos;s/socialFeedCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "554"
+                  endingLineNumber = "554"
+                  offsetFromSymbolStart = "748">
+               </Location>
+               <Location
+                  uuid = "E381F6D2-837B-4F38-9EF9-1F1D041D13AB - b38ef7e98da41a92"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Forthgreen.TagModel) -&gt; Swift.Bool in Forthgreen.socialFeedCell.tapLabel(gesture: __C.UITapGestureRecognizer) -&gt; ()"
+                  moduleName = "Forthgreen"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/root1/Documents/Projects/Forthgreen/forthgreen/TableViewXib&apos;s/socialFeedCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "556"
+                  endingLineNumber = "556"
+                  offsetFromSymbolStart = "100">
+               </Location>
+               <Location
+                  uuid = "E381F6D2-837B-4F38-9EF9-1F1D041D13AB - fad1f6753659e14a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Forthgreen.socialFeedCell.tapLabel(gesture: __C.UITapGestureRecognizer) -&gt; ()"
+                  moduleName = "Forthgreen"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/root1/Documents/Projects/Forthgreen/forthgreen/TableViewXib&apos;s/socialFeedCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "554"
+                  endingLineNumber = "554"
+                  offsetFromSymbolStart = "764">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D437B3B4-E73E-4716-B375-89FF6546ED17"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "forthgreen/ViewModel/SocialFeedViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "153"
+            endingLineNumber = "153"
+            landmarkName = "likePost(postRef:status:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D437B3B4-E73E-4716-B375-89FF6546ED17 - fe09302bb3e9b1d6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Forthgreen.SocialFeedViewModel.likePost(postRef: Swift.String, status: Swift.Bool) -&gt; ()"
+                  moduleName = "Forthgreen"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/root1/Documents/Projects/Forthgreen/forthgreen/ViewModel/SocialFeedViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "153"
+                  endingLineNumber = "153"
+                  offsetFromSymbolStart = "1100">
+               </Location>
+               <Location
+                  uuid = "D437B3B4-E73E-4716-B375-89FF6546ED17 - fe09302bb3e9b1d6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Forthgreen.SocialFeedViewModel.likePost(postRef: Swift.String, status: Swift.Bool) -&gt; ()"
+                  moduleName = "Forthgreen"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/root1/Documents/Projects/Forthgreen/forthgreen/ViewModel/SocialFeedViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "153"
+                  endingLineNumber = "153"
+                  offsetFromSymbolStart = "812">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F5BCB9C0-F6C2-4656-A28C-3B482066A6FF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "forthgreen/ViewModel/SocialFeedViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "155"
+            endingLineNumber = "155"
+            landmarkName = "likePost(postRef:status:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F5BCB9C0-F6C2-4656-A28C-3B482066A6FF - fe09302bb3e9b110"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Forthgreen.SocialFeedViewModel.likePost(postRef: Swift.String, status: Swift.Bool) -&gt; ()"
+                  moduleName = "Forthgreen"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/root1/Documents/Projects/Forthgreen/forthgreen/ViewModel/SocialFeedViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "155"
+                  endingLineNumber = "155"
+                  offsetFromSymbolStart = "1260">
+               </Location>
+               <Location
+                  uuid = "F5BCB9C0-F6C2-4656-A28C-3B482066A6FF - fe09302bb3e9b110"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Forthgreen.SocialFeedViewModel.likePost(postRef: Swift.String, status: Swift.Bool) -&gt; ()"
+                  moduleName = "Forthgreen"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/root1/Documents/Projects/Forthgreen/forthgreen/ViewModel/SocialFeedViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "155"
+                  endingLineNumber = "155"
+                  offsetFromSymbolStart = "988">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D0CCBBF5-27CC-4103-A4D1-FA38050CAF84"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "forthgreen/TableViewXib&apos;s/socialFeedCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "347"
+            endingLineNumber = "347"
+            landmarkName = "updateLikeAndImage()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D0CCBBF5-27CC-4103-A4D1-FA38050CAF84 - 235b5b386df51145"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Forthgreen.socialFeedCell.updateLikeAndImage() -&gt; ()"
+                  moduleName = "Forthgreen"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/root1/Documents/Projects/Forthgreen/forthgreen/TableViewXib&apos;s/socialFeedCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "347"
+                  endingLineNumber = "347"
+                  offsetFromSymbolStart = "632">
+               </Location>
+               <Location
+                  uuid = "D0CCBBF5-27CC-4103-A4D1-FA38050CAF84 - 235b5b386df51145"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Forthgreen.socialFeedCell.updateLikeAndImage() -&gt; ()"
+                  moduleName = "Forthgreen"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/root1/Documents/Projects/Forthgreen/forthgreen/TableViewXib&apos;s/socialFeedCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "347"
+                  endingLineNumber = "347"
+                  offsetFromSymbolStart = "636">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "29A1B109-7DCE-4810-92E1-9CB71DCC2ED3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "forthgreen/TableViewXib&apos;s/socialFeedCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "342"
+            endingLineNumber = "342"
+            landmarkName = "updateLikeAndImage()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "29A1B109-7DCE-4810-92E1-9CB71DCC2ED3 - 235b5b386df51e20"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Forthgreen.socialFeedCell.updateLikeAndImage() -&gt; ()"
+                  moduleName = "Forthgreen"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/root1/Documents/Projects/Forthgreen/forthgreen/TableViewXib&apos;s/socialFeedCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "342"
+                  endingLineNumber = "342"
+                  offsetFromSymbolStart = "160">
+               </Location>
+               <Location
+                  uuid = "29A1B109-7DCE-4810-92E1-9CB71DCC2ED3 - 235b5b386df51e20"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Forthgreen.socialFeedCell.updateLikeAndImage() -&gt; ()"
+                  moduleName = "Forthgreen"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/root1/Documents/Projects/Forthgreen/forthgreen/TableViewXib&apos;s/socialFeedCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "342"
+                  endingLineNumber = "342"
+                  offsetFromSymbolStart = "164">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9D5ECA40-5C23-463D-B23A-CFD45EEE89CA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "forthgreen/TableViewXib&apos;s/socialFeedCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "344"
+            endingLineNumber = "344"
+            landmarkName = "updateLikeAndImage()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "9D5ECA40-5C23-463D-B23A-CFD45EEE89CA - 235b5b386df51e83"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Forthgreen.socialFeedCell.updateLikeAndImage() -&gt; ()"
+                  moduleName = "Forthgreen"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/root1/Documents/Projects/Forthgreen/forthgreen/TableViewXib&apos;s/socialFeedCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "345"
+                  endingLineNumber = "345"
+                  offsetFromSymbolStart = "396">
+               </Location>
+               <Location
+                  uuid = "9D5ECA40-5C23-463D-B23A-CFD45EEE89CA - 235b5b386df51e83"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Forthgreen.socialFeedCell.updateLikeAndImage() -&gt; ()"
+                  moduleName = "Forthgreen"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/root1/Documents/Projects/Forthgreen/forthgreen/TableViewXib&apos;s/socialFeedCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "345"
+                  endingLineNumber = "345"
+                  offsetFromSymbolStart = "400">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1CDCAD22-E0C8-4B68-A574-E7934C06F5E7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "forthgreen/View/HomeStoryboard/ShopVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "205"
+            endingLineNumber = "205"
+            landmarkName = "updateProductListWithBokmark(productRef:status:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "1CDCAD22-E0C8-4B68-A574-E7934C06F5E7 - 33f9fc45211b339a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 @Swift.MainActor () -&gt; () in Forthgreen.ShopVC.updateProductListWithBokmark(productRef: Swift.String, status: Swift.Bool) -&gt; ()"
+                  moduleName = "Forthgreen"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/root1/Documents/Projects/Forthgreen/forthgreen/View/HomeStoryboard/ShopVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "205"
+                  endingLineNumber = "205"
+                  offsetFromSymbolStart = "1456">
+               </Location>
+               <Location
+                  uuid = "1CDCAD22-E0C8-4B68-A574-E7934C06F5E7 - 235857d2c297103"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #2 @Swift.MainActor () -&gt; () in Forthgreen.ShopVC.updateProductListWithBokmark(productRef: Swift.String, status: Swift.Bool) -&gt; ()"
+                  moduleName = "Forthgreen"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/root1/Documents/Projects/Forthgreen/forthgreen/View/HomeStoryboard/ShopVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "205"
+                  endingLineNumber = "205"
+                  offsetFromSymbolStart = "664">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E80A2A7E-4DED-4B44-8303-9DE334C0A23C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "forthgreen/View/HomeStoryboard/ShopVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "204"
+            endingLineNumber = "204"
+            landmarkName = "updateProductListWithBokmark(productRef:status:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E80A2A7E-4DED-4B44-8303-9DE334C0A23C - 33f9fc45211b33fb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 @Swift.MainActor () -&gt; () in Forthgreen.ShopVC.updateProductListWithBokmark(productRef: Swift.String, status: Swift.Bool) -&gt; ()"
+                  moduleName = "Forthgreen"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/root1/Documents/Projects/Forthgreen/forthgreen/View/HomeStoryboard/ShopVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "204"
+                  endingLineNumber = "204"
+                  offsetFromSymbolStart = "1424">
+               </Location>
+               <Location
+                  uuid = "E80A2A7E-4DED-4B44-8303-9DE334C0A23C - 235857d2c297162"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #2 @Swift.MainActor () -&gt; () in Forthgreen.ShopVC.updateProductListWithBokmark(productRef: Swift.String, status: Swift.Bool) -&gt; ()"
+                  moduleName = "Forthgreen"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/root1/Documents/Projects/Forthgreen/forthgreen/View/HomeStoryboard/ShopVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "204"
+                  endingLineNumber = "204"
+                  offsetFromSymbolStart = "184">
+               </Location>
+               <Location
+                  uuid = "E80A2A7E-4DED-4B44-8303-9DE334C0A23C - 235857d2c297162"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #2 @Swift.MainActor () -&gt; () in Forthgreen.ShopVC.updateProductListWithBokmark(productRef: Swift.String, status: Swift.Bool) -&gt; ()"
+                  moduleName = "Forthgreen"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/root1/Documents/Projects/Forthgreen/forthgreen/View/HomeStoryboard/ShopVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "204"
+                  endingLineNumber = "204"
+                  offsetFromSymbolStart = "636">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9F25FC08-E9DF-47E5-91D1-D5CDAB19040F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "forthgreen/View/HomeStoryboard/ShopVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "configUI()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E88F5F19-1E3A-4241-B2D1-C8656BA0B7B6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "forthgreen/View/HomeStoryboard/ShopVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "242"
+            endingLineNumber = "242"
+            landmarkName = "selecteUnselectBookmark(shopData:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0E5C8163-C391-445F-AB06-1921309F5B02"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "forthgreen/View/SocialFeedStoryboard/SocialFeedVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "205"
+            endingLineNumber = "205"
+            landmarkName = "configUI()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A6B17C86-8F12-4193-B858-CA7E9697D891"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "forthgreen/TableViewXib&apos;s/socialFeedCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "137"
+            endingLineNumber = "137"
+            landmarkName = "postInfo"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "A6B17C86-8F12-4193-B858-CA7E9697D891 - 9b9425833b593b15"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Forthgreen.socialFeedCell.postInfo.didset : Forthgreen.SocialFeed"
+                  moduleName = "Forthgreen"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/root1/Documents/Projects/Forthgreen/forthgreen/TableViewXib&apos;s/socialFeedCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "137"
+                  endingLineNumber = "137"
+                  offsetFromSymbolStart = "368">
+               </Location>
+               <Location
+                  uuid = "A6B17C86-8F12-4193-B858-CA7E9697D891 - 3be2cc2f22ad8621"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in Forthgreen.socialFeedCell.postInfo.didset : Forthgreen.SocialFeed"
+                  moduleName = "Forthgreen"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/root1/Documents/Projects/Forthgreen/forthgreen/TableViewXib&apos;s/socialFeedCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "138"
+                  endingLineNumber = "138"
+                  offsetFromSymbolStart = "68">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -3,7 +3,7 @@
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -136,8 +136,8 @@ Want to suggest a restaurant? Let us know.</string>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restaurant name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AQ7-Ws-50r">
-                                                        <rect key="frame" x="16" y="192" width="288" height="19.5"/>
-                                                        <fontDescription key="fontDescription" name="BuenosAires-Bold" family="Buenos Aires" pointSize="16"/>
+                                                        <rect key="frame" x="16" y="192" width="288" height="17"/>
+                                                        <fontDescription key="fontDescription" name="BuenosAires-Bold" family="Buenos Aires" pointSize="14"/>
                                                         <color key="textColor" name="charcoal"/>
                                                         <nil key="highlightedColor"/>
                                                         <userDefinedRuntimeAttributes>
@@ -145,7 +145,7 @@ Want to suggest a restaurant? Let us know.</string>
                                                         </userDefinedRuntimeAttributes>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uM5-xC-C1Q" customClass="FloatRatingView" customModule="SainiUtils">
-                                                        <rect key="frame" x="16" y="215.5" width="85" height="16"/>
+                                                        <rect key="frame" x="16" y="213" width="85" height="16"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="16" id="53T-dg-GNz"/>
@@ -171,7 +171,7 @@ Want to suggest a restaurant? Let us know.</string>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="32" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aad-M6-VuM">
-                                                        <rect key="frame" x="107" y="215" width="16" height="17"/>
+                                                        <rect key="frame" x="107" y="212.5" width="16" height="17"/>
                                                         <fontDescription key="fontDescription" name="BuenosAires-Book" family="Buenos Aires" pointSize="14"/>
                                                         <color key="textColor" red="0.24313725489999999" green="0.29411764709999999" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -180,7 +180,7 @@ Want to suggest a restaurant? Let us know.</string>
                                                         </userDefinedRuntimeAttributes>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Italian • Pizza • Pasta • Salads" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rln-qm-VPu">
-                                                        <rect key="frame" x="16" y="236.5" width="288" height="22"/>
+                                                        <rect key="frame" x="16" y="234" width="288" height="22"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="22" id="HYj-IL-fj3"/>
                                                         </constraints>
@@ -192,7 +192,7 @@ Want to suggest a restaurant? Let us know.</string>
                                                         </userDefinedRuntimeAttributes>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$$$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="deG-GK-d7I">
-                                                        <rect key="frame" x="16" y="263.5" width="23" height="17"/>
+                                                        <rect key="frame" x="16" y="261" width="23" height="17"/>
                                                         <fontDescription key="fontDescription" name="BuenosAires-Bold" family="Buenos Aires" pointSize="14"/>
                                                         <color key="textColor" red="0.75686274509999996" green="0.79607843140000001" blue="0.81176470590000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -201,7 +201,7 @@ Want to suggest a restaurant? Let us know.</string>
                                                         </userDefinedRuntimeAttributes>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.6 miles" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oA2-AZ-krC">
-                                                        <rect key="frame" x="49" y="263.5" width="58.5" height="17"/>
+                                                        <rect key="frame" x="49" y="261" width="58.5" height="17"/>
                                                         <fontDescription key="fontDescription" name="BuenosAires-Book" family="Buenos Aires" pointSize="14"/>
                                                         <color key="textColor" red="0.24313725489999999" green="0.29411764709999999" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>

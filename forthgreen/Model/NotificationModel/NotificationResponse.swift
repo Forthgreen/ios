@@ -38,10 +38,12 @@ struct NotificationList: Codable {
     let ref: String
     let refType: Int
     let createdOn, username, name, image: String
+    let userid: String
 
     enum CodingKeys: String, CodingKey {
         case id = "_id"
         case message, seen, ref, refType, createdOn, username, name, image
+        case userid
     }
     
     init(from decoder: Decoder) throws {
@@ -55,5 +57,6 @@ struct NotificationList: Codable {
         username = try values.decodeIfPresent(String.self, forKey: .username) ?? DocumentDefaultValues.Empty.string
         name = try values.decodeIfPresent(String.self, forKey: .name) ?? DocumentDefaultValues.Empty.string
         image = try values.decodeIfPresent(String.self, forKey: .image) ?? DocumentDefaultValues.Empty.string
+        userid = try values.decodeIfPresent(String.self, forKey: .userid) ?? DocumentDefaultValues.Empty.string
     }
 }

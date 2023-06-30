@@ -153,9 +153,9 @@ class OtherUserProfileVC: UIViewController {
         
         likePostVM.likePostInfo.bind { [weak self](_) in
             guard let `self` = self else { return }
-            let postRef = self.likePostVM.likePostInfo.value.ref
-            let likeStatus = self.likePostVM.likePostInfo.value.status
-            self.profileInfoVM.likePost(postRef: postRef, status: likeStatus)
+//            let postRef = self.likePostVM.likePostInfo.value.ref
+//            let likeStatus = self.likePostVM.likePostInfo.value.status
+//            self.profileInfoVM.likePost(postRef: postRef, status: likeStatus)
         }
         
         followUserVM.success.bind { [weak self] (_) in
@@ -435,8 +435,11 @@ extension OtherUserProfileVC: UITableViewDataSource, UITableViewDelegate {
     //MARK: - likePostBtnIsPressed
     @objc func likePostBtnIsPressed(_ sender: UIButton) {
         AppDelegate().sharedDelegate().vibrateOnTouch()
-        let request = LikePostRequest(postRef: profileInfoVM.userInfo.value.posts[sender.tag].id, like: !profileInfoVM.userInfo.value.posts[sender.tag].isLike)
+        let post = profileInfoVM.userInfo.value.posts[sender.tag]
+        let request = LikePostRequest(postRef: post.id,
+                                      like: !post.isLike)
         likePostVM.likePost(request: request)
+        self.profileInfoVM.likePost(postRef: post.id, status: !post.isLike)
     }
     
     //MARK: - addLikeBtnIsPressed
@@ -449,11 +452,16 @@ extension OtherUserProfileVC: UITableViewDataSource, UITableViewDelegate {
     
     //MARK: - addCommentBtnIsPressed
     @objc func addCommentBtnIsPressed(_ sender: UIButton) {
-        let vc = STORYBOARD.SOCIAL_FEED.instantiateViewController(withIdentifier: SOCIAL_FEED_STORYBOARD.CommentListVC.rawValue) as! CommentListVC
-        vc.profileInfoVM = self.profileInfoVM
-        vc.userIsFrom = .otherUserProfile
-        vc.otherUserId = profileInfoVM.userInfo.value.id
-        vc.postRef = profileInfoVM.userInfo.value.posts[sender.tag].id
+//        let vc = STORYBOARD.SOCIAL_FEED.instantiateViewController(withIdentifier: SOCIAL_FEED_STORYBOARD.CommentListVC.rawValue) as! CommentListVC
+//        vc.profileInfoVM = self.profileInfoVM
+//        vc.userIsFrom = .otherUserProfile
+//        vc.otherUserId = profileInfoVM.userInfo.value.id
+//        vc.postRef = profileInfoVM.userInfo.value.posts[sender.tag].id
+//        self.navigationController?.pushViewController(vc, animated: true)
+        
+        let vc = STORYBOARD.SOCIAL_FEED.instantiateViewController(withIdentifier: SOCIAL_FEED_STORYBOARD.PostDetailVC.rawValue) as! PostDetailVC
+        vc.ref = profileInfoVM.userInfo.value.posts[sender.tag].id
+        vc.isComeFromDashboard = true
         self.navigationController?.pushViewController(vc, animated: true)
     }
     

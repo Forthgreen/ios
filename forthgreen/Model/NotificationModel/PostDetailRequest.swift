@@ -8,6 +8,10 @@
 
 import Foundation
 
+struct PostDetailRequest: Encodable {
+    var postRef: String
+}
+
 struct NotificationDetailRequest: Encodable {
     var notificationId: String
 }

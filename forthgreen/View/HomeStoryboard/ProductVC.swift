@@ -91,13 +91,6 @@ class ProductVC: UIViewController {
         BookMarkAddVM.bookmarkInfo.bind { [weak self](_) in
             guard let `self` = self else { return }
             if self.BookMarkAddVM.success.value {
-                let index = self.productListArray.firstIndex { (data) -> Bool in
-                    data.id == self.BookMarkAddVM.bookmarkInfo.value.ref
-                }
-                if index != nil {
-                    self.productListArray[index!].isBookmark = self.BookMarkAddVM.bookmarkInfo.value.status
-                    self.collectionView.reloadData()
-                }
                 
                 if self.ProductHomeVM.productList.value.count != 0 {
                     let index = self.ProductHomeVM.productList.value.firstIndex { (data) -> Bool in
@@ -311,7 +304,13 @@ extension ProductVC: UICollectionViewDelegate, UICollectionViewDataSource, UICol
         }
         else {
             AppDelegate().sharedDelegate().vibrateOnTouch()
+            
             BookMarkAddVM.addBookmark(request: BookmarkAddRequest(ref: productListArray[sender.tag].id, refType: BOOKMARK_TYPES.PRODUCT.rawValue, status: !productListArray[sender.tag].isBookmark))
+            
+            let isBookmark = self.productListArray[sender.tag].isBookmark
+            self.productListArray[sender.tag].isBookmark = !isBookmark
+            self.collectionView.reloadData()
+            
         }
     }
     

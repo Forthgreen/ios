@@ -653,7 +653,7 @@ extension AppDelegate:UNUserNotificationCenterDelegate{
                 guard let sourceId : String = payloadDict["notificationId"] as? String else { return }
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                     let vc = STORYBOARD.SOCIAL_FEED.instantiateViewController(withIdentifier: SOCIAL_FEED_STORYBOARD.PostDetailVC.rawValue) as! PostDetailVC
-                    vc.ref = sourceId
+                    vc.notificationId = sourceId
                     vc.refType = self.pushNotificationType
                     if let visibleViewController = visibleViewController(){
                         visibleViewController.navigationController?.pushViewController(vc, animated: false)

@@ -83,19 +83,9 @@ class ProductDetailVC: UIViewController {
             guard let `self` = self else { return }
             if self.BookMarkAddVM.success.value {
                 if self.isFromProductDetail {
-                    self.productDetail.isBookmark = self.BookMarkAddVM.bookmarkInfo.value.status
-                    self.tableView.reloadData()
                     self.delegate?.updateProductListWithBokmark(productRef: self.BookMarkAddVM.bookmarkInfo.value.ref, status: self.BookMarkAddVM.bookmarkInfo.value.status)
                 }
-                else {
-                    let index = self.productDetail.similarProducts.firstIndex { (data) -> Bool in
-                        data.id == self.BookMarkAddVM.bookmarkInfo.value.ref
-                    }
-                    if index != nil {
-                        self.productDetail.similarProducts[index!].isBookmark = self.BookMarkAddVM.bookmarkInfo.value.status
-                        self.tableView.reloadData()
-                    }
-                }
+                
                 
                 if self.ProductHomeVM.productList.value.count != 0 {
                     let index = self.ProductHomeVM.productList.value.firstIndex { (data) -> Bool in
@@ -446,6 +436,9 @@ extension ProductDetailVC: UITableViewDataSource, UITableViewDelegate {
                 isFromProductDetail = true
                 AppDelegate().sharedDelegate().vibrateOnTouch()
                 BookMarkAddVM.addBookmark(request: BookmarkAddRequest(ref: productDetail.id, refType: BOOKMARK_TYPES.PRODUCT.rawValue, status: !productDetail.isBookmark))
+                
+                self.productDetail.isBookmark = !self.productDetail.isBookmark
+                self.tableView.reloadData()
             }
         }
     }
@@ -688,6 +681,11 @@ extension ProductDetailVC: UICollectionViewDelegate, UICollectionViewDataSource,
                 isFromProductDetail = false
                 AppDelegate().sharedDelegate().vibrateOnTouch()
                 BookMarkAddVM.addBookmark(request: BookmarkAddRequest(ref: productDetail.similarProducts[sender.tag].id, refType: BOOKMARK_TYPES.PRODUCT.rawValue, status: !productDetail.similarProducts[sender.tag].isBookmark))
+                
+                let product = self.productDetail.similarProducts[sender.tag]
+                self.productDetail.similarProducts[sender.tag].isBookmark = !product.isBookmark
+                self.tableView.reloadData()
+                
             }
         }
     }

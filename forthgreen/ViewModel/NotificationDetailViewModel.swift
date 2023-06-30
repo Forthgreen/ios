@@ -12,14 +12,16 @@ import SainiUtils
 protocol NotificationDetailDelegate {
     var failure: Box<Bool> { get set}
     var success: Box<Bool> { get set }
-    var postDetail: Box<[NotificationDetail]> { get set }
+    var postDetail: Box<[PostDetail]> { get set }
+    func fetchPostNotiDetail(request: PostDetailRequest)
     func fetchNotiDetail(request: NotificationDetailRequest)
 }
 
 struct NotificationDetailViewModel: NotificationDetailDelegate {
+    
     var failure: Box<Bool> = Box(Bool())
     var success: Box<Bool> = Box(Bool())
-    var postDetail: Box<[NotificationDetail]> = Box([NotificationDetail]())
+    var postDetail: Box<[PostDetail]> = Box([PostDetail]())
     
     func fetchNotiDetail(request: NotificationDetailRequest) {
         DispatchQueue.global().async {
@@ -27,6 +29,36 @@ struct NotificationDetailViewModel: NotificationDetailDelegate {
                 if response != nil{                             //if response is not empty
                     do {
                         let success = try JSONDecoder().decode(NotificationDetailResponse.self, from: response!) // decode the response into model
+                        switch success.code{
+                        case 100:
+                            let data = success.data.first?.posts ?? Posts()
+                            var postDetail = PostDetail()
+                            postDetail.id = data.id
+                            postDetail.posts = data
+                            self.postDetail.value = [postDetail]
+                            self.success.value = true
+                            break
+                        case 302:
+                            self.failure.value = true
+                            break
+                        default:
+                            log.error("\(Log.stats()) \(success.message)")/
+                        }
+                    }
+                    catch let err {
+                        log.error("ERROR OCCURED WHILE DECODING: \(Log.stats()) \(err)")/
+                    }
+                }
+            }
+        }
+    }
+    
+    func fetchPostNotiDetail(request: PostDetailRequest) {
+        DispatchQueue.global().async {
+            APIManager.sharedInstance.I_AM_COOL(params: request.toJSON(), api: API.POST.postDetail, Loader: false, isMultipart: false) { (response) in
+                if response != nil{                             //if response is not empty
+                    do {
+                        let success = try JSONDecoder().decode(PostDetailResponse.self, from: response!) // decode the response into model
                         switch success.code{
                         case 100:
                             self.postDetail.value = success.data
@@ -50,54 +82,6 @@ struct NotificationDetailViewModel: NotificationDetailDelegate {
     func deletePostLocally(id: String) {
         if postDetail.value.first?.posts.id == id {
             postDetail.value.removeAll()
-        }
-    }
-    
-    func likePost(postRef: String, status: Bool) {
-        if postDetail.value.first?.posts.id == postRef {
-            postDetail.value[0].posts.isLike = status
-            if status {
-                postDetail.value[0].posts.likes += 1
-            }
-            else {
-                postDetail.value[0].posts.likes -= 1
-            }
-        }
-    }
-    
-    func deleteComment(commentRef: String) {
-        if postDetail.value.first?.posts.comment.id == commentRef {
-            postDetail.value[0].posts.comment = Comment()
-        }
-    }
-    
-    func deleteReply(replyRef: String) {
-        if postDetail.value.first?.posts.comment.id == replyRef {
-            postDetail.value[0].posts.comment.reply = Reply()
-        }
-    }
-    
-    func likeComment(commentRef: String, status: Bool) {
-        if postDetail.value.first?.posts.comment.id == commentRef {
-            postDetail.value[0].posts.comment.isLike = status
-            if status {
-                postDetail.value[0].posts.comment.likes += 1
-            }
-            else {
-                postDetail.value[0].posts.comment.likes -= 1
-            }
-        }
-    }
-    
-    func likeReply(replyRef: String, status: Bool) {
-        if postDetail.value.first?.posts.comment.reply.id == replyRef {
-            postDetail.value[0].posts.comment.reply.isLike = status
-            if status {
-                postDetail.value[0].posts.comment.reply.likes += 1
-            }
-            else {
-                postDetail.value[0].posts.comment.reply.likes -= 1
-            }
         }
     }
 }

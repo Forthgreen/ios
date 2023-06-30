@@ -18,6 +18,7 @@ class ShopVC: UIViewController {
     private var BookMarkAddVM: BookMarkAddViewModel = BookMarkAddViewModel()
     
     var page = 1
+    var isRefreshPage = true
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -49,24 +50,29 @@ class ShopVC: UIViewController {
       
         BookMarkAddVM.bookmarkInfo.bind { [weak self](_) in
             guard let `self` = self else { return }
-            if self.BookMarkAddVM.success.value {
-                let index = self.shopVM.shopData.value.firstIndex { (data) -> Bool in
-                    data.id == self.BookMarkAddVM.bookmarkInfo.value.ref
-                }
-                if let index = index {
-                    self.shopVM.shopData.value[index].isBookmark = self.BookMarkAddVM.bookmarkInfo.value.status
-                    self.collectionShop.reloadData()
-                }
-            }
+//            if self.BookMarkAddVM.success.value {
+//                let index = self.shopVM.shopData.value.firstIndex { (data) -> Bool in
+//                    data.id == self.BookMarkAddVM.bookmarkInfo.value.ref
+//                }
+//                if let index = index {
+//                    self.shopVM.shopData.value[index].isBookmark = self.BookMarkAddVM.bookmarkInfo.value.status
+//                    self.collectionShop.reloadData()
+//                }
+//            }
         }
         
         shopVM.shopData.bind { [weak self] (_) in
             guard let `self` = self else { return }
-            if self.shopVM.shopData.value.isEmpty == false {
-                shimmerView.isHidden = true
+            DispatchQueue.main.async {
+                if self.isRefreshPage {
+                    if self.shopVM.shopData.value.isEmpty == false {
+                        self.shimmerView.isHidden = true
+                    }
+                    self.refreshControl.stopAnimating()
+                    self.collectionShop.reloadData()
+                }
             }
-            self.refreshControl.stopAnimating()
-            self.collectionShop.reloadData()
+            
         }
      //   self.collectionShop.addSubview(refreshControl)
         
@@ -132,7 +138,7 @@ extension ShopVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
         let showSpecHeight = indexPath.row == 0 ? 16 : 0
         let cellW = (collectionView.frame.width / 2) - 7
         let topWidth = 108 + collectionView.frame.width
-        let height = indexPath.row % 7 == 0 ? CGFloat((topWidth + CGFloat(showSpecHeight))) : (cellW + 90)
+        let height = indexPath.row % 7 == 0 ? CGFloat(topWidth - CGFloat(showSpecHeight)) : (cellW + 90)
         let width = indexPath.row % 7 == 0 ? collectionView.frame.size.width : cellW
     
         return CGSize(width: Double(width), height: Double(height))
@@ -190,8 +196,17 @@ extension ShopVC: UpdateProductBookmarkList {
             data.id == productRef
         }
         if index != nil {
-            self.shopVM.shopData.value[index!].isBookmark = status
-            self.collectionShop.reloadData()
+            DispatchQueue.main.async {
+                self.isRefreshPage = false
+                self.shopVM.shopData.value[index!].isBookmark = status
+                let indexPath = IndexPath(row: index!, section: 0)
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                    if let cell = self.collectionShop.cellForItem(at: indexPath) as? FShopOtherCell {
+                        cell.updateBookmark(isBookmark: status)
+                    }
+                    self.isRefreshPage = true
+                }
+            }
         }
     }
 }
@@ -223,6 +238,10 @@ extension ShopVC: FShopOtherDelegate {
             BookMarkAddVM.addBookmark(request: BookmarkAddRequest(ref: shopData.id,
                                                                   refType: BOOKMARK_TYPES.PRODUCT.rawValue,
                                                                   status: !bookmark))
+            if let id = shopData.id {
+                self.updateProductListWithBokmark(productRef: id,
+                                                  status: !bookmark)
+            }
         } else if AppModel.shared.isGuestUser {
             self.showLoginAlert()
         }

@@ -130,8 +130,6 @@ class RestaurantDetailVC: UIViewController {
         BookMarkAddVM.bookmarkInfo.bind { [weak self](_) in
             guard let `self` = self else { return }
             if self.BookMarkAddVM.success.value {
-                self.restaurantDetail.isBookmark = self.BookMarkAddVM.bookmarkInfo.value.status
-                self.tableView.reloadData()
                 self.delegate?.updateRestaurantListWithBokmark(restaurantRef: self.restaurantDetail.id, status: self.BookMarkAddVM.bookmarkInfo.value.status)
             }
         }
@@ -426,8 +424,10 @@ extension RestaurantDetailVC: UITableViewDataSource, UITableViewDelegate {
                 self.tableView.isHidden = false
             }
             else {
-                AppDelegate().sharedDelegate().vibrateOnTouch()
                 BookMarkAddVM.addBookmark(request: BookmarkAddRequest(ref: restaurantDetail.id, refType: BOOKMARK_TYPES.RESTAURANT.rawValue, status: !restaurantDetail.isBookmark))
+                AppDelegate().sharedDelegate().vibrateOnTouch()
+                self.restaurantDetail.isBookmark = !restaurantDetail.isBookmark
+                self.tableView.reloadData()
             }
         }
     }

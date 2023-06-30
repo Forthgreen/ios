@@ -47,7 +47,7 @@ struct SocialFeed: Codable {
     var postTextLineCount: Int
     var isTextExpanded: Bool
     let status: Bool
-    let tags: [TagModel]
+    var tags: [TagModel]
     let whoLiked: [AddedBy]
     var thumbnail, video: String
     var videoWidth, videoHeight: Double
@@ -57,7 +57,7 @@ struct SocialFeed: Codable {
         case comments, isLike, image, text, createdOn, likes, addedBy, type, bio, email, name, postTextLineCount, isTextExpanded, isFollow, username, status, tags, whoLiked, thumbnail, video, videoWidth, videoHeight
     }
     
-    init(from decoder: Decoder) throws {
+     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         id = try values.decodeIfPresent(String.self, forKey: .id) ?? DocumentDefaultValues.Empty.string
         comments = try values.decodeIfPresent(Int.self, forKey: .comments) ?? DocumentDefaultValues.Empty.int

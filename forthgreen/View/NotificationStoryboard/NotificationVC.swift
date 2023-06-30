@@ -173,6 +173,10 @@ extension NotificationVC: UITableViewDataSource, UITableViewDelegate {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: TABLE_VIEW_CELL.NotificationCell.rawValue, for: indexPath) as? NotificationCell else { return UITableViewCell() }
         if notificationVM.notificationList.value.count > 0 {
             cell.profileImage.downloadCachedImage(placeholder: GLOBAL_IMAGES.placeholderForProfile.rawValue, urlString: AppImageUrl.average +  notificationVM.notificationList.value[indexPath.row].image)
+            cell.profileImage.tag = indexPath.row
+            cell.profileImage.sainiAddTapGesture {
+                self.sendToOtherUserScreen(index: indexPath.row)
+            }
             let name = notificationVM.notificationList.value[indexPath.row].name
             
             var paragraphStyle = NSMutableParagraphStyle()
@@ -195,6 +199,12 @@ extension NotificationVC: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
+    func sendToOtherUserScreen(index: Int) {
+        let vc = STORYBOARD.SOCIAL_FEED.instantiateViewController(withIdentifier: SOCIAL_FEED_STORYBOARD.OtherUserProfileVC.rawValue) as! OtherUserProfileVC
+        vc.userId = notificationVM.notificationList.value[index].userid
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     //willDisplay
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         //Pagination
@@ -215,28 +225,32 @@ extension NotificationVC: UITableViewDataSource, UITableViewDelegate {
         switch notificationType {
         case .comment:
             let vc = STORYBOARD.SOCIAL_FEED.instantiateViewController(withIdentifier: SOCIAL_FEED_STORYBOARD.PostDetailVC.rawValue) as! PostDetailVC
-            vc.ref = notificationVM.notificationList.value[indexPath.row].id
+            vc.ref = notificationVM.notificationList.value[indexPath.row].ref
+            vc.notificationId = notificationVM.notificationList.value[indexPath.row].id
             vc.refType = NOTIFICATION_TYPE(rawValue: notificationVM.notificationList.value[indexPath.row].refType) ?? .postLike
             vc.notificationVM = notificationVM
             self.navigationController?.pushViewController(vc, animated: true)
             break
         case .replyComment:
             let vc = STORYBOARD.SOCIAL_FEED.instantiateViewController(withIdentifier: SOCIAL_FEED_STORYBOARD.PostDetailVC.rawValue) as! PostDetailVC
-            vc.ref = notificationVM.notificationList.value[indexPath.row].id
+            vc.ref = notificationVM.notificationList.value[indexPath.row].ref
+            vc.notificationId = notificationVM.notificationList.value[indexPath.row].id
             vc.refType = NOTIFICATION_TYPE(rawValue: notificationVM.notificationList.value[indexPath.row].refType) ?? .postLike
             vc.notificationVM = notificationVM
             self.navigationController?.pushViewController(vc, animated: true)
             break
         case .postLike:
             let vc = STORYBOARD.SOCIAL_FEED.instantiateViewController(withIdentifier: SOCIAL_FEED_STORYBOARD.PostDetailVC.rawValue) as! PostDetailVC
-            vc.ref = notificationVM.notificationList.value[indexPath.row].id
+            vc.ref = notificationVM.notificationList.value[indexPath.row].ref
+            vc.notificationId = notificationVM.notificationList.value[indexPath.row].id
             vc.refType = NOTIFICATION_TYPE(rawValue: notificationVM.notificationList.value[indexPath.row].refType) ?? .postLike
             vc.notificationVM = notificationVM
             self.navigationController?.pushViewController(vc, animated: true)
             break
         case .commentLike:
             let vc = STORYBOARD.SOCIAL_FEED.instantiateViewController(withIdentifier: SOCIAL_FEED_STORYBOARD.PostDetailVC.rawValue) as! PostDetailVC
-            vc.ref = notificationVM.notificationList.value[indexPath.row].id
+            vc.ref = notificationVM.notificationList.value[indexPath.row].ref
+            vc.notificationId = notificationVM.notificationList.value[indexPath.row].id
             vc.refType = NOTIFICATION_TYPE(rawValue: notificationVM.notificationList.value[indexPath.row].refType) ?? .postLike
             vc.notificationVM = notificationVM
             self.navigationController?.pushViewController(vc, animated: true)
@@ -247,7 +261,8 @@ extension NotificationVC: UITableViewDataSource, UITableViewDelegate {
             self.navigationController?.pushViewController(vc, animated: true)
         case .replyLike:
             let vc = STORYBOARD.SOCIAL_FEED.instantiateViewController(withIdentifier: SOCIAL_FEED_STORYBOARD.PostDetailVC.rawValue) as! PostDetailVC
-            vc.ref = notificationVM.notificationList.value[indexPath.row].id
+            vc.ref = notificationVM.notificationList.value[indexPath.row].ref
+            vc.notificationId = notificationVM.notificationList.value[indexPath.row].id
             vc.refType = NOTIFICATION_TYPE(rawValue: notificationVM.notificationList.value[indexPath.row].refType) ?? .postLike
             vc.notificationVM = notificationVM
             self.navigationController?.pushViewController(vc, animated: true)

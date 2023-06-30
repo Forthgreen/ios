@@ -259,7 +259,7 @@
 		FAA19BCF2638B57400010AB6 /* ReportCommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA19BCE2638B57400010AB6 /* ReportCommentViewModel.swift */; };
 		FAA19BD32639FD8400010AB6 /* postImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA19BD12639FD8400010AB6 /* postImageCell.swift */; };
 		FAA19BD42639FD8400010AB6 /* postImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAA19BD22639FD8400010AB6 /* postImageCell.xib */; };
-		FAA19C27263A098E00010AB6 /* NotificationDetailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA19C26263A098D00010AB6 /* NotificationDetailRequest.swift */; };
+		FAA19C27263A098E00010AB6 /* PostDetailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA19C26263A098D00010AB6 /* PostDetailRequest.swift */; };
 		FAA19C2A263A09C400010AB6 /* NotificationDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA19C29263A09C400010AB6 /* NotificationDetailResponse.swift */; };
 		FAA19C2D263A09ED00010AB6 /* NotificationDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA19C2C263A09ED00010AB6 /* NotificationDetailViewModel.swift */; };
 		FAAD860324648A8600F99403 /* Onboarding3.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAD860224648A8600F99403 /* Onboarding3.swift */; };
@@ -569,7 +569,7 @@
 		FAA19BCE2638B57400010AB6 /* ReportCommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportCommentViewModel.swift; sourceTree = "<group>"; };
 		FAA19BD12639FD8400010AB6 /* postImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = postImageCell.swift; sourceTree = "<group>"; };
 		FAA19BD22639FD8400010AB6 /* postImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = postImageCell.xib; sourceTree = "<group>"; };
-		FAA19C26263A098D00010AB6 /* NotificationDetailRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationDetailRequest.swift; sourceTree = "<group>"; };
+		FAA19C26263A098D00010AB6 /* PostDetailRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailRequest.swift; sourceTree = "<group>"; };
 		FAA19C29263A09C400010AB6 /* NotificationDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationDetailResponse.swift; sourceTree = "<group>"; };
 		FAA19C2C263A09ED00010AB6 /* NotificationDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationDetailViewModel.swift; sourceTree = "<group>"; };
 		FAAD860224648A8600F99403 /* Onboarding3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding3.swift; sourceTree = "<group>"; };
@@ -1228,7 +1228,7 @@
 			children = (
 				FAA19ADC2636999500010AB6 /* NotificationResponse.swift */,
 				FAA19AE22636C7EB00010AB6 /* NotificationSeenRequest.swift */,
-				FAA19C26263A098D00010AB6 /* NotificationDetailRequest.swift */,
+				FAA19C26263A098D00010AB6 /* PostDetailRequest.swift */,
 				FAA19C29263A09C400010AB6 /* NotificationDetailResponse.swift */,
 			);
 			path = NotificationModel;
@@ -1751,7 +1751,7 @@
 				FA52732C26258CB000D93F0C /* SocialFeedResponse.swift in Sources */,
 				FA5FDA052628C0EA0055FEB7 /* DeletePostViewModel.swift in Sources */,
 				FAA19B822638AE8200010AB6 /* AddPostResponse.swift in Sources */,
-				FAA19C27263A098E00010AB6 /* NotificationDetailRequest.swift in Sources */,
+				FAA19C27263A098E00010AB6 /* PostDetailRequest.swift in Sources */,
 				8828908326A9A2640060B5FA /* CategoryFilterVC.swift in Sources */,
 				FA15C69E24641E2700315E16 /* EditProfileVC.swift in Sources */,
 				FA52728B2620370000D93F0C /* FollowerListVC.swift in Sources */,
@@ -2113,7 +2113,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 12;
+				MARKETING_VERSION = 14;
 				PRODUCT_BUNDLE_IDENTIFIER = com.app.forthgreenApp;
 				PRODUCT_NAME = Forthgreen;
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -2141,7 +2141,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 12;
+				MARKETING_VERSION = 14;
 				PRODUCT_BUNDLE_IDENTIFIER = com.app.forthgreenApp;
 				PRODUCT_NAME = Forthgreen;
 				PROVISIONING_PROFILE_SPECIFIER = "";

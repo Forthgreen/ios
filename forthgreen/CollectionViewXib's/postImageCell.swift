@@ -8,6 +8,7 @@
 
 import UIKit
 import SainiUtils
+import SDWebImage
 
 class postImageCell: UICollectionViewCell {
 
@@ -17,6 +18,11 @@ class postImageCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
     }
 
 }

@@ -38,6 +38,11 @@ class FShopOtherCell: UICollectionViewCell {
                                                     urlString: AppImageUrl.average + (data.images?.first ?? ""))
     }
     
+    func updateBookmark(isBookmark: Bool) {
+        self.shopData?.isBookmark = isBookmark
+        self.btnBookMark.isSelected = self.shopData?.isBookmark == true
+    }
+    
     @IBAction func btnBookMarkAction(_ sender: UIButton) {
         if let shopData = shopData {
             self.delegate?.selecteUnselectBookmark(shopData: shopData)

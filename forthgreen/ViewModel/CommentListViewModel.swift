@@ -37,6 +37,9 @@ struct CommentListViewModel: CommentListDelegate {
                         case 100:
                             switch request.commentType {
                             case .comment:
+                                if request.page == 1 {
+                                    self.commentList.value.removeAll()
+                                }
                                 self.commentList.value += success.data
                                 self.commentList.value = self.commentList.value.filter({ $0.id != DocumentDefaultValues.Empty.string })
                                 self.commentHasMore.value = success.hasMore
@@ -79,7 +82,7 @@ struct CommentListViewModel: CommentListDelegate {
     
     func addNewComment(commentInfo: CommentList) {
 //        commentList.value.insert(commentInfo, at: 0)
-        commentList.value.append(commentInfo)
+        commentList.value.insert(commentInfo, at: 0)
     }
     
     func addNewReply(replyInfo: CommentList, commentIndex: Int) {

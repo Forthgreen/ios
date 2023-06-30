@@ -25,7 +25,7 @@ class SocialFeedVC: UIViewController, AddPostDeleagte {
     private var deletedPostId: String = String()
     private var followedUserPostId: String = String()
     private var followedUserIndex: Int = Int()
-    private let refreshControl = UIRefreshControl()
+    private var refreshControl = UIRefreshControl()
     private var imageArray: [String] = [String]()
     private var page: Int = Int()
     private var hasMore:Bool = false
@@ -49,11 +49,12 @@ class SocialFeedVC: UIViewController, AddPostDeleagte {
     @IBOutlet weak var tableView: UITableView!
     
     @IBOutlet weak var bedgeCountView: UIView!
+    private var activityIndicatorView = UIActivityIndicatorView()
     
     var isCurrentScreen = false
     var isFeedSelected = true
-    
-    
+    var selectedIndex = -1
+    var isRefreshTable = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -148,9 +149,12 @@ class SocialFeedVC: UIViewController, AddPostDeleagte {
         
         page = 1
         hasMore = false
-        socialFeedVM.fetchFollowingPosts(page: page)
-        socialFeedVM.fetchPosts(page: page)
-        
+        if AppModel.shared.isGuestUser {
+            socialFeedVM.fetchPosts(page: page)
+        } else {
+            socialFeedVM.fetchFollowingPosts(page: page)
+            socialFeedVM.fetchPosts(page: page)
+        }
         
         socialFeedVM.postListSuccess.bind { [weak self] (_) in
             guard let `self` = self else { return }
@@ -180,6 +184,10 @@ class SocialFeedVC: UIViewController, AddPostDeleagte {
             guard let `self` = self else { return }
             DispatchQueue.main.async {
                 self.hasMore = self.socialFeedVM.hasMore.value
+                self.activityIndicatorView.stopAnimating()
+                self.activityIndicatorView.removeFromSuperview()
+                self.tableView.tableFooterView = nil
+                self.tableView.tableFooterView?.isHidden = true
             }
         }
         
@@ -194,9 +202,11 @@ class SocialFeedVC: UIViewController, AddPostDeleagte {
             guard let `self` = self else { return }
             if !self.socialFeedVM.postList.value.isEmpty {
                 DispatchQueue.main.async {
-                    self.tableView.reloadData()
-                    delay(1.0) {
-                        self.pausePlayeVideos()
+                    if self.isRefreshTable {
+                        self.tableView.reloadData()
+                        delay(1.0) {
+                            self.pausePlayeVideos()
+                        }
                     }
                 }
             }
@@ -247,9 +257,10 @@ class SocialFeedVC: UIViewController, AddPostDeleagte {
         
         likePostVM.likePostInfo.bind { [weak self](_) in
             guard let `self` = self else { return }
-            let postRef = self.likePostVM.likePostInfo.value.ref
-            let likeStatus = self.likePostVM.likePostInfo.value.status
-            self.socialFeedVM.likePost(postRef: postRef, status: likeStatus)
+       //     let postRef = self.likePostVM.likePostInfo.value.ref
+         //   let likeStatus = self.likePostVM.likePostInfo.value.status
+         //   self.socialFeedVM.likePost(postRef: postRef, status: likeStatus)
+
         }
         
         followUserVM.success.bind { [weak self] (_) in
@@ -419,8 +430,8 @@ extension SocialFeedVC: UITableViewDelegate, UITableViewDataSource {
             if socialFeedVM.postList.value.count == 0 {
                 tableView.sainiSetEmptyMessage(STATIC_LABELS.noDataFound.rawValue)
             } else {
-                tableView.restore()
-                tableView.separatorStyle = .none
+             //   tableView.restore()
+              //  tableView.separatorStyle = .none
             }
             return socialFeedVM.postList.value.count
         } else {
@@ -533,9 +544,35 @@ extension SocialFeedVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         //Pagination
         if indexPath.row == socialFeedVM.postList.value.count - 2 && hasMore  && self.isFeedSelected {
+            
+            let viewParent = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 70))
+            activityIndicatorView.removeFromSuperview()
+            activityIndicatorView = UIActivityIndicatorView(frame: CGRect.init(x: 0, y: 0, width: tableView.frame.width, height: 50))
+            activityIndicatorView.hidesWhenStopped = true
+            viewParent.addSubview(refreshControl)
+            activityIndicatorView.center = viewParent.center
+            activityIndicatorView.startAnimating()
+            
+            viewParent.addSubview(activityIndicatorView)
+            tableView.tableFooterView = viewParent
+            tableView.tableFooterView?.isHidden = false
+            
             page = page + 1
             socialFeedVM.fetchPosts(page: page)
         } else if indexPath.row == socialFeedVM.postFollowingList.value.count - 2 && hasMore  && !self.isFeedSelected {
+            
+            let viewParent = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 70))
+            activityIndicatorView.removeFromSuperview()
+            activityIndicatorView = UIActivityIndicatorView(frame: CGRect.init(x: 0, y: 0, width: tableView.frame.width, height: 50))
+            activityIndicatorView.hidesWhenStopped = true
+            viewParent.addSubview(refreshControl)
+            activityIndicatorView.center = viewParent.center
+            activityIndicatorView.startAnimating()
+            
+            viewParent.addSubview(activityIndicatorView)
+            tableView.tableFooterView = viewParent
+            tableView.tableFooterView?.isHidden = false
+            
             page = page + 1
             socialFeedVM.fetchFollowingPosts(page: page)
         }
@@ -669,8 +706,10 @@ extension SocialFeedVC: UITableViewDelegate, UITableViewDataSource {
         cell?.viewMoreBtn.isHidden = true
         cell?.heightConstraintOfViewMoreBtnView.constant = 0
         if self.isFeedSelected {
-            self.socialFeedVM.postList.value[sender.tag].isTextExpanded = true
-            cell?.postTxtLbl.numberOfLines = self.socialFeedVM.postList.value[sender.tag].postTextLineCount
+            DispatchQueue.main.async {
+                self.socialFeedVM.postList.value[sender.tag].isTextExpanded = true
+                cell?.postTxtLbl.numberOfLines = self.socialFeedVM.postList.value[sender.tag].postTextLineCount
+            }
         } else {
             self.socialFeedVM.postFollowingList.value[sender.tag].isTextExpanded = true
             cell?.postTxtLbl.numberOfLines = self.socialFeedVM.postFollowingList.value[sender.tag].postTextLineCount
@@ -685,16 +724,42 @@ extension SocialFeedVC: UITableViewDelegate, UITableViewDataSource {
             guestUserView.crossBtn.isHidden = true
         }
         else {
-            guestUserView.isHidden = true
-            AppDelegate().sharedDelegate().vibrateOnTouch()
-            if self.isFeedSelected {
-                let request = LikePostRequest(postRef: socialFeedVM.postList.value[sender.tag].id,
-                                              like: !socialFeedVM.postList.value[sender.tag].isLike)
-                likePostVM.likePost(request: request)
-            } else {
-                let request = LikePostRequest(postRef: socialFeedVM.postFollowingList.value[sender.tag].id,
-                                              like: !socialFeedVM.postFollowingList.value[sender.tag].isLike)
-                likePostVM.likePost(request: request)
+            DispatchQueue.main.async {
+                self.guestUserView.isHidden = true
+                AppDelegate().sharedDelegate().vibrateOnTouch()
+                if self.isFeedSelected {
+                    DispatchQueue.main.async {
+                        let post = self.socialFeedVM.postList.value[sender.tag]
+                        let request = LikePostRequest(postRef: post.id,
+                                                      like: !post.isLike)
+                        self.likePostVM.likePost(request: request)
+                        DispatchQueue.main.asyncAfter(deadline: .now()) {
+                            self.isRefreshTable = false
+                            self.socialFeedVM.likePost(postRef: post.id, status: !post.isLike)
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                                if let cell = self.tableView.cellForRow(at: IndexPath(row: sender.tag, section: 0)) as? socialFeedCell {
+                                    cell.postInfo = self.socialFeedVM.postList.value[sender.tag]
+                                }
+                                self.isRefreshTable = true
+                            }
+                        }
+                    }
+                } else {
+                    let post = self.socialFeedVM.postFollowingList.value[sender.tag]
+                    let request = LikePostRequest(postRef: post.id,
+                                                  like: !post.isLike)
+                    self.likePostVM.likePost(request: request)
+                    DispatchQueue.main.asyncAfter(deadline: .now()) {
+                        self.isRefreshTable = false
+                        self.socialFeedVM.likePost(postRef: post.id, status: !post.isLike)
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                            if let cell = self.tableView.cellForRow(at: IndexPath(row: sender.tag, section: 0)) as? socialFeedCell {
+                                cell.postInfo = self.socialFeedVM.postFollowingList.value[sender.tag]
+                            }
+                            self.isRefreshTable = true
+                        }
+                    }
+                }
             }
         }
     }
@@ -708,14 +773,13 @@ extension SocialFeedVC: UITableViewDelegate, UITableViewDataSource {
         }
         else {
             guestUserView.isHidden = true
-            let vc = STORYBOARD.SOCIAL_FEED.instantiateViewController(withIdentifier: SOCIAL_FEED_STORYBOARD.CommentListVC.rawValue) as! CommentListVC
+            let vc = STORYBOARD.SOCIAL_FEED.instantiateViewController(withIdentifier: SOCIAL_FEED_STORYBOARD.PostDetailVC.rawValue) as! PostDetailVC
             if self.isFeedSelected {
-                vc.postRef = socialFeedVM.postList.value[sender.tag].id
+                vc.ref = socialFeedVM.postList.value[sender.tag].id
             } else {
-                vc.postRef = socialFeedVM.postFollowingList.value[sender.tag].id
+                vc.ref = socialFeedVM.postFollowingList.value[sender.tag].id
             }
-            vc.userIsFrom = .home
-            vc.socialFeedVM = self.socialFeedVM
+            vc.isComeFromDashboard = true
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }
@@ -737,6 +801,7 @@ extension SocialFeedVC: UITableViewDelegate, UITableViewDataSource {
             }
             vc.likeType = .POST
             self.navigationController?.pushViewController(vc, animated: true)
+            
         }
     }
     

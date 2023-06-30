@@ -67,7 +67,9 @@ class CommentCell: UITableViewCell {
                 likeBtn.setImage(UIImage(named: LIKE_POST_IMAGES_SMALL.notLiked.rawValue), for: .normal)
             }
             
-            commentTextLbl.attributedText = attributedStringWithColor(commentList.comment, commentList.tags.map({ $0.name }), color: colorFromHex(hex: "#3A86FF"), font: UIFont.init(name: APP_FONT.buenosAiresBook.rawValue, size: 14.0), lineSpacing: 5)
+            commentTextLbl.attributedText = attributedStringWithColor(commentList.comment,
+                                                                      commentList.tags.map({ $0.name }),
+                                                                      color: colorFromHex(hex: "#000000"), font: UIFont.init(name: APP_FONT.buenosAiresBook.rawValue, size: 14.0), lineSpacing: 5)
             
             
             
